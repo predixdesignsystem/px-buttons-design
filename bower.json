@@ -1,0 +1,24 @@
+{
+  "name": "pdx-buttons",
+  "version": "0.0.1",
+  "authors": [
+    "General Electric"
+  ],
+  "description": "Button object styles for Predix Design Extension",
+  "main": "_objects.buttons.scss",
+  "keywords": [
+    "pdx",
+    "sass",
+    "buttons"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.sw.ge.com/jrogerson/pdx-buttons.git",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

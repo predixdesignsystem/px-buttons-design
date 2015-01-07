@@ -12,7 +12,7 @@
     "buttons"
   ],
   "license": "Apache 2",
-  "homepage": "https://github.sw.ge.com/jrogerson/pdx-buttons.git",
+  "homepage": "git@github.sw.ge.com:jrogerson/pdx-buttons.git",
   "private": true,
   "ignore": [
     "**/.*",

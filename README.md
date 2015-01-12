@@ -1,4 +1,4 @@
-pdx-buttons
+px-buttons
 ===========
 
-Button object styles for Predix Design Extension
+Button object styles for Predix Experience

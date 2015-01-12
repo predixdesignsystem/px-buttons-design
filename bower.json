@@ -1,10 +1,10 @@
 {
-  "name": "pdx-buttons",
+  "name": "px-buttons",
   "version": "0.0.1",
   "authors": [
     "General Electric"
   ],
-  "description": "Button object styles for Predix Design Extension",
+  "description": "Button object styles for Predix Experience",
   "main": "_objects.buttons.scss",
   "keywords": [
     "pdx",
@@ -12,7 +12,7 @@
     "buttons"
   ],
   "license": "Apache 2",
-  "homepage": "git@github.sw.ge.com:jrogerson/pdx-buttons.git",
+  "homepage": "git://github.sw.ge.com/jrogerson/px-buttons.git",
   "private": true,
   "ignore": [
     "**/.*",

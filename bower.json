@@ -20,5 +20,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "inuit-buttons": "~0.4.1",
+    "px-defaults": "git://github.sw.ge.com/jrogerson/px-defaults.git#master",
+    "px-functions": "git://github.sw.ge.com/jrogerson/px-functions.git#master",
+    "px-mixins": "git://github.sw.ge.com/jrogerson/px-mixins.git#master",
+    "px-colors": "git://github.sw.ge.com/jrogerson/px-colors.git#master"
+  }
 }

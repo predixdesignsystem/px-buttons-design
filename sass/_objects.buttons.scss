@@ -1,13 +1,13 @@
+$inuit-btn-border-width     : 0;
+$inuit-btn-background       : $true-black;
+$inuit-btn-radius           : 3px;
+$inuit-enable-btn--small    : true;
+
 @import "lib/inuit-defaults/settings.defaults";
 @import "lib/px-colors/sass/settings.colors";
 @import "lib/inuit-functions/tools.functions";
 @import "lib/inuit-mixins/tools.mixins";
 @import "lib/inuit-buttons/objects.buttons";
-
-$inuit-btn-border-width     : 0;
-$inuit-btn-background       : $true-black;
-$inuit-btn-radius           : 3px;
-$inuit-enable-btn--small    : true;
 
 @if import-once('objects.buttons') {
 

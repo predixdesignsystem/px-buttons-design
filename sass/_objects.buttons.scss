@@ -4,6 +4,11 @@
 @import "lib/inuit-mixins/tools.mixins";
 @import "lib/inuit-buttons/objects.buttons";
 
+$inuit-btn-border-width     : 0;
+$inuit-btn-background       : $true-black;
+$inuit-btn-radius           : 3px;
+$inuit-enable-btn--small    : true;
+
 @if import-once('objects.buttons') {
 
   .btn {

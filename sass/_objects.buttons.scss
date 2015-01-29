@@ -1,7 +1,7 @@
-@import "lib/px-defaults/settings.defaults";
-@import "lib/px-functions/tools.functions";
-@import "lib/px-mixins/tools.mixins";
-@import "lib/px-colors/settings.colors";
+@import "lib/px-defaults/sass/settings.defaults";
+@import "lib/px-functions/sass/tools.functions";
+@import "lib/px-mixins/sass/tools.mixins";
+@import "lib/px-colors/sass/settings.colors";
 @import "lib/inuit-buttons/objects.buttons";
 
 .btn {

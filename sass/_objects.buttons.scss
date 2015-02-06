@@ -1,46 +1,7 @@
-$inuit-btn-border-width     : 0;
-$inuit-btn-background       : $true-black;
-$inuit-btn-radius           : 3px;
-$inuit-enable-btn--small    : true;
+/*------------------------------------*\
+    #PX-BUTTONS
+\*------------------------------------*/
 
-@import "lib/inuit-defaults/settings.defaults";
-@import "lib/px-colors/sass/settings.colors";
-@import "lib/inuit-functions/tools.functions";
-@import "lib/inuit-mixins/tools.mixins";
-@import "lib/inuit-buttons/objects.buttons";
-
-@if import-once('objects.buttons') {
-
-  .btn {
-    @include inuit-font-size(13px);
-    font-weight: bold;
-    text-transform: uppercase;
-    background-image: linear-gradient(to bottom, $gray-dark 0, $true-black 100%);
-    .fa {
-      color: $true-black;
-    }
-  }
-  
-  .btn-bare {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-    text-transform: none;
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      background: transparent;
-      color: inherit;
-    }
-  }
-  
-  .btn-input {
-    border: solid rgba($gray, .55);
-    border-width: 1px 1px 1px 0;
-    border-radius: 0;
-    color: $true-black;
-    background: rgba($gray-lighter, .5);
-  }
-
-}
+/**
+ * Button object styles for Predix Experience
+ */

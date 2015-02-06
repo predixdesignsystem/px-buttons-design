@@ -7,7 +7,7 @@
   "description": "Button object styles for Predix Experience",
   "main": "_objects.buttons.scss",
   "keywords": [
-    "pdx",
+    "px",
     "sass",
     "buttons"
   ],
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "inuit-buttons": "~0.4.1",
-    "inuit-mixins": "0.2.3",
+    "inuit-mixins": "~0.2.3",
     "px-colors": "git://github.sw.ge.com/jrogerson/px-colors.git#master"
   }
 }

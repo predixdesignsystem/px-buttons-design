@@ -1,5 +1,5 @@
 {
-  "name": "px-buttons",
+  "name": "px-buttons-design",
   "version": "0.0.1",
   "authors": [
     "General Electric"
@@ -12,7 +12,7 @@
     "buttons"
   ],
   "license": "Apache 2",
-  "homepage": "git://github.sw.ge.com/jrogerson/px-buttons.git",
+  "homepage": "git://github.sw.ge.com/pxc/px-buttons-design.git",
   "private": true,
   "ignore": [
     "**/.*",
@@ -24,6 +24,6 @@
   "dependencies": {
     "inuit-buttons": "~0.4.1",
     "inuit-mixins": "~0.2.3",
-    "px-colors": "git://github.sw.ge.com/jrogerson/px-colors.git#master"
+    "px-colors-design": "git://github.sw.ge.com/pxc/px-colors-design.git#master"
   }
 }

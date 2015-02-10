@@ -24,6 +24,7 @@
   "dependencies": {
     "inuit-buttons": "~0.4.1",
     "inuit-mixins": "~0.2.3",
-    "px-colors-design": "git://github.sw.ge.com/pxc/px-colors-design.git#master"
+    "px-colors-design": "git://github.sw.ge.com/pxc/px-colors-design.git#master",
+    "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master"
   }
 }

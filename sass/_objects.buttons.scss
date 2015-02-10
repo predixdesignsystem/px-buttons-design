@@ -5,3 +5,7 @@
 /**
  * Button object styles for Predix Experience
  */
+ 
+@import "px-functions-design/sass/tools.functions";
+
+@if import-once('objects.buttons') {}

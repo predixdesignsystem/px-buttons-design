@@ -3,48 +3,40 @@
 \*------------------------------------*/
 
 /**
- * Button object styles for Predix Experience
- */
+* A simple button object.
+*/
 
 @import "inuit-defaults/settings.defaults"; 
 @import "px-functions-design/sass/tools.functions";
 
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-btn-namespace:       $inuit-namespace !default;
+
+$inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
+$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
+$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
+$inuit-btn-background:      #4a8ec2 !default;
+$inuit-btn-color:           #fff !default;
+$inuit-btn-border-width:    1px !default;
+$inuit-btn-border-style:    solid !default;
+$inuit-btn-border-color:    $inuit-btn-background !default;
+$inuit-btn-radius:          0 !default;
+
+$inuit-enable-btn--small:   false !default;
+$inuit-enable-btn--large:   false !default;
+$inuit-enable-btn--full:    false !default;
+$inuit-enable-btn--pill:    false !default;
+
+
+
+
+
+// Here we set a variable assuming that `box-sizing: border-box;` is not set
+// globally. If it has been previously been defined, the following variable will
+// be overriden and will be set to `true`.
+$inuit-global-border-box: false !default;
+
 @if import-once('objects.buttons') {
-  
-  /**
-  * A simple button object.
-  */
-  
-  // Predefine the variables below in order to alter and enable specific features.
-  $inuit-btn-namespace:       $inuit-namespace !default;
-  
-  $inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
-  $inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
-  $inuit-btn-padding--large:  double($inuit-btn-padding) !default;
-  $inuit-btn-background:      #4a8ec2 !default;
-  $inuit-btn-color:           #fff !default;
-  $inuit-btn-border-width:    1px !default;
-  $inuit-btn-border-style:    solid !default;
-  $inuit-btn-border-color:    $inuit-btn-background !default;
-  $inuit-btn-radius:          0 !default;
-  
-  $inuit-enable-btn--small:   false !default;
-  $inuit-enable-btn--large:   false !default;
-  $inuit-enable-btn--full:    false !default;
-  $inuit-enable-btn--pill:    false !default;
-  
-  
-  
-  
-  
-  // Here we set a variable assuming that `box-sizing: border-box;` is not set
-  // globally. If it has been previously been defined, the following variable will
-  // be overriden and will be set to `true`.
-  $inuit-global-border-box: false !default;
-  
-  
-  
-  
   
   /**
   * 1. Allow us to style box model properties.

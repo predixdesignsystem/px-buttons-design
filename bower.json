@@ -23,8 +23,6 @@
   ],
   "dependencies": {
     "inuit-defaults": "~0.2.0",
-    "inuit-mixins": "~0.2.3",
-    "px-colors-design": "git://github.sw.ge.com/pxc/px-colors-design.git#master",
     "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master"
   }
 }

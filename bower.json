@@ -2,7 +2,8 @@
   "name": "px-buttons-design",
   "version": "0.0.1",
   "authors": [
-    "General Electric"
+    "General Electric",
+    "Harry Roberts <harry@csswizardry.com>"
   ],
   "description": "Button object styles for Predix Experience",
   "main": "_objects.buttons.scss",

@@ -165,4 +165,18 @@ $inuit-global-border-box: false !default;
   
   }
   
+  .btn-bare {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    text-transform: none;
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+      color: inherit;
+    }
+  }
+  
 }

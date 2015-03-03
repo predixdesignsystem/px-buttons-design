@@ -61,6 +61,7 @@ $inuit-global-border-box: false !default;
     overflow: visible; /* [6] */
     padding: $inuit-btn-padding - $inuit-btn-border-width  double($inuit-btn-padding) - $inuit-btn-border-width; /* [7] */
     background-color: $inuit-btn-background;
+    -webkit-font-smoothing: antialiased;
   
     @if($inuit-btn-border-width != 0) {
         border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;

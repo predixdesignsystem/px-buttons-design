@@ -6,8 +6,8 @@
 * A simple button object.
 */
 
-@import "inuit-defaults/settings.defaults"; 
-@import "px-functions-design/sass/tools.functions";
+@import "../inuit-defaults/settings.defaults";
+@import "../px-functions-design/tools.functions";
 
 // Predefine the variables below in order to alter and enable specific features.
 $inuit-btn-namespace:       $inuit-namespace !default;

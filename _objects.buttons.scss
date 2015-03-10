@@ -27,6 +27,7 @@ $inuit-enable-btn--large:   false !default;
 $inuit-enable-btn--full:    false !default;
 $inuit-enable-btn--pill:    false !default;
 
+$inuit-enable-btn--bare:    false !default;
 
 
 
@@ -166,18 +167,27 @@ $inuit-global-border-box: false !default;
   
   }
   
-  .btn-bare {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-    text-transform: none;
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      background: transparent;
-      color: inherit;
+  @if ($inuit-enable-btn--bare == true) {
+    
+    /**
+     * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>.
+     */
+  
+    .#{$inuit-btn-namespace}btn--bare,
+    %#{$inuit-btn-namespace}btn--bare {
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      text-transform: none;
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        background: transparent;
+        color: inherit;
+      }
     }
+  
   }
   
 }

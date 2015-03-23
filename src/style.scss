@@ -52,3 +52,7 @@ $inuit-enable-btn--disabled : true;
   background-color: rgb(247,247,247);
   color: rgb(47, 111, 159);
 }
+
+.flex .btn {
+  @extend %flex__item--baseline;
+}

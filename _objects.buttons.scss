@@ -7,35 +7,54 @@
 */
 
 @import "../inuit-defaults/settings.defaults";
+@import "../inuit-mixins/tools.mixins";
 @import "../px-functions-design/tools.functions";
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-btn-namespace:       $inuit-namespace !default;
+$inuit-btn-namespace                                : $inuit-namespace !default;
 
-$inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
-$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
-$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
-$inuit-btn-background:      #4a8ec2 !default;
-$inuit-btn-color:           #fff !default;
-$inuit-btn-border-width:    1px !default;
-$inuit-btn-border-style:    solid !default;
-$inuit-btn-border-color:    $inuit-btn-background !default;
-$inuit-btn-radius:          0 !default;
+$inuit-btn-padding                                  : quarter($inuit-base-spacing-unit) !default;
+$inuit-btn-font-size--tiny                          : 11px !default;
+$inuit-btn-font-size--small                         : 13px !default;
+$inuit-btn-font-size--large                         : 20px !default;
+$inuit-btn-font-size--huge                          : 30px !default;
+$inuit-btn-height--tiny                             : 15px !default;
+$inuit-btn-height--small                            : 20px !default;
+$inuit-btn-height--large                            : 40px !default;
+$inuit-btn-height--huge                             : 60px !default;
+$inuit-btn-background                               : rgb(49,113,227) !default;
+$inuit-btn-background--hover                        : linear-gradient(180deg, rgb(52,178,252) 0%, $inuit-btn-background 100%);
+$inuit-btn-background--active                       : linear-gradient(0deg, rgb(52,178,252) 0%, $inuit-btn-background 100%);
+$inuit-btn-color                                    : rgb(255,255,255) !default;
+$inuit-btn-border-width                             : 0 !default;
+$inuit-btn-border-style                             : solid !default;
+$inuit-btn-border-color                             : $inuit-btn-background !default;
+$inuit-btn-negative-background                      : rgb(223,223,223) !default;
+$inuit-btn-negative-background--hover               : linear-gradient(180deg, $inuit-btn-negative-background 0%, rgb(187,186,188) 100%);
+$inuit-btn-negative-background--active              : linear-gradient(0deg, $inuit-btn-negative-background 0%, rgb(187,186,188) 100%);
+$inuit-btn-negative-color                           : rgb(42,42,42) !default;
+$inuit-btn-radius                                   : 3px !default;
 
-$inuit-enable-btn--small:   false !default;
-$inuit-enable-btn--large:   false !default;
-$inuit-enable-btn--full:    false !default;
-$inuit-enable-btn--pill:    false !default;
+$inuit-enable-btn--tiny                             : false !default;
+$inuit-enable-btn--small                            : false !default;
+$inuit-enable-btn--large                            : false !default;
+$inuit-enable-btn--huge                             : false !default;
+$inuit-enable-btn--full                             : false !default;
+$inuit-enable-btn--pill                             : false !default;
 
-$inuit-enable-btn--bare:    false !default;
+$inuit-enable-btn--bare                             : false !default;
+$inuit-enable-btn--negative                         : false !default;
+$inuit-enable-btn--disabled                         : false !default;
 
+@function btnPadding($font-size,$btn-height) {
+  $btnPadding: ((($btn-height - $font-size) / 2) / $font-size);
+  @return #{$btnPadding}em;
+}
 
-
-
-// Here we set a variable assuming that `box-sizing: border-box;` is not set
+// Here we set a variable assuming that `box-sizing : border-box;` is not set
 // globally. If it has been previously been defined, the following variable will
 // be overriden and will be set to `true`.
-$inuit-global-border-box: false !default;
+$inuit-global-border-box                            : false !default;
 
 @if import-once('objects.buttons') {
   
@@ -56,16 +75,20 @@ $inuit-global-border-box: false !default;
     vertical-align: middle; /* [2] */
     font: inherit; /* [3] */
     text-align: center; /* [4] */
-    border: none; /* [4] */
     margin:  0; /* [4] */
     cursor: pointer; /* [5] */
     overflow: visible; /* [6] */
-    padding: $inuit-btn-padding - $inuit-btn-border-width  double($inuit-btn-padding) - $inuit-btn-border-width; /* [7] */
-    background-color: $inuit-btn-background;
+    background: $inuit-btn-background;
     -webkit-font-smoothing: antialiased;
   
     @if($inuit-btn-border-width != 0) {
         border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;
+        padding: calc(#{$inuit-btn-padding} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+    }
+    
+    @else {
+        border: 0;
+        padding: $inuit-btn-padding 1em;
     }
   
     @if($inuit-btn-radius != 0) {
@@ -79,7 +102,24 @@ $inuit-global-border-box: false !default;
         text-decoration: none; /* [4] */
         color: $inuit-btn-color;
     }
+    
+    &:hover,
+    &:focus {
+      background: $inuit-btn-background--hover;
+    }
+    
+    &:active {
+      background: $inuit-btn-background--active;
+    }
   
+  }
+  
+  
+  /**
+  * Establish default space between adjacent buttons
+  */
+  .#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
+    margin-left: halve($inuit-base-spacing-unit);
   }
   
   /**
@@ -95,6 +135,26 @@ $inuit-global-border-box: false !default;
   
   
   
+  @if ($inuit-enable-btn--tiny == true) {
+  
+    /**
+     * Small buttons.
+     */
+  
+    .#{$inuit-btn-namespace}btn--tiny,
+    %#{$inuit-btn-namespace}btn--tiny {
+        @include inuit-font-size($inuit-btn-font-size--tiny,$inuit-btn-font-size--tiny);
+        @if($inuit-btn-border-width != 0) {
+            padding: calc(#{btnPadding($inuit-btn-font-size--tiny,$inuit-btn-height--tiny)} - #{$inuit-btn-border-width} + 1px) calc(1em - #{$inuit-btn-border-width}) 1px; /* [7] */
+        }
+        
+        @else {
+            padding: calc(#{btnPadding($inuit-btn-font-size--tiny,$inuit-btn-height--tiny)} + 1px) 1em 1px;
+        }
+    }
+  
+  }
+  
   @if ($inuit-enable-btn--small == true) {
   
     /**
@@ -103,7 +163,14 @@ $inuit-global-border-box: false !default;
   
     .#{$inuit-btn-namespace}btn--small,
     %#{$inuit-btn-namespace}btn--small {
-        padding: $inuit-btn-padding--small - $inuit-btn-border-width  double($inuit-btn-padding--small) - $inuit-btn-border-width; /* [7] */
+        @include inuit-font-size($inuit-btn-font-size--small,$inuit-btn-font-size--small);
+        @if($inuit-btn-border-width != 0) {
+            padding: calc(#{btnPadding($inuit-btn-font-size--small,$inuit-btn-height--small)} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+        }
+        
+        @else {
+            padding: btnPadding($inuit-btn-font-size--small,$inuit-btn-height--small) 1em;
+        }
     }
   
   }
@@ -116,12 +183,37 @@ $inuit-global-border-box: false !default;
   
     .#{$inuit-btn-namespace}btn--large,
     %#{$inuit-btn-namespace}btn--large {
-        padding: $inuit-btn-padding--large - $inuit-btn-border-width  double($inuit-btn-padding--large) - $inuit-btn-border-width; /* [7] */
+        @include inuit-font-size($inuit-btn-font-size--large,$inuit-btn-font-size--large);
+        @if($inuit-btn-border-width != 0) {
+            padding: calc(#{btnPadding($inuit-btn-font-size--large,$inuit-btn-height--large)} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+        }
+        
+        @else {
+            padding: btnPadding($inuit-btn-font-size--large,$inuit-btn-height--large) 1em;
+        }
     }
   
   }
   
+  @if ($inuit-enable-btn--huge == true) {
   
+    /**
+     * Large buttons.
+     */
+  
+    .#{$inuit-btn-namespace}btn--huge,
+    %#{$inuit-btn-namespace}btn--huge {
+        @include inuit-font-size($inuit-btn-font-size--huge,$inuit-btn-font-size--huge);
+        @if($inuit-btn-border-width != 0) {
+            padding: calc(#{btnPadding($inuit-btn-font-size--huge,$inuit-btn-height--huge)} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+        }
+        
+        @else {
+            padding: btnPadding($inuit-btn-font-size--huge,$inuit-btn-height--huge) 1em;
+        }
+    }
+  
+  }
   
   
   
@@ -167,6 +259,10 @@ $inuit-global-border-box: false !default;
   
   }
   
+  
+  
+  
+  
   @if ($inuit-enable-btn--bare == true) {
     
     /**
@@ -185,6 +281,58 @@ $inuit-global-border-box: false !default;
       &:focus {
         background: transparent;
         color: inherit;
+      }
+    }
+  
+  }
+  
+  
+  
+  @if ($inuit-enable-btn--negative == true) {
+    
+    /**
+     * Change button colors for buttons with negative outcomes
+     */
+  
+    .#{$inuit-btn-namespace}btn--negative,
+    %#{$inuit-btn-namespace}btn--negative {
+      background: $inuit-btn-negative-background;
+      color: $inuit-btn-negative-color;
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        color: $inuit-btn-negative-color;
+      }
+      &:hover,
+      &:focus {
+        background: $inuit-btn-negative-background--hover;
+      }
+      &:active {
+        background: $inuit-btn-negative-background--active;
+      }
+    }
+  
+  }
+  
+  
+  
+  @if ($inuit-enable-btn--disabled == true) {
+    
+    /**
+     * Change button colors for buttons with negative outcomes
+     */
+  
+    .#{$inuit-btn-namespace}btn--disabled,
+    %#{$inuit-btn-namespace}btn--disabled {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        border: 1px solid rgb(212,212,212);
+        padding: calc(#{$inuit-btn-padding} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+        background: rgb(255,255,255);
+        color: rgb(187,187,187);
       }
     }
   

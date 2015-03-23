@@ -2,6 +2,10 @@
 
 Predix Experience Button module is a simple, robust, extensible baseline for building entire suites of buttons onto. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
 
+## Demo
+
+You can review button styles and recommended markup and required here: https://github.sw.ge.com/pages/pxc/px-buttons-design
+
 ## Dependencies
 
 Px's Buttons module depends on three other Px and inuitcss modules:

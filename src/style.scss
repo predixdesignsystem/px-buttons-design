@@ -19,6 +19,7 @@ $inuit-base-line-height     : 20px;
 @import "../px-viewport-design/base.viewport";
 @import "../px-flexbox-design/base.flexbox";
 @import "../px-typography-design/base.typography";
+@import "../px-code-design/base.code";
 
 // Trumps
 @import "../px-clearfix-design/trumps.clearfix";
@@ -42,16 +43,6 @@ $inuit-enable-btn--negative : true;
 $inuit-enable-btn--disabled : true;
 
 @import "../objects.buttons";
-
-// Put these 'code' styles here for expediency
-
-.code {
-  border: 1px solid rgb(229,229,229);
-  padding: $inuit-base-spacing-unit;
-  border-radius: .25em;
-  background-color: rgb(247,247,247);
-  color: rgb(47, 111, 159);
-}
 
 .flex .btn {
   @extend %flex__item--baseline;

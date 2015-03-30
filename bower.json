@@ -13,7 +13,7 @@
     "buttons"
   ],
   "license": "Apache 2",
-  "homepage": "git://github.sw.ge.com/pxc/px-buttons-design.git",
+  "homepage": "git://github.sw.ge.com/PXd/px-buttons-design.git",
   "private": true,
   "ignore": [
     "**/.*",
@@ -25,10 +25,11 @@
   "dependencies": {
     "inuit-defaults": "~0.2.0",
     "inuit-mixins": "~0.2.3",
-    "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master"
+    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master"
   },
   "devDependencies": {
-    "px-flexbox-design": "git://github.sw.ge.com/pxc/px-flexbox-design.git#master",
-    "px-starter-kit": "git://github.sw.ge.com/pxc/px-starter-kit.git#master"
+    "px-code-design": "git://github.sw.ge.com/PXd/px-code-design.git#master",
+    "px-flexbox-design": "git://github.sw.ge.com/PXd/px-flexbox-design.git#master",
+    "px-starter-kit": "git://github.sw.ge.com/PXd/px-starter-kit.git#master"
   }
 }

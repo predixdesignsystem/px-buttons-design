@@ -30,6 +30,6 @@
   "devDependencies": {
     "px-code-design": "git://github.sw.ge.com/PXd/px-code-design.git#master",
     "px-flexbox-design": "git://github.sw.ge.com/PXd/px-flexbox-design.git#master",
-    "px-starter-kit": "git://github.sw.ge.com/PXd/px-starter-kit.git#master"
+    "px-starter-kit-design": "git://github.sw.ge.com/PXd/px-starter-kit-design.git#master"
   }
 }

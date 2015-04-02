@@ -280,6 +280,7 @@ $inuit-global-border-box                            : false !default;
       &:active,
       &:focus {
         background: transparent;
+        background-image: none;
         color: inherit;
       }
     }

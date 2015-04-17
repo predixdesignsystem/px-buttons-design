@@ -1,10 +1,7 @@
 $imported-once-files        : ();
 
-$inuit-base-font-size       : 15px;
-$inuit-base-line-height     : 20px;
-
 // Settings
-@import "../inuit-defaults/settings.defaults";
+@import "../px-defaults-design/settings.defaults";
 
 // Tools
 @import "../px-functions-design/tools.functions";

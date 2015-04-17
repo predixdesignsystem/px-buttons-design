@@ -10,7 +10,7 @@ You can review button styles and recommended markup and required here: https://g
 
 Px's Buttons module depends on three other Px and inuitcss modules:
 
-* [settings.defaults](https://github.com/inuitcss/settings.defaults)
+* [px-defaults-design](https://github.sw.ge.com/PXd/px-defaults-design)
 * [px-functions-design](https://github.sw.ge.com/PXd/px-functions-design)
 
 ## Installation

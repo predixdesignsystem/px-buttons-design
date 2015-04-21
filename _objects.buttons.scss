@@ -180,19 +180,9 @@ $inuit-global-border-box                            : false !default;
   .#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
     margin-left: halve($inuit-base-spacing-unit);
   }
-  
-  /**
-  * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
-  */
-  .#{$inuit-btn-namespace}btn::-moz-focus-inner,
-  %#{$inuit-btn-namespace}btn::-moz-focus-inner {
-    border:  0;
-    padding: 0;
-  }
-  
-  
-  
-  
+
+
+
   
   @if ($inuit-enable-btn--tiny == true) {
   

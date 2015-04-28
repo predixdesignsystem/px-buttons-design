@@ -256,6 +256,7 @@ $inuit-global-border-box                            : false !default;
       border: 0;
       border-radius: 0;
       padding: 0;
+      line-height: inherit;
       text-transform: none;
       &,
       &:hover,

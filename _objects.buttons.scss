@@ -12,33 +12,6 @@
 /// @type String [default] - Prepend value for all generated classes
 $inuit-btn-namespace                                : $inuit-namespace !default;
 
-/// @type Number [default] - Padding
-$inuit-btn-padding                                  : quarter($inuit-base-spacing-unit) !default;
-
-/// @type Number [default] - Tiny button font size
-$inuit-btn-font-size--tiny                          : 11px !default;
-
-/// @type Number [default] - Small button font size
-$inuit-btn-font-size--small                         : 13px !default;
-
-/// @type Number [default] - Large button font size
-$inuit-btn-font-size--large                         : 20px !default;
-
-/// @type Number [default] - Huge button font size
-$inuit-btn-font-size--huge                          : 30px !default;
-
-/// @type Number [default] - Tiny button height
-$inuit-btn-height--tiny                             : 15px !default;
-
-/// @type Number [default] - Small button height
-$inuit-btn-height--small                            : 20px !default;
-
-/// @type Number [default] - Large button height
-$inuit-btn-height--large                            : 40px !default;
-
-/// @type Number [default] - Huge button height
-$inuit-btn-height--huge                             : 60px !default;
-
 /// @type Color [default] - Background color
 $inuit-btn-background                               : rgb(49,113,227) !default;
 
@@ -75,9 +48,6 @@ $inuit-btn-negative-color                           : rgb(42,42,42) !default;
 /// @type Number [default] - Border radius
 $inuit-btn-radius                                   : 3px !default;
 
-/// @type Boolean [default] - Produce CSS for tiny buttons?
-$inuit-enable-btn--tiny                             : false !default;
-
 /// @type Boolean [default] - Produce CSS for small buttons?
 $inuit-enable-btn--small                            : false !default;
 
@@ -85,7 +55,7 @@ $inuit-enable-btn--small                            : false !default;
 $inuit-enable-btn--large                            : false !default;
 
 /// @type Boolean [default] - Produce CSS for huge buttons?
-$inuit-enable-btn--huge                             : false !default;
+$inuit-enable-btn--cta                              : false !default;
 
 /// @type Boolean [default] - Produce CSS for full buttons?
 $inuit-enable-btn--full                             : false !default;
@@ -101,16 +71,6 @@ $inuit-enable-btn--negative                         : false !default;
 
 /// @type Boolean [default] - Produce CSS for disabled buttons?
 $inuit-enable-btn--disabled                         : false !default;
-
-/// Creates correct button padding, like majik!
-/// @access private
-/// @param {Number} $font-size - Font size of the button
-/// @param {Number} $btn-height - Height of the button
-/// @return {Number} - the padding
-@function btnPadding($font-size,$btn-height) {
-  $btnPadding: ((($btn-height - $font-size) / 2) / $font-size);
-  @return #{$btnPadding}em;
-}
 
 /// @type Boolean [default] - Assume `box-sizing : border-box;`
 $inuit-global-border-box                            : false !default;
@@ -135,6 +95,8 @@ $inuit-global-border-box                            : false !default;
     font: inherit; /* [3] */
     text-align: center; /* [4] */
     margin:  0; /* [4] */
+    padding-right: 1em;
+    padding-left: 1em;
     cursor: pointer; /* [5] */
     overflow: visible; /* [6] */
     background: $inuit-btn-background;
@@ -142,12 +104,14 @@ $inuit-global-border-box                            : false !default;
   
     @if($inuit-btn-border-width != 0) {
         border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;
-        padding: calc(#{$inuit-btn-padding} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+        line-height: 2em;
     }
     
     @else {
         border: 0;
-        padding: $inuit-btn-padding 1em;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        line-height: calc(2em - 2px);
     }
   
     @if($inuit-btn-radius != 0) {
@@ -178,31 +142,10 @@ $inuit-global-border-box                            : false !default;
   * Establish default space between adjacent buttons
   */
   .#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
-    margin-left: halve($inuit-base-spacing-unit);
+    margin-left: $inuit-base-spacing-unit--small;
   }
 
 
-
-  
-  @if ($inuit-enable-btn--tiny == true) {
-  
-    /**
-     * Small buttons.
-     */
-  
-    .#{$inuit-btn-namespace}btn--tiny,
-    %#{$inuit-btn-namespace}btn--tiny {
-        @include inuit-font-size($inuit-btn-font-size--tiny,$inuit-btn-font-size--tiny);
-        @if($inuit-btn-border-width != 0) {
-            padding: calc(#{btnPadding($inuit-btn-font-size--tiny,$inuit-btn-height--tiny)} - #{$inuit-btn-border-width} + 1px) calc(1em - #{$inuit-btn-border-width}) 1px; /* [7] */
-        }
-        
-        @else {
-            padding: calc(#{btnPadding($inuit-btn-font-size--tiny,$inuit-btn-height--tiny)} + 1px) 1em 1px;
-        }
-    }
-  
-  }
   
   @if ($inuit-enable-btn--small == true) {
   
@@ -212,13 +155,17 @@ $inuit-global-border-box                            : false !default;
   
     .#{$inuit-btn-namespace}btn--small,
     %#{$inuit-btn-namespace}btn--small {
-        @include inuit-font-size($inuit-btn-font-size--small,$inuit-btn-font-size--small);
+        font-size: calculateRem(12px);
+        
         @if($inuit-btn-border-width != 0) {
-            padding: calc(#{btnPadding($inuit-btn-font-size--small,$inuit-btn-height--small)} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+            line-height: 1.6666666667em;
         }
         
         @else {
-            padding: btnPadding($inuit-btn-font-size--small,$inuit-btn-height--small) 1em;
+            border: 0;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            line-height: calc(1.6666666667em - 2px);
         }
     }
   
@@ -232,34 +179,20 @@ $inuit-global-border-box                            : false !default;
   
     .#{$inuit-btn-namespace}btn--large,
     %#{$inuit-btn-namespace}btn--large {
-        @include inuit-font-size($inuit-btn-font-size--large,$inuit-btn-font-size--large);
-        @if($inuit-btn-border-width != 0) {
-            padding: calc(#{btnPadding($inuit-btn-font-size--large,$inuit-btn-height--large)} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
-        }
-        
-        @else {
-            padding: btnPadding($inuit-btn-font-size--large,$inuit-btn-height--large) 1em;
-        }
+        font-size: $inuit-base-spacing-unit--large;
     }
   
   }
   
-  @if ($inuit-enable-btn--huge == true) {
+  @if ($inuit-enable-btn--cta == true) {
   
     /**
-     * Large buttons.
+     * Call-to-action buttons.
      */
   
-    .#{$inuit-btn-namespace}btn--huge,
-    %#{$inuit-btn-namespace}btn--huge {
-        @include inuit-font-size($inuit-btn-font-size--huge,$inuit-btn-font-size--huge);
-        @if($inuit-btn-border-width != 0) {
-            padding: calc(#{btnPadding($inuit-btn-font-size--huge,$inuit-btn-height--huge)} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
-        }
-        
-        @else {
-            padding: btnPadding($inuit-btn-font-size--huge,$inuit-btn-height--huge) 1em;
-        }
+    .#{$inuit-btn-namespace}btn--cta,
+    %#{$inuit-btn-namespace}btn--cta {
+        font-size: $inuit-base-spacing-unit--huge;
     }
   
   }
@@ -380,7 +313,8 @@ $inuit-global-border-box                            : false !default;
       &:active,
       &:focus {
         border: 1px solid rgb(212,212,212);
-        padding: calc(#{$inuit-btn-padding} - #{$inuit-btn-border-width}) calc(1em - #{$inuit-btn-border-width}); /* [7] */
+        padding-top: 0;
+        padding-bottom: 0;
         background: rgb(255,255,255);
         color: rgb(187,187,187);
       }

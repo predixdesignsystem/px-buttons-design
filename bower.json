@@ -24,8 +24,8 @@
   ],
   "dependencies": {
     "px-defaults-design": "git://github.sw.ge.com/PXd/px-defaults-design.git#master",
-    "inuit-mixins": "~0.2.3",
-    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master"
+    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master",
+    "px-mixins-design": "git://github.sw.ge.com/PXd/px-mixins-design.git#master"
   },
   "devDependencies": {
     "px-code-design": "git://github.sw.ge.com/PXd/px-code-design.git#master",

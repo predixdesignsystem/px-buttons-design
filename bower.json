@@ -1,6 +1,6 @@
 {
   "name": "px-buttons-design",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -23,13 +23,13 @@
     "tests"
   ],
   "dependencies": {
-    "px-defaults-design": "git://github.sw.ge.com/PXd/px-defaults-design.git#master",
-    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master",
-    "px-mixins-design": "git://github.sw.ge.com/PXd/px-mixins-design.git#master"
+    "px-defaults-design": "git://github.sw.ge.com/PXd/px-defaults-design.git#~0.1.0",
+    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#~0.1.0",
+    "px-mixins-design": "git://github.sw.ge.com/PXd/px-mixins-design.git#~0.1.0"
   },
   "devDependencies": {
-    "px-code-design": "git://github.sw.ge.com/PXd/px-code-design.git#master",
-    "px-flexbox-design": "git://github.sw.ge.com/PXd/px-flexbox-design.git#master",
-    "px-starter-kit-design": "git://github.sw.ge.com/PXd/px-starter-kit-design.git#master"
+    "px-code-design": "git://github.sw.ge.com/PXd/px-code-design.git#~0.1.0",
+    "px-flexbox-design": "git://github.sw.ge.com/PXd/px-flexbox-design.git#~0.1.0",
+    "px-starter-kit-design": "git://github.sw.ge.com/PXd/px-starter-kit-design.git#~0.1.0"
   }
 }

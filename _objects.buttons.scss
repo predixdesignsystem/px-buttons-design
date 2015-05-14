@@ -320,7 +320,11 @@ $inuit-global-border-box                            : false !default;
         color: rgb(187,187,187);
       }
     }
-  
+
+    .btn[disabled] {
+      @extend %#{$inuit-btn-namespace}btn--disabled;
+    }
+
   }
-  
+
 }

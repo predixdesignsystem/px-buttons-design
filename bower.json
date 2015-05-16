@@ -1,6 +1,6 @@
 {
   "name": "px-buttons-design",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -13,7 +13,7 @@
     "buttons"
   ],
   "license": "Apache 2",
-  "homepage": "git://github.sw.ge.com/PXd/px-buttons-design.git",
+  "homepage": "git://github.build.ge.com/PXd/px-buttons-design.git",
   "private": true,
   "ignore": [
     "**/.*",
@@ -23,13 +23,14 @@
     "tests"
   ],
   "dependencies": {
-    "px-defaults-design": "git://github.sw.ge.com/PXd/px-defaults-design.git#~0.1.0",
-    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#~0.1.0",
-    "px-mixins-design": "git://github.sw.ge.com/PXd/px-mixins-design.git#~0.1.0"
+    "px-colors-design": "git://github.build.ge.com/PXd/px-colors-design.git#~0.2.0",
+    "px-defaults-design": "git://github.build.ge.com/PXd/px-defaults-design.git#~0.1.0",
+    "px-mixins-design": "git://github.build.ge.com/PXd/px-mixins-design.git#~0.1.0"
   },
   "devDependencies": {
-    "px-code-design": "git://github.sw.ge.com/PXd/px-code-design.git#~0.1.0",
-    "px-flexbox-design": "git://github.sw.ge.com/PXd/px-flexbox-design.git#~0.1.0",
-    "px-starter-kit-design": "git://github.sw.ge.com/PXd/px-starter-kit-design.git#~0.1.0"
+    "px-code-design": "git://github.build.ge.com/PXd/px-code-design.git#~0.1.0",
+    "px-flexbox-design": "git://github.build.ge.com/PXd/px-flexbox-design.git#~0.1.0",
+    "px-iconography-design": "git://github.build.ge.com/PXd/px-iconography-design.git#~0.1.0",
+    "px-starter-kit-design": "git://github.build.ge.com/PXd/px-starter-kit-design.git#~0.1.0"
   }
 }

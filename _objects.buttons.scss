@@ -5,6 +5,7 @@
 ////
 
 @import "../px-defaults-design/settings.defaults";
+@import "../px-colors-design/settings.colors";
 @import "../px-mixins-design/tools.mixins";
 @import "../px-functions-design/tools.functions";
 
@@ -12,41 +13,74 @@
 /// @type String [default] - Prepend value for all generated classes
 $inuit-btn-namespace                                : $inuit-namespace !default;
 
-/// @type Color [default] - Background color
-$inuit-btn-background                               : rgb(49,113,227) !default;
-
-/// @type Color - Hover color
-$inuit-btn-background--hover                        : linear-gradient(180deg, rgb(52,178,252) 0%, $inuit-btn-background 100%);
-
-/// @type Color - Active color
-$inuit-btn-background--active                       : linear-gradient(0deg, rgb(52,178,252) 0%, $inuit-btn-background 100%);
-
 /// @type Color [default] - Font color
-$inuit-btn-color                                    : rgb(255,255,255) !default;
+$inuit-btn-color                                    : $gray9 !default;
 
-/// @type Number [default] - Border width
-$inuit-btn-border-width                             : 0 !default;
+/// @type Color [default] - Background color
+$inuit-btn-background                               : $gray3 !default;
 
-/// @type String [default] - Border style
-$inuit-btn-border-style                             : solid !default;
+/// @type Color [default] - Hover background color
+$inuit-btn-background--hover                        : $gray5 !default;
+
+/// @type Color [default] - Pressed background color
+$inuit-btn-background--pressed                      : $gray6 !default;
 
 /// @type Color [default] - Border color
-$inuit-btn-border-color                             : $inuit-btn-background !default;
+$inuit-btn-border-color                             : $gray4 !default;
 
-/// @type Color [default] - Inverse background color
-$inuit-btn-negative-background                      : rgb(223,223,223) !default;
+/// @type Color [default] - Hover border color
+$inuit-btn-border-color--hover                      : $gray6 !default;
 
-/// @type Color - Inverse background hover color
-$inuit-btn-negative-background--hover               : linear-gradient(180deg, $inuit-btn-negative-background 0%, rgb(187,186,188) 100%);
+/// @type Color [default] - Pressed border color
+$inuit-btn-border-color--pressed                    : $gray7 !default;
 
-/// @type Color - Inverse background active color
-$inuit-btn-negative-background--active              : linear-gradient(0deg, $inuit-btn-negative-background 0%, rgb(187,186,188) 100%);
+/// @type Color [default] - Shadow
+$inuit-btn-shadow                                   : 0 1px 0 rgba($black, .12) !default;
 
-/// @type Color [default] - Inverse font color
-$inuit-btn-negative-color                           : rgb(42,42,42) !default;
+/// @type Color [default] - Primary background color
+$inuit-btn-primary-background                       : $primary-blue !default;
 
-/// @type Number [default] - Border radius
-$inuit-btn-radius                                   : 3px !default;
+/// @type Color - [default] Primary hover background color
+$inuit-btn-primary-background--hover                : $primary-blue-hover !default;
+
+/// @type Color - [default] Primary pressed background color
+$inuit-btn-primary-background--pressed              : $primary-blue-pressed !default;
+
+/// @type Color [default] - Primary font color
+$inuit-btn-primary-color                            : $white !default;
+
+/// @type Color [default] - Primary border color
+$inuit-btn-primary-border-color                     : $primary-blue-pressed !default;
+
+/// @type Color [default] - Tertiary background color
+$inuit-btn-tertiary-background                      : $white !default;
+
+/// @type Color - [default] Tertiary hover background color
+$inuit-btn-tertiary-background--hover               : $gray3 !default;
+
+/// @type Color - [default] Tertiary pressed background color
+$inuit-btn-tertiary-background--pressed             : $gray5 !default;
+
+/// @type Color [default] - Tertiary font color
+$inuit-btn-tertiary-color                           : $primary-blue !default;
+
+/// @type Color [default] - Tertiary border color
+$inuit-btn-tertiary-border-color                    : $gray6 !default;
+
+/// @type Color [default] - Disabled background color
+$inuit-btn-disabled-background                      : $white !default;
+
+/// @type Color [default] - Disabled font color
+$inuit-btn-disabled-color                           : $gray4 !default;
+
+/// @type Color [default] - Disabled border color
+$inuit-btn-disabled-border-color                    : $gray4 !default;
+
+/// @type Boolean [default] - Produce CSS for primary buttons?
+$inuit-enable-btn--primary                          : false !default;
+
+/// @type Boolean [default] - Produce CSS for tertiary buttons?
+$inuit-enable-btn--tertiary                         : false !default;
 
 /// @type Boolean [default] - Produce CSS for small buttons?
 $inuit-enable-btn--small                            : false !default;
@@ -54,20 +88,17 @@ $inuit-enable-btn--small                            : false !default;
 /// @type Boolean [default] - Produce CSS for large buttons?
 $inuit-enable-btn--large                            : false !default;
 
-/// @type Boolean [default] - Produce CSS for huge buttons?
+/// @type Boolean [default] - Produce CSS for call to action buttons?
 $inuit-enable-btn--cta                              : false !default;
 
 /// @type Boolean [default] - Produce CSS for full buttons?
 $inuit-enable-btn--full                             : false !default;
 
-/// @type Boolean [default] - Produce CSS for pill buttons?
-$inuit-enable-btn--pill                             : false !default;
+/// @type Boolean [default] - Produce CSS for icon buttons?
+$inuit-enable-btn--icon                             : false !default;
 
 /// @type Boolean [default] - Produce CSS for bare buttons?
 $inuit-enable-btn--bare                             : false !default;
-
-/// @type Boolean [default] - Produce CSS for inverse buttons?
-$inuit-enable-btn--negative                         : false !default;
 
 /// @type Boolean [default] - Produce CSS for disabled buttons?
 $inuit-enable-btn--disabled                         : false !default;
@@ -76,63 +107,39 @@ $inuit-enable-btn--disabled                         : false !default;
 $inuit-global-border-box                            : false !default;
 
 @if import-once('objects.buttons') {
-  
-  /**
-  * 1. Allow us to style box model properties.
-  * 2. Line different sized buttons up a little nicer.
-  * 3. Make buttons inherit font styles (often necessary when styling `input`s as
-  *    buttons).
-  * 4. Reset/normalize some styles.
-  * 5. Force all button-styled elements to appear clickable.
-  * 6. Fixes odd inner spacing in IE7.
-  * 7. Subtract the border size from the padding value so that buttons do not
-  *    grow larger as we add borders.
-  */
+
   .#{$inuit-btn-namespace}btn,
   %#{$inuit-btn-namespace}btn {
-    display: inline-block; /* [1] */
-    vertical-align: middle; /* [2] */
-    font: inherit; /* [3] */
-    text-align: center; /* [4] */
-    margin:  0; /* [4] */
-    padding-right: 1em;
-    padding-left: 1em;
-    cursor: pointer; /* [5] */
-    overflow: visible; /* [6] */
-    background: $inuit-btn-background;
+    display: inline-block;
+    margin: 0;
+    border: 1px solid $inuit-btn-border-color;
+    border-radius: 3px;
+    padding: 0 1em;
+    box-shadow: $inuit-btn-shadow;
+    font: inherit;
+    line-height: calc(2em - 2px);
     -webkit-font-smoothing: antialiased;
-  
-    @if($inuit-btn-border-width != 0) {
-        border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;
-        line-height: 2em;
-    }
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    background-color: $inuit-btn-background;
     
-    @else {
-        border: 0;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        line-height: calc(2em - 2px);
-    }
-  
-    @if($inuit-btn-radius != 0) {
-        border-radius: $inuit-btn-radius;
-    }
-  
     &,
-    &:hover,
-    &:active,
-    &:focus {
-        text-decoration: none; /* [4] */
-        color: $inuit-btn-color;
+    &:visited {
+      color: $inuit-btn-color;
     }
     
     &:hover,
     &:focus {
-      background: $inuit-btn-background--hover;
+      border-color: $inuit-btn-border-color--hover;
+      color: $inuit-btn-color;
+      background-color: $inuit-btn-background--hover;
     }
     
     &:active {
-      background: $inuit-btn-background--active;
+      border-color: $inuit-btn-border-color--pressed;
+      color: $inuit-btn-color;
+      background-color: $inuit-btn-background--pressed;
     }
   
   }
@@ -144,8 +151,122 @@ $inuit-global-border-box                            : false !default;
   .#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
     margin-left: $inuit-base-spacing-unit--small;
   }
+  
+  
 
+  @if ($inuit-enable-btn--bare == true) {
+    
+    /**
+     * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>).
+     */
+  
+    .#{$inuit-btn-namespace}btn--bare,
+    %#{$inuit-btn-namespace}btn--bare {
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      line-height: inherit;
+      box-shadow: none;
+      &,
+      &:visited,
+      &:hover,
+      &:active,
+      &:focus {
+        background: transparent;
+        background-color: none;
+        color: inherit;
+      }
+    }
+  
+  }
+  
+  
+  
+  @if ($inuit-enable-btn--primary == true) {
+    
+    /**
+     * Change button colors for primary buttons
+     */
+  
+    .#{$inuit-btn-namespace}btn--primary,
+    %#{$inuit-btn-namespace}btn--primary {
+      border-color: $inuit-btn-primary-border-color;
+      background-color: $inuit-btn-primary-background;
+      &,
+      &:visited {
+        color: $inuit-btn-primary-color;
+      }
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        color: $inuit-btn-primary-color;
+        background-color: $inuit-btn-primary-background--hover;
+      }
+      &:active {
+        border-color: transparent;
+        color: $inuit-btn-primary-color;
+        background-color: $inuit-btn-primary-background--pressed;
+      }
+    }
+  
+  }
+  
+  
+  
+  @if ($inuit-enable-btn--tertiary == true) {
+    
+    /**
+     * Change button colors for tertiary buttons
+     */
+  
+    .#{$inuit-btn-namespace}btn--tertiary,
+    %#{$inuit-btn-namespace}btn--tertiary {
+      border-color: $inuit-btn-tertiary-border-color;
+      background-color: $inuit-btn-tertiary-background;
+      &,
+      &:visited {
+        color: $inuit-btn-tertiary-color;
+      }
+      &:hover,
+      &:focus {
+        border-color: $inuit-btn-tertiary-border-color;
+        color: $inuit-btn-tertiary-color;
+        background-color: $inuit-btn-tertiary-background--hover;
+      }
+      &:active {
+        border-color: $inuit-btn-tertiary-border-color;
+        color: $inuit-btn-tertiary-color;
+        background-color: $inuit-btn-tertiary-background--pressed;
+      }
+    }
+  
+  }
+  
+  
+  
+  @if ($inuit-enable-btn--disabled == true) {
+    
+    /**
+     * Change button colors for disabled buttons
+     */
+  
+    .#{$inuit-btn-namespace}btn--disabled,
+    %#{$inuit-btn-namespace}btn--disabled,
+    .btn[disabled] {
+      &,
+      &:visited,
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: $inuit-btn-disabled-border-color;
+        box-shadow: none;
+        cursor: not-allowed;
+        background-color: $inuit-btn-disabled-background;
+        color: $inuit-btn-disabled-color;
+      }
+    }
 
+  }
   
   @if ($inuit-enable-btn--small == true) {
   
@@ -156,17 +277,7 @@ $inuit-global-border-box                            : false !default;
     .#{$inuit-btn-namespace}btn--small,
     %#{$inuit-btn-namespace}btn--small {
         font-size: calculateRem(12px);
-        
-        @if($inuit-btn-border-width != 0) {
-            line-height: 1.6666666667em;
-        }
-        
-        @else {
-            border: 0;
-            padding-top: 1px;
-            padding-bottom: 1px;
-            line-height: calc(1.6666666667em - 2px);
-        }
+        line-height: calc(1.6666666667em - 2px);
     }
   
   }
@@ -199,6 +310,7 @@ $inuit-global-border-box                            : false !default;
   
   
   
+  
   @if ($inuit-enable-btn--full == true) {
   
     /**
@@ -225,7 +337,7 @@ $inuit-global-border-box                            : false !default;
   
   
   
-  @if ($inuit-enable-btn--pill == true) {
+  @if ($inuit-enable-btn--icon == true) {
   
     /**
      * Round-ended buttons.
@@ -234,97 +346,13 @@ $inuit-global-border-box                            : false !default;
      *    button.
      */
   
-    .#{$inuit-btn-namespace}btn--pill,
-    %#{$inuit-btn-namespace}btn--pill {
-        border-radius: 100px; /* [1] */
+    .#{$inuit-btn-namespace}btn--icon,
+    %#{$inuit-btn-namespace}btn--icon {
+        width: 2em;
+        border-radius: 6.6666666667em;
+        padding: 1px 0 0 1px;
     }
   
-  }
-  
-  
-  
-  
-  
-  @if ($inuit-enable-btn--bare == true) {
-    
-    /**
-     * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>.
-     */
-  
-    .#{$inuit-btn-namespace}btn--bare,
-    %#{$inuit-btn-namespace}btn--bare {
-      border: 0;
-      border-radius: 0;
-      padding: 0;
-      line-height: inherit;
-      text-transform: none;
-      &,
-      &:hover,
-      &:active,
-      &:focus {
-        background: transparent;
-        background-image: none;
-        color: inherit;
-      }
-    }
-  
-  }
-  
-  
-  
-  @if ($inuit-enable-btn--negative == true) {
-    
-    /**
-     * Change button colors for buttons with negative outcomes
-     */
-  
-    .#{$inuit-btn-namespace}btn--negative,
-    %#{$inuit-btn-namespace}btn--negative {
-      background: $inuit-btn-negative-background;
-      color: $inuit-btn-negative-color;
-      &,
-      &:hover,
-      &:active,
-      &:focus {
-        color: $inuit-btn-negative-color;
-      }
-      &:hover,
-      &:focus {
-        background: $inuit-btn-negative-background--hover;
-      }
-      &:active {
-        background: $inuit-btn-negative-background--active;
-      }
-    }
-  
-  }
-  
-  
-  
-  @if ($inuit-enable-btn--disabled == true) {
-    
-    /**
-     * Change button colors for buttons with negative outcomes
-     */
-  
-    .#{$inuit-btn-namespace}btn--disabled,
-    %#{$inuit-btn-namespace}btn--disabled {
-      &,
-      &:hover,
-      &:active,
-      &:focus {
-        border: 1px solid rgb(212,212,212);
-        padding-top: 0;
-        padding-bottom: 0;
-        background: rgb(255,255,255);
-        color: rgb(187,187,187);
-      }
-    }
-
-    .btn[disabled] {
-      @extend %#{$inuit-btn-namespace}btn--disabled;
-    }
-
   }
 
 }

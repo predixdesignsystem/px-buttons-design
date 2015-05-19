@@ -34,10 +34,10 @@ $inuit-btn-border-color--hover                      : $gray6 !default;
 /// @type Color [default] - Pressed border color
 $inuit-btn-border-color--pressed                    : $gray7 !default;
 
-/// @type Color [default] - Shadow
+/// @type Color | String [default] - Shadow
 $inuit-btn-shadow                                   : 0 1px 0 rgba($black, .15) !default;
 
-/// @type Color [default] - Small shadow
+/// @type Color | String [default] - Small shadow
 $inuit-btn-shadow--light                            : 0 1px 0 rgba($black, .1) !default;
 
 /// @type Color [default] - Primary background color
@@ -114,6 +114,7 @@ $inuit-global-border-box                            : false !default;
   .#{$inuit-btn-namespace}btn,
   %#{$inuit-btn-namespace}btn {
     display: inline-block;
+    overflow: visible;
     margin: 0;
     border: 1px solid $inuit-btn-border-color;
     border-radius: 3px;
@@ -125,7 +126,9 @@ $inuit-global-border-box                            : false !default;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    text-transform: none;
     background-color: $inuit-btn-background;
+    -webkit-appearance: button;
     
     &,
     &:visited {

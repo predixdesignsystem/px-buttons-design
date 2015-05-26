@@ -174,14 +174,13 @@ $inuit-global-border-box                            : false !default;
       border-radius: 0;
       padding: 0;
       line-height: inherit;
-      box-shadow: none;
       &,
       &:visited,
       &:hover,
       &:active,
       &:focus {
-        background: transparent;
-        background-color: none;
+        box-shadow: none;
+        background: none;
         color: inherit;
       }
     }

@@ -38,7 +38,12 @@ These flags are available and, if needed, should be set to `true` prior to impor
     $inuit-enable-btn--small
     $inuit-enable-btn--large
     $inuit-enable-btn--full
-    $inuit-enable-btn--pill
+    $inuit-enable-btn--primary
+    $inuit-enable-btn--bare
+    $inuit-enable-btn--tertiary
+    $inuit-enable-btn--disabled
+    $inuit-enable-btn--cta
+    $inuit-enable-btn--icon
 
 The following variables are available for use in the module:
 

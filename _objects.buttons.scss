@@ -40,6 +40,9 @@ $inuit-btn-shadow                                   : 0 1px 0 rgba($black, .15) 
 /// @type Color | String [default] - Small shadow
 $inuit-btn-shadow--light                            : 0 1px 0 rgba($black, .1) !default;
 
+/// @type Color [default] - Primary font color
+$inuit-btn-primary-color                            : $white !default;
+
 /// @type Color [default] - Primary background color
 $inuit-btn-primary-background                       : $primary-blue !default;
 
@@ -49,11 +52,11 @@ $inuit-btn-primary-background--hover                : $primary-blue-hover !defau
 /// @type Color - [default] Primary pressed background color
 $inuit-btn-primary-background--pressed              : $primary-blue-pressed !default;
 
-/// @type Color [default] - Primary font color
-$inuit-btn-primary-color                            : $white !default;
-
 /// @type Color [default] - Primary border color
 $inuit-btn-primary-border-color                     : $primary-blue-pressed !default;
+
+/// @type Color [default] - Tertiary font color
+$inuit-btn-tertiary-color                           : $primary-blue !default;
 
 /// @type Color [default] - Tertiary background color
 $inuit-btn-tertiary-background                      : $white !default;
@@ -64,17 +67,11 @@ $inuit-btn-tertiary-background--hover               : $gray3 !default;
 /// @type Color - [default] Tertiary pressed background color
 $inuit-btn-tertiary-background--pressed             : $gray5 !default;
 
-/// @type Color [default] - Tertiary font color
-$inuit-btn-tertiary-color                           : $primary-blue !default;
-
-/// @type Color [default] - Tertiary border color
-$inuit-btn-tertiary-border-color                    : $gray5 !default;
+/// @type Color [default] - Disabled font color
+$inuit-btn-disabled-color                           : $gray4 !default;
 
 /// @type Color [default] - Disabled background color
 $inuit-btn-disabled-background                      : $white !default;
-
-/// @type Color [default] - Disabled font color
-$inuit-btn-disabled-color                           : $gray4 !default;
 
 /// @type Color [default] - Disabled border color
 $inuit-btn-disabled-border-color                    : $gray4 !default;
@@ -129,24 +126,22 @@ $inuit-global-border-box                            : false !default;
     text-transform: none;
     background-color: $inuit-btn-background;
     -webkit-appearance: button;
-    
     &,
-    &:visited {
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
       color: $inuit-btn-color;
     }
-    
     &:hover,
     &:focus {
       border-color: $inuit-btn-border-color--hover;
       box-shadow: $inuit-btn-shadow;
-      color: $inuit-btn-color;
       background-color: $inuit-btn-background--hover;
     }
-    
     &:active {
       border-color: $inuit-btn-border-color--pressed;
-      box-shadow: $inuit-btn-shadow;
-      color: $inuit-btn-color;
+      box-shadow: none;
       background-color: $inuit-btn-background--pressed;
     }
   
@@ -201,18 +196,19 @@ $inuit-global-border-box                            : false !default;
       box-shadow: $inuit-btn-shadow;
       background-color: $inuit-btn-primary-background;
       &,
-      &:visited {
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active {
         color: $inuit-btn-primary-color;
       }
       &:hover,
       &:focus {
         border-color: transparent;
-        color: $inuit-btn-primary-color;
         background-color: $inuit-btn-primary-background--hover;
       }
       &:active {
         border-color: transparent;
-        color: $inuit-btn-primary-color;
         background-color: $inuit-btn-primary-background--pressed;
       }
     }
@@ -229,23 +225,25 @@ $inuit-global-border-box                            : false !default;
   
     .#{$inuit-btn-namespace}btn--tertiary,
     %#{$inuit-btn-namespace}btn--tertiary {
-      border-color: $inuit-btn-tertiary-border-color;
+      border-color: $inuit-btn-border-color;
       box-shadow: none;
       background-color: $inuit-btn-tertiary-background;
       &,
-      &:visited {
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active {
         color: $inuit-btn-tertiary-color;
       }
       &:hover,
       &:focus {
-        border-color: $inuit-btn-tertiary-border-color;
-        color: $inuit-btn-tertiary-color;
+        border-color: $inuit-btn-border-color--hover;
+        box-shadow: none;
         background-color: $inuit-btn-tertiary-background--hover;
       }
       &:active {
-        border-color: $inuit-btn-tertiary-border-color;
+        border-color: $inuit-btn-border-color--pressed;
         box-shadow: none;
-        color: $inuit-btn-tertiary-color;
         background-color: $inuit-btn-tertiary-background--pressed;
       }
     }

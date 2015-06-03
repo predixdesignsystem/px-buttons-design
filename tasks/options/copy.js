@@ -10,5 +10,5 @@ module.exports = {
     flatten: true,
     src: '*/font-awesome/fonts/*',
     dest: 'dist/icons'
-  },
+  }
 };

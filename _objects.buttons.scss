@@ -86,8 +86,8 @@ $inuit-enable-btn--small                            : false !default;
 /// @type Boolean [default] - Produce CSS for large buttons?
 $inuit-enable-btn--large                            : false !default;
 
-/// @type Boolean [default] - Produce CSS for call to action buttons?
-$inuit-enable-btn--cta                              : false !default;
+/// @type Boolean [default] - Produce CSS for huge buttons?
+$inuit-enable-btn--huge                             : false !default;
 
 /// @type Boolean [default] - Produce CSS for full buttons?
 $inuit-enable-btn--full                             : false !default;
@@ -301,14 +301,14 @@ $inuit-global-border-box                            : false !default;
   
   }
   
-  @if ($inuit-enable-btn--cta == true) {
+  @if ($inuit-enable-btn--huge == true) {
   
     /**
      * Call-to-action buttons.
      */
   
-    .#{$inuit-btn-namespace}btn--cta,
-    %#{$inuit-btn-namespace}btn--cta {
+    .#{$inuit-btn-namespace}btn--huge,
+    %#{$inuit-btn-namespace}btn--huge {
         font-size: $inuit-base-spacing-unit--huge;
     }
   

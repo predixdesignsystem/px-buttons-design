@@ -1,6 +1,6 @@
 # Buttons
 
-Predix Experience Button module is a simple, robust, extensible baseline for building entire suites of buttons onto. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
+Predix Experience Buttons module is a simple, robust, extensible baseline for building entire suites of buttons onto. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
 
 ## Demo
 
@@ -12,7 +12,7 @@ You can review Sass Documentation here: https://github.build.ge.com/pages/PXd/px
 
 ## Dependencies
 
-Px's Buttons module depends on three other Px and inuitcss modules:
+Px's Buttons module depends on two other Px modules:
 
 * [px-colors-design](https://github.build.ge.com/PXd/px-colors-design)
 * [px-defaults-design](https://github.build.ge.com/PXd/px-defaults-design)
@@ -47,12 +47,12 @@ These flags are available and, if needed, should be set to `true` prior to impor
 
     $inuit-enable-btn--small
     $inuit-enable-btn--large
+    $inuit-enable-btn--huge
     $inuit-enable-btn--full
     $inuit-enable-btn--primary
-    $inuit-enable-btn--bare
     $inuit-enable-btn--tertiary
     $inuit-enable-btn--disabled
-    $inuit-enable-btn--cta
+    $inuit-enable-btn--bare
     $inuit-enable-btn--icon
 
 The following variables are available for use in the module:
@@ -83,7 +83,7 @@ The following variables are available for use in the module:
 
 These classes are available if the variable flags listed above are set to `true`:
 
-* `btn--[small|large|cta]`: Small, large or CTA buttons
+* `btn--[small|large|huge]`: Small, large or huge buttons
 * `btn--[primary|tertiary|disabled]`: Primary, tertiary, or disabled buttons
 * `btn--full`: Full width buttons
-* `btn--icon`: Button with icon
+* `btn--icon`: Circular button for icons

@@ -1,6 +1,6 @@
 {
   "name": "px-buttons-design",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -29,6 +29,6 @@
   "devDependencies": {
     "px-code-design": "git://github.build.ge.com/PXd/px-code-design.git#~0.1.0",
     "px-iconography-design": "git://github.build.ge.com/PXd/px-iconography-design.git#~0.1.0",
-    "px-starter-kit-design": "git://github.build.ge.com/PXd/px-starter-kit-design.git#~0.1.0"
+    "px-starter-kit-design": "git://github.build.ge.com/PXd/px-starter-kit-design.git#~0.2.0"
   }
 }

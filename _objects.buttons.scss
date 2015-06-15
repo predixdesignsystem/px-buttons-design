@@ -4,8 +4,8 @@
 /// @group px-buttons-design
 ////
 
-@import "../px-defaults-design/settings.defaults";
-@import "../px-colors-design/settings.colors";
+@import "px-defaults-design/_settings.defaults.scss";
+@import "px-colors-design/_settings.colors.scss";
 
 
 /// @type String [default] - Prepend value for all generated classes
@@ -104,261 +104,257 @@ $inuit-enable-btn--disabled                         : false !default;
 /// @type Boolean [default] - Assume `box-sizing : border-box;`
 $inuit-global-border-box                            : false !default;
 
-@if import-once('objects.buttons') {
+.#{$inuit-btn-namespace}btn,
+%#{$inuit-btn-namespace}btn {
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  border: 1px solid $inuit-btn-border-color;
+  border-radius: 3px;
+  padding: 0 1em;
+  box-shadow: $inuit-btn-shadow--light;
+  font: inherit;
+  line-height: calc(2em - 2px);
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  background-color: $inuit-btn-background;
+  -webkit-appearance: button;
+  &,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $inuit-btn-color;
+  }
+  &:hover,
+  &:focus {
+    border-color: $inuit-btn-border-color--hover;
+    box-shadow: $inuit-btn-shadow;
+    background-color: $inuit-btn-background--hover;
+  }
+  &:active {
+    border-color: $inuit-btn-border-color--pressed;
+    box-shadow: none;
+    background-color: $inuit-btn-background--pressed;
+  }
 
-  .#{$inuit-btn-namespace}btn,
-  %#{$inuit-btn-namespace}btn {
-    display: inline-block;
-    overflow: visible;
-    margin: 0;
-    border: 1px solid $inuit-btn-border-color;
-    border-radius: 3px;
-    padding: 0 1em;
-    box-shadow: $inuit-btn-shadow--light;
-    font: inherit;
-    line-height: calc(2em - 2px);
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    text-transform: none;
-    background-color: $inuit-btn-background;
-    -webkit-appearance: button;
+}
+
+
+/**
+* Establish default space between adjacent buttons
+*/
+.#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
+  margin-left: $inuit-base-spacing-unit--small;
+}
+
+
+
+@if ($inuit-enable-btn--bare == true) {
+  
+  /**
+   * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>).
+   */
+
+  .#{$inuit-btn-namespace}btn--bare,
+  %#{$inuit-btn-namespace}btn--bare {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    line-height: inherit;
+    &,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      background: none;
+      color: inherit;
+    }
+  }
+
+}
+
+
+
+@if ($inuit-enable-btn--primary == true) {
+  
+  /**
+   * Change button colors for primary buttons
+   */
+
+  .#{$inuit-btn-namespace}btn--primary,
+  %#{$inuit-btn-namespace}btn--primary {
+    border-color: $inuit-btn-primary-border-color;
+    box-shadow: $inuit-btn-shadow;
+    background-color: $inuit-btn-primary-background;
     &,
     &:visited,
     &:hover,
     &:focus,
     &:active {
-      color: $inuit-btn-color;
+      color: $inuit-btn-primary-color;
+    }
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $inuit-btn-primary-background--hover;
+    }
+    &:active {
+      border-color: transparent;
+      background-color: $inuit-btn-primary-background--pressed;
+    }
+  }
+
+}
+
+
+
+@if ($inuit-enable-btn--tertiary == true) {
+  
+  /**
+   * Change button colors for tertiary buttons
+   */
+
+  .#{$inuit-btn-namespace}btn--tertiary,
+  %#{$inuit-btn-namespace}btn--tertiary {
+    border-color: $inuit-btn-border-color;
+    box-shadow: none;
+    background-color: $inuit-btn-tertiary-background;
+    &,
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $inuit-btn-tertiary-color;
     }
     &:hover,
     &:focus {
       border-color: $inuit-btn-border-color--hover;
-      box-shadow: $inuit-btn-shadow;
-      background-color: $inuit-btn-background--hover;
+      box-shadow: none;
+      background-color: $inuit-btn-tertiary-background--hover;
     }
     &:active {
       border-color: $inuit-btn-border-color--pressed;
       box-shadow: none;
-      background-color: $inuit-btn-background--pressed;
+      background-color: $inuit-btn-tertiary-background--pressed;
     }
-  
   }
-  
+
+}
+
+
+
+@if ($inuit-enable-btn--disabled == true) {
   
   /**
-  * Establish default space between adjacent buttons
-  */
-  .#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
-    margin-left: $inuit-base-spacing-unit--small;
-  }
-  
-  
+   * Change button colors for disabled buttons
+   */
 
-  @if ($inuit-enable-btn--bare == true) {
-    
-    /**
-     * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>).
-     */
-  
-    .#{$inuit-btn-namespace}btn--bare,
-    %#{$inuit-btn-namespace}btn--bare {
-      border: 0;
-      border-radius: 0;
-      padding: 0;
-      line-height: inherit;
-      &,
-      &:visited,
-      &:hover,
-      &:active,
-      &:focus {
-        box-shadow: none;
-        background: none;
-        color: inherit;
-      }
-    }
-  
-  }
-  
-  
-  
-  @if ($inuit-enable-btn--primary == true) {
-    
-    /**
-     * Change button colors for primary buttons
-     */
-  
-    .#{$inuit-btn-namespace}btn--primary,
-    %#{$inuit-btn-namespace}btn--primary {
-      border-color: $inuit-btn-primary-border-color;
-      box-shadow: $inuit-btn-shadow;
-      background-color: $inuit-btn-primary-background;
-      &,
-      &:visited,
-      &:hover,
-      &:focus,
-      &:active {
-        color: $inuit-btn-primary-color;
-      }
-      &:hover,
-      &:focus {
-        border-color: transparent;
-        background-color: $inuit-btn-primary-background--hover;
-      }
-      &:active {
-        border-color: transparent;
-        background-color: $inuit-btn-primary-background--pressed;
-      }
-    }
-  
-  }
-  
-  
-  
-  @if ($inuit-enable-btn--tertiary == true) {
-    
-    /**
-     * Change button colors for tertiary buttons
-     */
-  
-    .#{$inuit-btn-namespace}btn--tertiary,
-    %#{$inuit-btn-namespace}btn--tertiary {
-      border-color: $inuit-btn-border-color;
+  .#{$inuit-btn-namespace}btn--disabled,
+  %#{$inuit-btn-namespace}btn--disabled,
+  .btn[disabled] {
+    &,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $inuit-btn-disabled-border-color;
       box-shadow: none;
-      background-color: $inuit-btn-tertiary-background;
-      &,
-      &:visited,
-      &:hover,
-      &:focus,
-      &:active {
-        color: $inuit-btn-tertiary-color;
-      }
-      &:hover,
-      &:focus {
-        border-color: $inuit-btn-border-color--hover;
-        box-shadow: none;
-        background-color: $inuit-btn-tertiary-background--hover;
-      }
-      &:active {
-        border-color: $inuit-btn-border-color--pressed;
-        box-shadow: none;
-        background-color: $inuit-btn-tertiary-background--pressed;
-      }
+      cursor: not-allowed;
+      background-color: $inuit-btn-disabled-background;
+      color: $inuit-btn-disabled-color;
     }
-  
   }
-  
-  
-  
-  @if ($inuit-enable-btn--disabled == true) {
-    
-    /**
-     * Change button colors for disabled buttons
-     */
-  
-    .#{$inuit-btn-namespace}btn--disabled,
-    %#{$inuit-btn-namespace}btn--disabled,
-    .btn[disabled] {
-      &,
-      &:visited,
-      &:hover,
-      &:active,
-      &:focus {
-        border-color: $inuit-btn-disabled-border-color;
-        box-shadow: none;
-        cursor: not-allowed;
-        background-color: $inuit-btn-disabled-background;
-        color: $inuit-btn-disabled-color;
+
+}
+
+@if ($inuit-enable-btn--small == true) {
+
+  /**
+   * Small buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--small,
+  %#{$inuit-btn-namespace}btn--small {
+      font-size: calculateRem(12px);
+      line-height: calc(1.6666666667em - 2px);
+  }
+
+}
+
+@if ($inuit-enable-btn--large == true) {
+
+  /**
+   * Large buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--large,
+  %#{$inuit-btn-namespace}btn--large {
+      font-size: $inuit-base-spacing-unit--large;
+  }
+
+}
+
+@if ($inuit-enable-btn--huge == true) {
+
+  /**
+   * Call-to-action buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--huge,
+  %#{$inuit-btn-namespace}btn--huge {
+      font-size: $inuit-base-spacing-unit--huge;
+  }
+
+}
+
+
+
+
+@if ($inuit-enable-btn--full == true) {
+
+  /**
+   * Full-width buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--full,
+  %#{$inuit-btn-namespace}btn--full {
+      width: 100%;
+
+      @if $inuit-global-border-box == false {
+          /**
+           * Remove paddings so that widths and paddings don’t conflict.
+           */
+          padding-right: 0;
+          padding-left:  0;
       }
-    }
 
   }
-  
-  @if ($inuit-enable-btn--small == true) {
-  
-    /**
-     * Small buttons.
-     */
-  
-    .#{$inuit-btn-namespace}btn--small,
-    %#{$inuit-btn-namespace}btn--small {
-        font-size: calculateRem(12px);
-        line-height: calc(1.6666666667em - 2px);
-    }
-  
-  }
-  
-  @if ($inuit-enable-btn--large == true) {
-  
-    /**
-     * Large buttons.
-     */
-  
-    .#{$inuit-btn-namespace}btn--large,
-    %#{$inuit-btn-namespace}btn--large {
-        font-size: $inuit-base-spacing-unit--large;
-    }
-  
-  }
-  
-  @if ($inuit-enable-btn--huge == true) {
-  
-    /**
-     * Call-to-action buttons.
-     */
-  
-    .#{$inuit-btn-namespace}btn--huge,
-    %#{$inuit-btn-namespace}btn--huge {
-        font-size: $inuit-base-spacing-unit--huge;
-    }
-  
-  }
-  
-  
-  
-  
-  @if ($inuit-enable-btn--full == true) {
-  
-    /**
-     * Full-width buttons.
-     */
-  
-    .#{$inuit-btn-namespace}btn--full,
-    %#{$inuit-btn-namespace}btn--full {
-        width: 100%;
-  
-        @if $inuit-global-border-box == false {
-            /**
-             * Remove paddings so that widths and paddings don’t conflict.
-             */
-            padding-right: 0;
-            padding-left:  0;
-        }
-  
-    }
-  
-  }
-  
-  
-  
-  
-  
-  @if ($inuit-enable-btn--icon == true) {
-  
-    /**
-     * Round-ended buttons.
-     *
-     * 1. Overly-large value to ensure the radius rounds the whole end of the
-     *    button.
-     */
-  
-    .#{$inuit-btn-namespace}btn--icon,
-    %#{$inuit-btn-namespace}btn--icon {
-        width: 2em;
-        border-radius: 6.6666666667em;
-        padding: 1px 0 0 1px;
-    }
-  
+
+}
+
+
+
+
+
+@if ($inuit-enable-btn--icon == true) {
+
+  /**
+   * Round-ended buttons.
+   *
+   * 1. Overly-large value to ensure the radius rounds the whole end of the
+   *    button.
+   */
+
+  .#{$inuit-btn-namespace}btn--icon,
+  %#{$inuit-btn-namespace}btn--icon {
+      width: 2em;
+      border-radius: 6.6666666667em;
+      padding: 1px 0 0 1px;
   }
 
 }

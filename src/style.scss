@@ -22,7 +22,7 @@ $inuit-enable-btn--primary      : true;
 $inuit-enable-btn--tertiary     : true;
 $inuit-enable-btn--disabled     : true;
 
-@import "../objects.buttons";
+@import "../_objects.buttons.scss";
 
 .flex .btn {
   @extend %flex__item--baseline;

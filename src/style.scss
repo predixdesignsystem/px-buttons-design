@@ -1,15 +1,13 @@
-$imported-once-files            : ();
-
 // Generic
-@import "../px-normalize-design/generic.normalize";
-@import "../px-box-sizing-design/generic.box-sizing";
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
 
 // Base
-@import "../px-viewport-design/base.viewport";
-@import "../px-flexbox-design/base.flexbox";
-@import "../px-typography-design/base.typography";
-@import "../px-code-design/base.code";
-@import "../px-iconography-design/base.iconography";
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-flexbox-design/_base.flexbox.scss";
+@import "px-typography-design/_base.typography.scss";
+@import "px-code-design/_base.code.scss";
+@import "px-iconography-design/_base.iconography.scss";
 
 // Buttons
 
@@ -37,4 +35,4 @@ $inuit-enable-margins--large    : true;
 $inuit-enable-margins--huge     : true;
 $inuit-enable-margins--none     : true;
 
-@import "../px-spacing-responsive-design/trumps.spacing-responsive";
+@import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";

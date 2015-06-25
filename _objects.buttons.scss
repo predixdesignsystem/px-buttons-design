@@ -123,6 +123,7 @@ $inuit-global-border-box                            : false !default;
   white-space: nowrap;
   background-color: $inuit-btn-background;
   &,
+  &:link,
   &:visited,
   &:hover,
   &:focus,
@@ -170,6 +171,7 @@ button.#{$inuit-btn-namespace}btn {
     padding: 0;
     line-height: inherit;
     &,
+    &:link,
     &:visited,
     &:hover,
     &:active,
@@ -196,6 +198,7 @@ button.#{$inuit-btn-namespace}btn {
     box-shadow: $inuit-btn-shadow;
     background-color: $inuit-btn-primary-background;
     &,
+    &:link,
     &:visited,
     &:hover,
     &:focus,
@@ -229,6 +232,7 @@ button.#{$inuit-btn-namespace}btn {
     box-shadow: none;
     background-color: $inuit-btn-tertiary-background;
     &,
+    &:link,
     &:visited,
     &:hover,
     &:focus,
@@ -262,6 +266,7 @@ button.#{$inuit-btn-namespace}btn {
   %#{$inuit-btn-namespace}btn--disabled,
   .btn[disabled] {
     &,
+    &:link,
     &:visited,
     &:hover,
     &:active,

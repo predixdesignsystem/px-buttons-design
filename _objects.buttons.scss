@@ -120,8 +120,8 @@ $inuit-global-border-box                            : false !default;
   text-align: center;
   text-decoration: none;
   text-transform: none;
+  white-space: nowrap;
   background-color: $inuit-btn-background;
-  -webkit-appearance: button;
   &,
   &:visited,
   &:hover,
@@ -141,6 +141,10 @@ $inuit-global-border-box                            : false !default;
     background-color: $inuit-btn-background--pressed;
   }
 
+}
+
+button.#{$inuit-btn-namespace}btn {
+  -webkit-appearance: button;
 }
 
 

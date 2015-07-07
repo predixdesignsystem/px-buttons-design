@@ -14,13 +14,43 @@
         <p>
           To use this module, follow the instructions in the
           <a href=https://github.build.ge.com/PXd/px-buttons-design>README</a>.
+          <!-- build:remove -->
+          (For background on PXd, read the
+          <a href=https://github.build.ge.com/PXd/px-getting-started>Getting Started</a>
+          documentation.)
+          <!-- /build -->
         </p>
-        <a class=btn href=https://github.build.ge.com/PXd/px-buttons-design>
+        <a class="btn btn--primary" href=https://github.build.ge.com/PXd/px-buttons-design>
           <i class="fa fa-github u-mr--"></i>
           px-buttons-design
         </a>
       </div>
+      <h2>How to Use</h2>
+      <p>Install via command line:</p>
+      <figure class="code u-mb+">
+        <code>
+          bower install --save https://github.build.ge.com/PXd/px-buttons-design.git
+        </code>
+      </figure>
+      <p>Add to component Sass file:</p>
+      <figure class="code u-mb++">
+        <code>
+          @import "px-buttons-design/_objects.buttons.scss";
+        </code>
+      </figure>
       <h2>Small</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-btn--small : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;button class="btn btn--small btn--primary"&gt;&hellip;&lt;/button&gt;
@@ -32,14 +62,61 @@
           &lt;button class="btn btn--small btn--disabled"&gt;&hellip;&lt;/button&gt;
         </code>
       </figure>
-      <div class="flex flex--wrap u-mb+">
-        <button class="btn btn--small btn--primary u-mb+" type=button>Primary</button>
-        <button class="btn btn--small u-mb+" type=button>Default</button>
-        <button class="btn btn--small btn--tertiary u-mb+" type=button>Tertiary</button>
-        <button class="btn btn--small btn--disabled u-mb+" disabled type=button>Disabled</button>
+      <div class="flex flex--wrap">
+        <button class="btn btn--small btn--primary" type=button>Primary</button>
+        <button class="btn btn--small" type=button>Default</button>
+        <button class="btn btn--small btn--tertiary" type=button>Tertiary</button>
+        <button class="btn btn--small btn--disabled" disabled type=button>Disabled</button>
       </div>
+      <p class=u-mb++>Note: Icon buttons should not be used at the small button size.</p>
       <h2>Regular</h2>
-      <figure class="code u-mb+">
+      <h3>Sass Flags</h3>
+      <p>To enable Primary, Tertiary, Disabled, or Icon buttons, the following Sass flags are required:</p>
+      <h4>Primary</h4>
+      <figure class=code>
+        <code>
+          $inuit-enable-btn--primary : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h4>Tertiary</h4>
+      <figure class=code>
+        <code>
+          $inuit-enable-btn--tertiary : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h4>Disabled</h4>
+      <figure class=code>
+        <code>
+          $inuit-enable-btn--primary : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h4>Icon</h4>
+      <figure class=code>
+        <code>
+          $inuit-enable-btn--icon : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <figure class="code u-mv+">
         <code>
           &lt;button class="btn btn--primary"&gt;&hellip;&lt;/button&gt;
           <br>
@@ -84,6 +161,18 @@
         </button>
       </div>
       <h2>Large</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-btn--large : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;button class="btn btn--large btn--primary"&gt;&hellip;&lt;/button&gt;
@@ -129,6 +218,18 @@
         </button>
       </div>
       <h2>Huge</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-btn--huge : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;button class="btn btn--huge btn--primary"&gt;&hellip;&lt;/button&gt;
@@ -192,6 +293,18 @@
         </button>
       </div>
       <h2>Icon as Button</h2>
+      <h3>Sass Flag</h3>
+      <figure class="code">
+        <code>
+          $inuit-enable-btn--bare : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h3>HTML</h3>
       <figure class="code u-mb+">
         <code>
           &lt;button class="btn btn--bare"&gt;

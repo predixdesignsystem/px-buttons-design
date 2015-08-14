@@ -141,6 +141,9 @@ $inuit-global-border-box                            : false !default;
     box-shadow: none;
     background-color: $inuit-btn-background--pressed;
   }
+  &:active, &:focus {
+    outline: none;
+  }
 
 }
 

@@ -126,12 +126,10 @@ $inuit-global-border-box                            : false !default;
   &:link,
   &:visited,
   &:hover,
-  &:focus,
   &:active {
     color: $inuit-btn-color;
   }
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: $inuit-btn-border-color--hover;
     box-shadow: $inuit-btn-shadow;
     background-color: $inuit-btn-background--hover;
@@ -141,7 +139,7 @@ $inuit-global-border-box                            : false !default;
     box-shadow: none;
     background-color: $inuit-btn-background--pressed;
   }
-  &:active, &:focus {
+  &:active {
     outline: none;
   }
 
@@ -204,12 +202,10 @@ button.#{$inuit-btn-namespace}btn {
     &:link,
     &:visited,
     &:hover,
-    &:focus,
     &:active {
       color: $inuit-btn-primary-color;
     }
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: transparent;
       background-color: $inuit-btn-primary-background--hover;
     }
@@ -238,12 +234,10 @@ button.#{$inuit-btn-namespace}btn {
     &:link,
     &:visited,
     &:hover,
-    &:focus,
     &:active {
       color: $inuit-btn-tertiary-color;
     }
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: $inuit-btn-border-color--hover;
       box-shadow: none;
       background-color: $inuit-btn-tertiary-background--hover;
@@ -272,8 +266,7 @@ button.#{$inuit-btn-namespace}btn {
     &:link,
     &:visited,
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       border-color: $inuit-btn-disabled-border-color;
       box-shadow: none;
       cursor: not-allowed;

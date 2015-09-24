@@ -1,0 +1,368 @@
+////
+/// PX-BUTTONS-DESIGN
+/// Defines simple button objects
+/// @group px-buttons-design
+////
+
+@import "px-defaults-design/_settings.defaults.scss";
+@import "px-colors-design/_settings.colors.scss";
+
+
+/// @type String [default] - Prepend value for all generated classes
+$inuit-btn-namespace                                : $inuit-namespace !default;
+
+/// @type Color [default] - Font color
+$inuit-btn-color                                    : $black !default;
+
+/// @type Color [default] - Background color
+$inuit-btn-background                               : $gray3 !default;
+
+/// @type Color [default] - Hover background color
+$inuit-btn-background--hover                        : $gray5 !default;
+
+/// @type Color [default] - Pressed background color
+$inuit-btn-background--pressed                      : $gray6 !default;
+
+/// @type Color [default] - Border color
+$inuit-btn-border-color                             : $gray5 !default;
+
+/// @type Color [default] - Hover border color
+$inuit-btn-border-color--hover                      : $gray6 !default;
+
+/// @type Color [default] - Pressed border color
+$inuit-btn-border-color--pressed                    : $gray7 !default;
+
+/// @type Color | String [default] - Shadow
+$inuit-btn-shadow                                   : 0 1px 0 rgba($black, .15) !default;
+
+/// @type Color | String [default] - Small shadow
+$inuit-btn-shadow--light                            : 0 1px 0 rgba($black, .1) !default;
+
+/// @type Color [default] - Primary font color
+$inuit-btn-primary-color                            : $white !default;
+
+/// @type Color [default] - Primary background color
+$inuit-btn-primary-background                       : $primary-blue !default;
+
+/// @type Color - [default] Primary hover background color
+$inuit-btn-primary-background--hover                : $primary-blue-hover !default;
+
+/// @type Color - [default] Primary pressed background color
+$inuit-btn-primary-background--pressed              : $primary-blue-pressed !default;
+
+/// @type Color [default] - Primary border color
+$inuit-btn-primary-border-color                     : $primary-blue-pressed !default;
+
+/// @type Color [default] - Tertiary font color
+$inuit-btn-tertiary-color                           : $primary-blue !default;
+
+/// @type Color [default] - Tertiary background color
+$inuit-btn-tertiary-background                      : $white !default;
+
+/// @type Color - [default] Tertiary hover background color
+$inuit-btn-tertiary-background--hover               : $gray3 !default;
+
+/// @type Color - [default] Tertiary pressed background color
+$inuit-btn-tertiary-background--pressed             : $gray5 !default;
+
+/// @type Color [default] - Disabled font color
+$inuit-btn-disabled-color                           : $gray4 !default;
+
+/// @type Color [default] - Disabled background color
+$inuit-btn-disabled-background                      : $white !default;
+
+/// @type Color [default] - Disabled border color
+$inuit-btn-disabled-border-color                    : $gray4 !default;
+
+/// @type Boolean [default] - Produce CSS for primary buttons?
+$inuit-enable-btn--primary                          : false !default;
+
+/// @type Boolean [default] - Produce CSS for tertiary buttons?
+$inuit-enable-btn--tertiary                         : false !default;
+
+/// @type Boolean [default] - Produce CSS for small buttons?
+$inuit-enable-btn--small                            : false !default;
+
+/// @type Boolean [default] - Produce CSS for large buttons?
+$inuit-enable-btn--large                            : false !default;
+
+/// @type Boolean [default] - Produce CSS for huge buttons?
+$inuit-enable-btn--huge                             : false !default;
+
+/// @type Boolean [default] - Produce CSS for full buttons?
+$inuit-enable-btn--full                             : false !default;
+
+/// @type Boolean [default] - Produce CSS for icon buttons?
+$inuit-enable-btn--icon                             : false !default;
+
+/// @type Boolean [default] - Produce CSS for bare buttons?
+$inuit-enable-btn--bare                             : false !default;
+
+/// @type Boolean [default] - Produce CSS for disabled buttons?
+$inuit-enable-btn--disabled                         : false !default;
+
+/// @type Boolean [default] - Assume `box-sizing : border-box;`
+$inuit-global-border-box                            : false !default;
+
+.#{$inuit-btn-namespace}btn,
+%#{$inuit-btn-namespace}btn {
+  display: inline-block;
+  overflow: visible;
+  height: 2em;
+  margin: 0;
+  border: 1px solid $inuit-btn-border-color;
+  border-radius: 3px;
+  padding: 0 1em;
+  box-shadow: $inuit-btn-shadow--light;
+  font: inherit;
+  line-height: calc(2em - 2px);
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  background-color: $inuit-btn-background;
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $inuit-btn-color;
+  }
+  &:hover {
+    border-color: $inuit-btn-border-color--hover;
+    box-shadow: $inuit-btn-shadow;
+    background-color: $inuit-btn-background--hover;
+  }
+  &:active {
+    border-color: $inuit-btn-border-color--pressed;
+    box-shadow: none;
+    background-color: $inuit-btn-background--pressed;
+  }
+  &:active {
+    outline: none;
+  }
+
+}
+
+button.#{$inuit-btn-namespace}btn {
+  -webkit-appearance: button;
+}
+
+
+/**
+* Establish default space between adjacent buttons
+*/
+.#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
+  margin-left: $inuit-base-spacing-unit--small;
+}
+
+
+
+@if ($inuit-enable-btn--bare == true) {
+  
+  /**
+   * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>).
+   */
+
+  .#{$inuit-btn-namespace}btn--bare,
+  %#{$inuit-btn-namespace}btn--bare {
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    line-height: inherit;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      background: none;
+      color: inherit;
+    }
+  }
+
+}
+
+
+
+@if ($inuit-enable-btn--primary == true) {
+  
+  /**
+   * Change button colors for primary buttons
+   */
+
+  .#{$inuit-btn-namespace}btn--primary,
+  %#{$inuit-btn-namespace}btn--primary {
+    border-color: $inuit-btn-primary-border-color;
+    box-shadow: $inuit-btn-shadow;
+    background-color: $inuit-btn-primary-background;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $inuit-btn-primary-color;
+    }
+    &:hover {
+      border-color: transparent;
+      background-color: $inuit-btn-primary-background--hover;
+    }
+    &:active {
+      border-color: transparent;
+      background-color: $inuit-btn-primary-background--pressed;
+    }
+  }
+
+}
+
+
+
+@if ($inuit-enable-btn--tertiary == true) {
+  
+  /**
+   * Change button colors for tertiary buttons
+   */
+
+  .#{$inuit-btn-namespace}btn--tertiary,
+  %#{$inuit-btn-namespace}btn--tertiary {
+    border-color: $inuit-btn-border-color;
+    box-shadow: none;
+    background-color: $inuit-btn-tertiary-background;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $inuit-btn-tertiary-color;
+    }
+    &:hover {
+      border-color: $inuit-btn-border-color--hover;
+      box-shadow: none;
+      background-color: $inuit-btn-tertiary-background--hover;
+    }
+    &:active {
+      border-color: $inuit-btn-border-color--pressed;
+      box-shadow: none;
+      background-color: $inuit-btn-tertiary-background--pressed;
+    }
+  }
+
+}
+
+
+
+@if ($inuit-enable-btn--disabled == true) {
+  
+  /**
+   * Change button colors for disabled buttons
+   */
+
+  .#{$inuit-btn-namespace}btn--disabled,
+  %#{$inuit-btn-namespace}btn--disabled,
+  .btn[disabled] {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      border-color: $inuit-btn-disabled-border-color;
+      box-shadow: none;
+      cursor: not-allowed;
+      background-color: $inuit-btn-disabled-background;
+      color: $inuit-btn-disabled-color;
+    }
+  }
+
+}
+
+@if ($inuit-enable-btn--small == true) {
+
+  /**
+   * Small buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--small,
+  %#{$inuit-btn-namespace}btn--small {
+      height: 1.6666666667em;
+      font-size: calculateRem(12px);
+      line-height: calc(1.6666666667em - 2px);
+  }
+
+}
+
+@if ($inuit-enable-btn--large == true) {
+
+  /**
+   * Large buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--large,
+  %#{$inuit-btn-namespace}btn--large {
+      font-size: $inuit-base-spacing-unit--large;
+  }
+
+}
+
+@if ($inuit-enable-btn--huge == true) {
+
+  /**
+   * Call-to-action buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--huge,
+  %#{$inuit-btn-namespace}btn--huge {
+      font-size: $inuit-base-spacing-unit--huge;
+  }
+
+}
+
+
+
+
+@if ($inuit-enable-btn--full == true) {
+
+  /**
+   * Full-width buttons.
+   */
+
+  .#{$inuit-btn-namespace}btn--full,
+  %#{$inuit-btn-namespace}btn--full {
+      width: 100%;
+
+      @if $inuit-global-border-box == false {
+          /**
+           * Remove paddings so that widths and paddings don’t conflict.
+           */
+          padding-right: 0;
+          padding-left:  0;
+      }
+
+  }
+
+}
+
+
+
+
+
+@if ($inuit-enable-btn--icon == true) {
+
+  /**
+   * Round-ended buttons.
+   *
+   * 1. Overly-large value to ensure the radius rounds the whole end of the
+   *    button.
+   */
+
+  .#{$inuit-btn-namespace}btn--icon,
+  %#{$inuit-btn-namespace}btn--icon {
+      width: 2em;
+      border-radius: 6.6666666667em;
+      padding: 1px 0 0 1px;
+  }
+
+}

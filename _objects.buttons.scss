@@ -38,6 +38,18 @@ $inuit-btn-shadow                                   : 0 1px 0 rgba($black, .15) 
 /// @type Color | String [default] - Small shadow
 $inuit-btn-shadow--light                            : 0 1px 0 rgba($black, .1) !default;
 
+/// @type Height | String [default] - Button Height
+$inuit-btn-height                                   : 2em !default;
+
+/// @type Line Height | String [default] - Button line height for firefox
+$inuit-btn-line-height--firefox                     : 1.8em !default;
+
+/// @type Height | String [default] - Small Button Height
+$inuit-btn-height--small                            : 1.6666666667em !default;
+
+/// @type Line Height | String [default] - Button line height for firefox
+$inuit-btn-line-height--small--firefox              : 1.4em !default;
+
 /// @type Color [default] - Primary font color
 $inuit-btn-primary-color                            : $white !default;
 
@@ -104,18 +116,20 @@ $inuit-enable-btn--disabled                         : false !default;
 /// @type Boolean [default] - Assume `box-sizing : border-box;`
 $inuit-global-border-box                            : false !default;
 
+
+
 .#{$inuit-btn-namespace}btn,
 %#{$inuit-btn-namespace}btn {
   display: inline-block;
   overflow: visible;
-  height: 2em;
+  height: $inuit-btn-height;
   margin: 0;
   border: 1px solid $inuit-btn-border-color;
   border-radius: 3px;
-  padding: 0 1em;
+  padding: 0 $inuit-btn-height/2;
   box-shadow: $inuit-btn-shadow--light;
   font: inherit;
-  line-height: calc(2em - 2px);
+  line-height: calc($inuit-btn-height - 2px);
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   text-align: center;
@@ -155,7 +169,7 @@ $inuit-global-border-box                            : false !default;
 @-moz-document url-prefix() {
   .#{$inuit-btn-namespace}btn:not(button),
   %#{$inuit-btn-namespace}btn:not(button) {
-      line-height:1.8em;
+      line-height:$inuit-btn-line-height--firefox;
   }
 }
 
@@ -300,9 +314,23 @@ button.#{$inuit-btn-namespace}btn {
 
   .#{$inuit-btn-namespace}btn--small,
   %#{$inuit-btn-namespace}btn--small {
-      height: 1.6666666667em;
+      height: $inuit-btn-height--small;
       font-size: calculateRem(12px);
-      line-height: calc(1.6666666667em - 2px);
+      line-height: calc($inuit-btn-height--small - 2px);
+  }
+
+  /** Hack for FF since it does not support calc().
+    * Other buttons appear ok with the height declaration, but round buttons
+    * can fail with text, such as in the px-data-table.
+    * This hack appears to work for circular icon buttons, but break smaller size
+    * rectangular buttons, hence placing it here even though line-height: calc() is
+    * declared in the base btn declaration.
+  **/
+  @-moz-document url-prefix() {
+    .#{$inuit-btn-namespace}btn--small,
+    %#{$inuit-btn-namespace}btn--small {
+        line-height:$inuit-btn-line-height--small--firefox;
+    }
   }
 
 }
@@ -373,7 +401,7 @@ button.#{$inuit-btn-namespace}btn {
 
   .#{$inuit-btn-namespace}btn--icon,
   %#{$inuit-btn-namespace}btn--icon {
-      width: 2em;
+      width: $inuit-btn-height;
       border-radius: 6.6666666667em;
       padding: 1px 0 0 1px;
   }
@@ -387,7 +415,7 @@ button.#{$inuit-btn-namespace}btn {
   @-moz-document url-prefix() {
     .#{$inuit-btn-namespace}btn--icon,
     %#{$inuit-btn-namespace}btn--icon {
-        line-height:1.8em;
+        line-height:$inuit-btn-line-height--firefox;
     }
   }
 

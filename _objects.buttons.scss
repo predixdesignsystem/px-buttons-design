@@ -129,7 +129,7 @@ $inuit-global-border-box                            : false !default;
   padding: 0 $inuit-btn-height/2;
   box-shadow: $inuit-btn-shadow--light;
   font: inherit;
-  line-height: calc($inuit-btn-height - 2px);
+  line-height: calc(#{$inuit-btn-height} - 2px);
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   text-align: center;

@@ -4,7 +4,7 @@
   <head>
     <meta charset=utf-8>
     <title>Buttons</title>
-    <link rel=stylesheet href=css/style.css>
+    <link rel=stylesheet href=../dist/css/style.css>
   </head>
   <body>
     <section class=viewport role=region>
@@ -69,6 +69,7 @@
         <button class="btn btn--small btn--disabled" disabled type=button>Disabled</button>
       </div>
       <p class=u-mb++>Note: Icon buttons should not be used at the small button size.</p>
+
       <h2>Regular</h2>
       <h3>Sass Flags</h3>
       <p>To enable Primary, Tertiary, Disabled, or Icon buttons, the following Sass flags are required:</p>
@@ -160,6 +161,7 @@
           <i class="fa fa-area-chart"></i>
         </button>
       </div>
+
       <h2>Large</h2>
       <h3>Sass Flag</h3>
       <figure class="code">
@@ -217,6 +219,7 @@
           <i class="fa fa-area-chart"></i>
         </button>
       </div>
+
       <h2>Huge</h2>
       <h3>Sass Flag</h3>
       <figure class="code">
@@ -270,7 +273,7 @@
         <button class="btn btn--huge btn--tertiary btn--icon u-mb+" type=button>
           <i class="fa fa-area-chart"></i>
         </button>
-        <button class="btn btn--huge btn--disabled btn--icon u-mb+" type=button>
+        <button class="btn btn--huge btn--icon u-mb+" disabled type=button>
           <i class="fa fa-area-chart"></i>
         </button>
       </div>
@@ -292,7 +295,8 @@
           Cancel
         </button>
       </div>
-      <h2>Icon as Button</h2>
+
+      <h2>Button with No Styles</h2>
       <h3>Sass Flag</h3>
       <figure class="code">
         <code>
@@ -326,6 +330,85 @@
         </button>
         <button class="btn btn--bare u-mr u-mb+" type=button>
           <i class="fa fa-external-link"></i>
+        </button>
+      </div>
+
+      <h2>Text as Button &#38; Icon as button</h2>
+      <h3>Sass Flags</h3>
+      <p>To enable Primary, Tertiary, Disabled, or Icon buttons, the following Sass flags are required:</p>
+      <h4>Primary</h4>
+      <figure class=code>
+        <code>
+          $inuit-enable-btn--bare-primary : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h4>Selected</h4>
+      <figure class=code>
+        <code>
+          $inuit-enable-btn--bare-select : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <h4>Disabled</h4>
+      <figure class=code>
+        <code>
+          $inuit-enable-btn--bare-disabled : true;
+        </code>
+      </figure>
+      <small>
+        Flag must be set before
+        <code class="code code--inline">@import</code>
+        in component Sass file.
+      </small>
+      <figure class="code u-mv+">
+        <code>
+          &lt;button class="btn btn--bare-primary"&gt;&hellip;&lt;/button&gt;
+          <br>
+          &lt;button class="btn btn--bare-select"&gt;&hellip;&lt;/button&gt;
+          <br>
+          &lt;button class="btn btn--bare-disabled"&gt;&hellip;&lt;/button&gt;
+          <br>
+          <br>
+          &lt;button class="btn btn--bare-primary"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;i class="fa fa-&hellip;"&gt;&lt;/i&gt;
+          <br>
+          &lt;/button&gt;
+          <br>
+          &lt;button class="btn btn--bare-select"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;i class="fa fa-&hellip;"&gt;&lt;/i&gt;
+          <br>
+          &lt;/button&gt;
+          <br>
+          &lt;button class="btn btn--bare-disabled"&gt;
+          <br>
+          &nbsp;&nbsp;&lt;i class="fa fa-&hellip;"&gt;&lt;/i&gt;
+          <br>
+          &lt;/button&gt;
+        </code>
+      </figure>
+      <div class="flex flex--wrap u-mb+">
+        <button class="btn btn--bare-primary u-mr u-mb+" type=button>Primary</button>
+        <button class="btn btn--bare-select u-mr u-mb+" type=button>Selected</button>
+        <button class="btn btn--bare-disabled u-mr u-mb+" type=button>Disabled</button>
+        <button class="btn btn--bare-primary u-mr u-mb+" type=button>
+          <i class="fa fa-area-chart"></i>
+        </button>
+        <button class="btn btn--bare-select u-mr u-mb+" type=button>
+          <i class="fa fa-area-chart"></i>
+        </button>
+        <button class="btn btn--bare-disabled u-mr u-mb+" type=button>
+          <i class="fa fa-area-chart"></i>
         </button>
       </div>
 

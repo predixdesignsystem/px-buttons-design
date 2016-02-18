@@ -14,16 +14,19 @@ $inuit-enable-code--inline      : true;
 
 // Buttons
 
-$inuit-enable-btn--small        : true;
-$inuit-enable-btn--large        : true;
-$inuit-enable-btn--huge         : true;
-$inuit-enable-btn--full         : true;
-$inuit-enable-btn--icon         : true;
+$inuit-enable-btn--small         : true;
+$inuit-enable-btn--large         : true;
+$inuit-enable-btn--huge          : true;
+$inuit-enable-btn--full          : true;
+$inuit-enable-btn--icon          : true;
 
-$inuit-enable-btn--bare         : true;
-$inuit-enable-btn--primary      : true;
-$inuit-enable-btn--tertiary     : true;
-$inuit-enable-btn--disabled     : true;
+$inuit-enable-btn--bare          : true;
+$inuit-enable-btn--bare-primary  : true;
+$inuit-enable-btn--bare-select   : true;
+$inuit-enable-btn--bare-disabled : true;
+$inuit-enable-btn--primary       : true;
+$inuit-enable-btn--tertiary      : true;
+$inuit-enable-btn--disabled      : true;
 
 @import "../_objects.buttons.scss";
 
@@ -32,10 +35,10 @@ $inuit-enable-btn--disabled     : true;
 }
 
 // Trumps
-$inuit-enable-margins           : true;
-$inuit-enable-margins--tiny     : true;
-$inuit-enable-margins--large    : true;
-$inuit-enable-margins--huge     : true;
-$inuit-enable-margins--none     : true;
+$inuit-enable-margins            : true;
+$inuit-enable-margins--tiny      : true;
+$inuit-enable-margins--large     : true;
+$inuit-enable-margins--huge      : true;
+$inuit-enable-margins--none      : true;
 
 @import "px-spacing-responsive-design/_trumps.spacing-responsive.scss";

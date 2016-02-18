@@ -110,6 +110,15 @@ $inuit-enable-btn--icon                             : false !default;
 /// @type Boolean [default] - Produce CSS for bare buttons?
 $inuit-enable-btn--bare                             : false !default;
 
+/// @type Boolean [default] - Produce CSS for bare blue buttons?
+$inuit-enable-btn--bare-primary                     : false !default;
+
+/// @type Boolean [default] - Produce CSS for bare blue buttons?
+$inuit-enable-btn--bare-select                      : false !default;
+
+/// @type Boolean [default] - Produce CSS for bare blue buttons?
+$inuit-enable-btn--bare-disabled                    : false !default;
+
 /// @type Boolean [default] - Produce CSS for disabled buttons?
 $inuit-enable-btn--disabled                         : false !default;
 
@@ -207,7 +216,102 @@ button.#{$inuit-btn-namespace}btn {
       color: inherit;
     }
   }
+}
 
+@if ($inuit-enable-btn--bare-primary == true) {
+
+  /**
+   * Good for buttons that are icons and/or text
+   * Text/Icon color is primary-blue
+   */
+
+  .#{$inuit-btn-namespace}btn--bare-primary,
+  %#{$inuit-btn-namespace}btn--bare-primary {
+    height: auto;
+    color: $primary-blue;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    line-height: inherit;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      background: none;
+    }
+    &:hover{
+      color: $primary-blue-hover;
+    }
+    &:active {
+        border-color: transparent;
+        color: $primary-blue-pressed;
+      }
+    }
+}
+
+@if ($inuit-enable-btn--bare-select == true) {
+
+  /**
+   * Good for buttons that are icons and/or text
+   * Text/Icon color is select-blue
+   */
+
+  .#{$inuit-btn-namespace}btn--bare-select,
+  %#{$inuit-btn-namespace}btn--bare-select {
+    height: auto;
+    color: $select-blue-default;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    line-height: inherit;
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      background: none;
+    }
+    &:hover{
+      color: $select-blue-hover;
+    }
+    &:active {
+        border-color: transparent;
+        color: $select-blue-pressed;
+      }
+    }
+}
+
+@if ($inuit-enable-btn--bare-select == true) {
+
+  /**
+   * Good for buttons that are icons and/or text
+   * Text/Icon is disabled
+   */
+
+  .#{$inuit-btn-namespace}btn--bare-disabled,
+  %#{$inuit-btn-namespace}btn--bare-disabled,
+    .btn--bare[disabled] {
+      height: auto;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      line-height: inherit;
+      &,
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        box-shadow: none;
+        background: none;
+        cursor: not-allowed;
+        color: $inuit-btn-disabled-color;
+      }
+    }
 }
 
 

@@ -17,11 +17,31 @@ module.exports = function(grunt) {
 
   // Initial config
   var config = {
-    pkg: grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON('package.json'),
+
+
+    depserve: {
+        options: {
+            open: '<%= depserveOpenUrl %>'
+        }
+    },
+    concurrent: {
+        devmode: {
+            tasks: ['watch', 'depserve'],
+            options: {
+                logConcurrentOutput: true
+            }
+        }
+    }
+
+
   };
 
   // Load tasks from the tasks folder
   grunt.loadTasks('tasks');
+
+  grunt.loadNpmTasks('grunt-dep-serve');
+  grunt.loadNpmTasks('grunt-concurrent');
 
   // Load all the tasks options in tasks/options base on the name:
   // watch.js => watch{}
@@ -34,4 +54,10 @@ module.exports = function(grunt) {
   // Default Task is basically a rebuild
   grunt.registerTask('default', ['htmlmin', 'sass', 'autoprefixer', 'sassdoc', 'clean']);
 
+  // First run task.
+  grunt.registerTask('firstrun', 'Basic first run', function() {
+      grunt.config.set('depserveOpenUrl', 'src/index.html');
+      grunt.task.run('default');
+      grunt.task.run('depserve');
+  });
 };

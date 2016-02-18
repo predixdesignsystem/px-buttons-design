@@ -41,8 +41,11 @@ These flags are available and, if needed, should be set to `true` prior to impor
     $inuit-enable-btn--primary
     $inuit-enable-btn--tertiary
     $inuit-enable-btn--disabled
-    $inuit-enable-btn--bare
     $inuit-enable-btn--icon
+    $inuit-enable-btn--bare
+    $inuit-enable-btn--bare-primary
+    $inuit-enable-btn--bare-select
+    $inuit-enable-btn--bare-disabled
 
 The following variables are available for use in the module:
 
@@ -76,3 +79,4 @@ These classes are available if the variable flags listed above are set to `true`
 * `btn--[primary|tertiary|disabled]`: Primary, tertiary, or disabled buttons
 * `btn--full`: Full width buttons
 * `btn--icon`: Circular button for icons
+* `btn--bare[primary|select|disabled]`: Text and Icon Buttons

@@ -1,3 +1,7 @@
+v0.4.22
+==========================
+* Updated License
+
 v0.4.21
 ==========================
 * Fixed sass line height calc bug.

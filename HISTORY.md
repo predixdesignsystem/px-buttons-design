@@ -1,3 +1,7 @@
+v0.4.23
+==============================
+* Added OSS notice and changed the repo to be public in bower.
+
 v0.4.22
 ==========================
 * Updated License

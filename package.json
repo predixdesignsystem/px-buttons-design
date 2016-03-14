@@ -2,7 +2,7 @@
   "name": "px-buttons-design",
   "version": "0.4.23",
   "description": "Button object styles for Predix Experience",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

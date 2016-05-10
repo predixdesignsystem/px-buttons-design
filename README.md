@@ -1,15 +1,10 @@
 # Buttons
 
-Predix Experience Buttons module is a simple, robust, extensible baseline for building entire suites of buttons onto. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
-
-
-
-
-
+Predix UI Buttons module is a simple, robust, extensible baseline for building entire suites of buttons onto. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
 
 ## Dependencies
 
-Px's Buttons module depends on two other Px modules:
+Predix UI's Buttons module depends on two other Px modules:
 
 * [px-colors-design](https://github.com/PredixDev/px-colors-design)
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
@@ -24,7 +19,7 @@ The Buttons module is also an upstream dependency in this meta kit:
 
 Install this module and its dependencies using bower:
 
-    bower install --save https://github.com/PredixDev/px-buttons-design.git
+    bower install --save px-buttons-design
 
 Once installed, `@import` into your project's Sass file in its Objects layer:
 
@@ -76,3 +71,5 @@ These classes are available if the variable flags listed above are set to `true`
 * `btn--[primary|tertiary|disabled]`: Primary, tertiary, or disabled buttons
 * `btn--full`: Full width buttons
 * `btn--icon`: Circular button for icons
+
+view the full API [here](http://predixdev.github.io/px-buttons-design/)

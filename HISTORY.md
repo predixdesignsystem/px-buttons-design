@@ -1,3 +1,7 @@
+v0.4.24
+==============================
+* updated oss notice and readme, pointing to the gh-pages
+
 v0.4.23
 ==============================
 * Added OSS notice and changed the repo to be public in bower.

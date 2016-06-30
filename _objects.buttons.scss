@@ -312,7 +312,7 @@ button.#{$inuit-btn-namespace}btn {
   %#{$inuit-btn-namespace}btn--small {
       height: $inuit-btn-height--small;
       font-size: calculateRem(12px);
-      line-height: calc($inuit-btn-height--small - 2px);
+      line-height: calc(#{$inuit-btn-height--small} - 2px);
   }
 
   /** Workaround for FF since it does not support calc().

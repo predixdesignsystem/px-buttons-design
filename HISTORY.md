@@ -1,3 +1,7 @@
+v0.4.25
+==============================
+* fix sass bug for btn--small line height
+
 v0.4.24
 ==============================
 * updated oss notice and readme, pointing to the gh-pages

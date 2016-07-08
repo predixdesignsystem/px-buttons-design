@@ -110,6 +110,9 @@ $inuit-enable-btn--icon                             : false !default;
 /// @type Boolean [default] - Produce CSS for bare buttons?
 $inuit-enable-btn--bare                             : false !default;
 
+/// @type Boolean [default] - Produce CSS for bare--primary buttons?
+$inuit-enable-btn--bare--primary                    : false !default;
+
 /// @type Boolean [default] - Produce CSS for disabled buttons?
 $inuit-enable-btn--disabled                         : false !default;
 
@@ -196,6 +199,13 @@ button.#{$inuit-btn-namespace}btn {
     border-radius: 0;
     padding: 0;
     line-height: inherit;
+    font-size: calculateRem(18px);
+    width: calculateRem(34px);
+    height: calculateRem(34px);
+    box-shadow: none;
+    background: none;
+    outline:none;
+
     &,
     &:link,
     &:visited,
@@ -204,12 +214,73 @@ button.#{$inuit-btn-namespace}btn {
     &:focus {
       box-shadow: none;
       background: none;
-      color: inherit;
+      outline:none;
     }
+
+    &,
+    &:link,
+    &:visited {
+      color: $gray8;
+    }
+
+    &:hover {
+      color: $primary-blue;
+    }
+
+    &:active,
+    &:focus {
+      color: $primary-blue-pressed;
+    }
+
   }
 
 }
 
+@if ($inuit-enable-btn--bare--primary == true) {
+
+.#{$inuit-btn-namespace}btn--bare--primary,
+%#{$inuit-btn-namespace}btn--bare--primary {
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    line-height: inherit;
+    font-size: calculateRem(18px);
+    width: calculateRem(34px);
+    height: calculateRem(34px);
+    box-shadow: none;
+    background: none;
+    outline:none;
+
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      background: none;
+      outline:none;
+    }
+
+    &,
+    &:link,
+    &:visited {
+      color: $primary-blue;
+    }
+
+    &:hover {
+      color: $primary-blue-hover;
+    }
+
+    &:active,
+    &:focus {
+      color: $primary-blue-pressed;
+    }
+
+  }
+
+}
 
 
 @if ($inuit-enable-btn--primary == true) {

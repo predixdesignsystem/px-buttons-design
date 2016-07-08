@@ -1,3 +1,7 @@
+ v0.4.26
+==============================
+* updated bare bones button styles
+
 v0.4.25
 ==============================
 * fix sass bug for btn--small line height

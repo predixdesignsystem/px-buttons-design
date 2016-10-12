@@ -19,11 +19,8 @@
     "node_modules",
     "bower_components",
     "sass",
-    "scripts",
     ".github",
-    "Gruntfile.js",
-    "OSS_Notice.pdf",
-    "sassdoc.json"
+    "OSS_Notice.pdf"
   ],
   "dependencies": {
     "px-colors-design": "~0.2.0",

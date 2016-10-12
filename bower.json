@@ -1,6 +1,6 @@
 {
   "name": "px-buttons-design",
-  "version": "0.4.27",
+  "version": "0.4.28",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -29,6 +29,6 @@
   "devDependencies": {
     "px-sass-doc": "~0.1.7",
     "px-starter-kit-design": "~0.6.0",
-    "polymer-font-awesome": "~0.1.5"
+    "px-polymer-font-awesome": "~0.1.9"
   }
 }

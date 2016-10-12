@@ -158,7 +158,7 @@ Iconic Buttons:
     if (opts.Type === "bare")           strings.push("$inuit-enable-btn--bare : true;");
     if (opts.Type === "bare primary")   strings.push("$inuit-enable-btn--bare--primary : true;");
     if (opts.Icon === true)             strings.push("$inuit-enable-btn--icon : true;");
-    return (strings.join("\n") + "\n@import 'px-button-design/_objects.buttons.scss';").trim();
+    return (strings.join("\n") + "\n@import 'px-buttons-design/_objects.buttons.scss';").trim();
   };
 
   template.isIcon = function() {

@@ -1,4 +1,8 @@
- v0.4.26
+v0.4.27
+==============================
+* added new demo and auto-ghp
+
+v0.4.26
 ==============================
 * updated bare bones button styles
 

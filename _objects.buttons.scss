@@ -7,120 +7,192 @@
 @import "px-defaults-design/_settings.defaults.scss";
 @import "px-colors-design/_settings.colors.scss";
 
-
-/// @type String [default] - Prepend value for all generated classes
+/// Prepend value for all generated classes
+/// @group px-buttons-design:variables:style
+/// @type String [default]
 $inuit-btn-namespace                                : $inuit-namespace !default;
 
-/// @type Color [default] - Font color
+/// Font color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-color                                    : $black !default;
 
-/// @type Color [default] - Background color
+/// Background color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-background                               : $gray3 !default;
 
-/// @type Color [default] - Hover background color
+/// Hover background color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-background--hover                        : $gray5 !default;
 
-/// @type Color [default] - Pressed background color
+/// Pressed background color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-background--pressed                      : $gray6 !default;
 
-/// @type Color [default] - Border color
+/// Border color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-border-color                             : $gray5 !default;
 
-/// @type Color [default] - Hover border color
+/// Hover border color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-border-color--hover                      : $gray6 !default;
 
-/// @type Color [default] - Pressed border color
+/// Pressed border color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-border-color--pressed                    : $gray7 !default;
 
-/// @type Color | String [default] - Shadow
+/// Shadow
+/// @group px-buttons-design:variables:style
+/// @type Color | String [default]
 $inuit-btn-shadow                                   : 0 1px 0 rgba($black, .15) !default;
 
-/// @type Color | String [default] - Small shadow
+/// Small shadow
+/// @group px-buttons-design:variables:style
+/// @type Color | String [default]
 $inuit-btn-shadow--light                            : 0 1px 0 rgba($black, .1) !default;
 
-/// @type Height | String [default] - Button Height
+/// Button Height
+/// @group px-buttons-design:variables:style
+/// @type Height | String [default]
 $inuit-btn-height                                   : 2em !default;
 
-/// @type Line Height | String [default] - Button line height for firefox
+/// Button line height for firefox
+/// @group px-buttons-design:variables:style
+/// @type Line Height | String [default]
 $inuit-btn-line-height--firefox                     : 1.8em !default;
 
-/// @type Height | String [default] - Small Button Height
+/// Small Button Height
+/// @group px-buttons-design:variables:style
+/// @type Height | String [default]
 $inuit-btn-height--small                            : 1.6666666667em !default;
 
-/// @type Line Height | String [default] - Button line height for firefox
+/// Button line height for firefox
+/// @group px-buttons-design:variables:style
+/// @type Line Height | String [default]
 $inuit-btn-line-height--small--firefox              : 1.4em !default;
 
-/// @type Color [default] - Primary font color
+/// Primary font color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-primary-color                            : $white !default;
 
-/// @type Color [default] - Primary background color
+/// Primary background color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-primary-background                       : $primary-blue !default;
 
-/// @type Color - [default] Primary hover background color
+/// Primary hover background color
+/// @group px-buttons-design:variables:style
+/// @type Color - [default]
 $inuit-btn-primary-background--hover                : $primary-blue-hover !default;
 
-/// @type Color - [default] Primary pressed background color
+/// Primary pressed background color
+/// @group px-buttons-design:variables:style
+/// @type Color - [default]
 $inuit-btn-primary-background--pressed              : $primary-blue-pressed !default;
 
-/// @type Color [default] - Primary border color
+/// Primary border color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-primary-border-color                     : $primary-blue-pressed !default;
 
-/// @type Color [default] - Tertiary font color
+/// Tertiary font color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-tertiary-color                           : $primary-blue !default;
 
-/// @type Color [default] - Tertiary background color
+/// Tertiary background color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-tertiary-background                      : $white !default;
 
-/// @type Color - [default] Tertiary hover background color
+/// Tertiary hover background color
+/// @group px-buttons-design:variables:style
+/// @type Color - [default]
 $inuit-btn-tertiary-background--hover               : $gray3 !default;
 
-/// @type Color - [default] Tertiary pressed background color
+/// Tertiary pressed background color
+/// @group px-buttons-design:variables:style
+/// @type Color - [default]
 $inuit-btn-tertiary-background--pressed             : $gray5 !default;
 
-/// @type Color [default] - Disabled font color
+/// Disabled font color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-disabled-color                           : $gray4 !default;
 
-/// @type Color [default] - Disabled background color
+/// Disabled background color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-disabled-background                      : $white !default;
 
-/// @type Color [default] - Disabled border color
+/// Disabled border color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
 $inuit-btn-disabled-border-color                    : $gray4 !default;
 
-/// @type Boolean [default] - Produce CSS for primary buttons?
+/// Produce CSS for primary buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--primary                          : false !default;
 
-/// @type Boolean [default] - Produce CSS for tertiary buttons?
+/// Produce CSS for tertiary buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--tertiary                         : false !default;
 
-/// @type Boolean [default] - Produce CSS for small buttons?
+/// Produce CSS for small buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--small                            : false !default;
 
-/// @type Boolean [default] - Produce CSS for large buttons?
+/// Produce CSS for large buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--large                            : false !default;
 
-/// @type Boolean [default] - Produce CSS for huge buttons?
+/// Produce CSS for huge buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--huge                             : false !default;
 
-/// @type Boolean [default] - Produce CSS for full buttons?
+/// Produce CSS for full buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--full                             : false !default;
 
-/// @type Boolean [default] - Produce CSS for icon buttons?
+/// Produce CSS for icon buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--icon                             : false !default;
 
-/// @type Boolean [default] - Produce CSS for bare buttons?
+/// Produce CSS for bare buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--bare                             : false !default;
 
-/// @type Boolean [default] - Produce CSS for bare--primary buttons?
+/// Produce CSS for bare--primary buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--bare--primary                    : false !default;
 
-/// @type Boolean [default] - Produce CSS for disabled buttons?
+/// Produce CSS for disabled buttons?
+/// @group px-buttons-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-btn--disabled                         : false !default;
 
-/// @type Boolean [default] - Assume `box-sizing : border-box;`
+/// Assume `box-sizing : border-box;`
+/// @group px-buttons-design:variables:style
+/// @type Boolean [default]
 $inuit-global-border-box                            : false !default;
 
-
-
+/// Default buttons
 .#{$inuit-btn-namespace}btn,
 %#{$inuit-btn-namespace}btn {
   display: inline-block;
@@ -160,11 +232,10 @@ $inuit-global-border-box                            : false !default;
   &:active {
     outline: none;
   }
-
 }
-/** Workaround for FF since it does not support calc().
-  * Other buttons appear ok with the height declaration, but non-button elements do not.
-**/
+
+/// Workaround for FF since it does not support calc().
+/// Other buttons appear ok with the height declaration, but non-button elements do not.
 @-moz-document url-prefix() {
   .#{$inuit-btn-namespace}btn:not(button),
   %#{$inuit-btn-namespace}btn:not(button) {
@@ -172,26 +243,18 @@ $inuit-global-border-box                            : false !default;
   }
 }
 
+/// All buttons
 button.#{$inuit-btn-namespace}btn {
   -webkit-appearance: button;
 }
 
-
-/**
-* Establish default space between adjacent buttons
-*/
+/// Establish default space between adjacent buttons
 .#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn {
   margin-left: $inuit-base-spacing-unit--small;
 }
 
-
-
+/// Buttons with no styles (good a11y practice to use <button> for actions rather than <a>).
 @if ($inuit-enable-btn--bare == true) {
-
-  /**
-   * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>).
-   */
-
   .#{$inuit-btn-namespace}btn--bare,
   %#{$inuit-btn-namespace}btn--bare {
     height: auto;
@@ -205,7 +268,6 @@ button.#{$inuit-btn-namespace}btn {
     box-shadow: none;
     background: none;
     outline:none;
-
     &,
     &:link,
     &:visited,
@@ -216,79 +278,63 @@ button.#{$inuit-btn-namespace}btn {
       background: none;
       outline:none;
     }
-
     &,
     &:link,
     &:visited {
       color: $gray8;
     }
-
     &:hover {
       color: $primary-blue;
     }
-
     &:active,
     &:focus {
       color: $primary-blue-pressed;
     }
-
   }
-
 }
 
+/// Button bare primary
 @if ($inuit-enable-btn--bare--primary == true) {
-
-.#{$inuit-btn-namespace}btn--bare--primary,
-%#{$inuit-btn-namespace}btn--bare--primary {
-    height: auto;
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-    line-height: inherit;
-    font-size: calculateRem(18px);
-    width: calculateRem(34px);
-    height: calculateRem(34px);
-    box-shadow: none;
-    background: none;
-    outline:none;
-
-    &,
-    &:link,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus {
+  .#{$inuit-btn-namespace}btn--bare--primary,
+  %#{$inuit-btn-namespace}btn--bare--primary {
+      height: auto;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: calculateRem(18px);
+      width: calculateRem(34px);
+      height: calculateRem(34px);
       box-shadow: none;
       background: none;
       outline:none;
-    }
-
-    &,
-    &:link,
-    &:visited {
-      color: $primary-blue;
-    }
-
-    &:hover {
-      color: $primary-blue-hover;
-    }
-
-    &:active,
-    &:focus {
-      color: $primary-blue-pressed;
-    }
-
+      &,
+      &:link,
+      &:visited,
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: none;
+        background: none;
+        outline:none;
+      }
+      &,
+      &:link,
+      &:visited {
+        color: $primary-blue;
+      }
+      &:hover {
+        color: $primary-blue-hover;
+      }
+      &:active,
+      &:focus {
+        color: $primary-blue-pressed;
+      }
   }
-
 }
 
-
+/// Primary buttons
 @if ($inuit-enable-btn--primary == true) {
-
-  /**
-   * Change button colors for primary buttons
-   */
-
   .#{$inuit-btn-namespace}btn--primary,
   %#{$inuit-btn-namespace}btn--primary {
     border-color: $inuit-btn-primary-border-color;
@@ -310,17 +356,10 @@ button.#{$inuit-btn-namespace}btn {
       background-color: $inuit-btn-primary-background--pressed;
     }
   }
-
 }
 
-
-
+/// Tertiary buttons
 @if ($inuit-enable-btn--tertiary == true) {
-
-  /**
-   * Change button colors for tertiary buttons
-   */
-
   .#{$inuit-btn-namespace}btn--tertiary,
   %#{$inuit-btn-namespace}btn--tertiary {
     border-color: $inuit-btn-border-color;
@@ -344,17 +383,10 @@ button.#{$inuit-btn-namespace}btn {
       background-color: $inuit-btn-tertiary-background--pressed;
     }
   }
-
 }
 
-
-
+/// Disabled buttons
 @if ($inuit-enable-btn--disabled == true) {
-
-  /**
-   * Change button colors for disabled buttons
-   */
-
   .#{$inuit-btn-namespace}btn--disabled,
   %#{$inuit-btn-namespace}btn--disabled,
   .btn[disabled] {
@@ -370,22 +402,16 @@ button.#{$inuit-btn-namespace}btn {
       color: $inuit-btn-disabled-color;
     }
   }
-
 }
 
+/// Small buttons
 @if ($inuit-enable-btn--small == true) {
-
-  /**
-   * Small buttons.
-   */
-
   .#{$inuit-btn-namespace}btn--small,
   %#{$inuit-btn-namespace}btn--small {
       height: $inuit-btn-height--small;
       font-size: calculateRem(12px);
       line-height: calc(#{$inuit-btn-height--small} - 2px);
   }
-
   /** Workaround for FF since it does not support calc().
     * Other buttons appear ok with the height declaration, but non-button elements do not.
   **/
@@ -395,48 +421,29 @@ button.#{$inuit-btn-namespace}btn {
         line-height:$inuit-btn-line-height--small--firefox;
     }
   }
-
 }
 
+/// Large buttons
 @if ($inuit-enable-btn--large == true) {
-
-  /**
-   * Large buttons.
-   */
-
   .#{$inuit-btn-namespace}btn--large,
   %#{$inuit-btn-namespace}btn--large {
       font-size: $inuit-base-spacing-unit--large;
   }
-
 }
 
+/// Huge buttons
 @if ($inuit-enable-btn--huge == true) {
-
-  /**
-   * Call-to-action buttons.
-   */
-
   .#{$inuit-btn-namespace}btn--huge,
   %#{$inuit-btn-namespace}btn--huge {
       font-size: $inuit-base-spacing-unit--huge;
   }
-
 }
 
-
-
-
+/// Full-width buttons (for mobile, et al)
 @if ($inuit-enable-btn--full == true) {
-
-  /**
-   * Full-width buttons.
-   */
-
   .#{$inuit-btn-namespace}btn--full,
   %#{$inuit-btn-namespace}btn--full {
       width: 100%;
-
       @if $inuit-global-border-box == false {
           /**
            * Remove paddings so that widths and paddings don’t conflict.
@@ -444,24 +451,11 @@ button.#{$inuit-btn-namespace}btn {
           padding-right: 0;
           padding-left:  0;
       }
-
   }
-
 }
 
-
-
-
-
+/// Round iconic buttons
 @if ($inuit-enable-btn--icon == true) {
-
-  /**
-   * Round-ended buttons.
-   *
-   * 1. Overly-large value to ensure the radius rounds the whole end of the
-   *    button.
-   */
-
   .#{$inuit-btn-namespace}btn--icon,
   %#{$inuit-btn-namespace}btn--icon {
       width: $inuit-btn-height;
@@ -476,5 +470,4 @@ button.#{$inuit-btn-namespace}btn {
         line-height:$inuit-btn-line-height--firefox;
     }
   }
-
 }

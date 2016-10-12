@@ -1,0 +1,1036 @@
+[
+    {
+        "description": "Default buttons\n",
+        "commentRange": {
+            "start": 195,
+            "end": 195
+        },
+        "context": {
+            "type": "css",
+            "name": ".#",
+            "value": "$inuit-btn-namespace",
+            "line": {
+                "start": 196,
+                "end": 474
+            }
+        },
+        "group": [
+            "px-buttons-design"
+        ],
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "All buttons\n",
+        "commentRange": {
+            "start": 246,
+            "end": 246
+        },
+        "context": {
+            "type": "css",
+            "name": "button.#",
+            "value": "$inuit-btn-namespace",
+            "line": {
+                "start": 247,
+                "end": 474
+            }
+        },
+        "group": [
+            "px-buttons-design"
+        ],
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Establish default space between adjacent buttons\n",
+        "commentRange": {
+            "start": 251,
+            "end": 251
+        },
+        "context": {
+            "type": "css",
+            "name": ".#",
+            "value": "$inuit-btn-namespace",
+            "line": {
+                "start": 252,
+                "end": 474
+            }
+        },
+        "group": [
+            "px-buttons-design"
+        ],
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for primary buttons?\n",
+        "commentRange": {
+            "start": 140,
+            "end": 142
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--primary",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 143,
+                "end": 143
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for tertiary buttons?\n",
+        "commentRange": {
+            "start": 145,
+            "end": 147
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--tertiary",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 148,
+                "end": 148
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for small buttons?\n",
+        "commentRange": {
+            "start": 150,
+            "end": 152
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--small",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 153,
+                "end": 153
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for large buttons?\n",
+        "commentRange": {
+            "start": 155,
+            "end": 157
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--large",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 158,
+                "end": 158
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for huge buttons?\n",
+        "commentRange": {
+            "start": 160,
+            "end": 162
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--huge",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 163,
+                "end": 163
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for full buttons?\n",
+        "commentRange": {
+            "start": 165,
+            "end": 167
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--full",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 168,
+                "end": 168
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for icon buttons?\n",
+        "commentRange": {
+            "start": 170,
+            "end": 172
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--icon",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 173,
+                "end": 173
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for bare buttons?\n",
+        "commentRange": {
+            "start": 175,
+            "end": 177
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--bare",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 178,
+                "end": 178
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for bare--primary buttons?\n",
+        "commentRange": {
+            "start": 180,
+            "end": 182
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--bare--primary",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 183,
+                "end": 183
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for disabled buttons?\n",
+        "commentRange": {
+            "start": 185,
+            "end": 187
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--disabled",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 188,
+                "end": 188
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Prepend value for all generated classes\n",
+        "commentRange": {
+            "start": 10,
+            "end": 12
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-namespace",
+            "value": "$inuit-namespace",
+            "scope": "default",
+            "line": {
+                "start": 13,
+                "end": 13
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "String [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Font color\n",
+        "commentRange": {
+            "start": 15,
+            "end": 17
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-color",
+            "value": "$black",
+            "scope": "default",
+            "line": {
+                "start": 18,
+                "end": 18
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Background color\n",
+        "commentRange": {
+            "start": 20,
+            "end": 22
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-background",
+            "value": "$gray3",
+            "scope": "default",
+            "line": {
+                "start": 23,
+                "end": 23
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Hover background color\n",
+        "commentRange": {
+            "start": 25,
+            "end": 27
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-background--hover",
+            "value": "$gray5",
+            "scope": "default",
+            "line": {
+                "start": 28,
+                "end": 28
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Pressed background color\n",
+        "commentRange": {
+            "start": 30,
+            "end": 32
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-background--pressed",
+            "value": "$gray6",
+            "scope": "default",
+            "line": {
+                "start": 33,
+                "end": 33
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Border color\n",
+        "commentRange": {
+            "start": 35,
+            "end": 37
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-border-color",
+            "value": "$gray5",
+            "scope": "default",
+            "line": {
+                "start": 38,
+                "end": 38
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Hover border color\n",
+        "commentRange": {
+            "start": 40,
+            "end": 42
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-border-color--hover",
+            "value": "$gray6",
+            "scope": "default",
+            "line": {
+                "start": 43,
+                "end": 43
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Pressed border color\n",
+        "commentRange": {
+            "start": 45,
+            "end": 47
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-border-color--pressed",
+            "value": "$gray7",
+            "scope": "default",
+            "line": {
+                "start": 48,
+                "end": 48
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Shadow\n",
+        "commentRange": {
+            "start": 50,
+            "end": 52
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-shadow",
+            "value": "0 1px 0 rgba($black, .15)",
+            "scope": "default",
+            "line": {
+                "start": 53,
+                "end": 53
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color | String [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Small shadow\n",
+        "commentRange": {
+            "start": 55,
+            "end": 57
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-shadow--light",
+            "value": "0 1px 0 rgba($black, .1)",
+            "scope": "default",
+            "line": {
+                "start": 58,
+                "end": 58
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color | String [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Button Height\n",
+        "commentRange": {
+            "start": 60,
+            "end": 62
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-height",
+            "value": "2em",
+            "scope": "default",
+            "line": {
+                "start": 63,
+                "end": 63
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Height | String [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Button line height for firefox\n",
+        "commentRange": {
+            "start": 65,
+            "end": 67
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-line-height--firefox",
+            "value": "1.8em",
+            "scope": "default",
+            "line": {
+                "start": 68,
+                "end": 68
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Line Height | String [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Small Button Height\n",
+        "commentRange": {
+            "start": 70,
+            "end": 72
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-height--small",
+            "value": "1.6666666667em",
+            "scope": "default",
+            "line": {
+                "start": 73,
+                "end": 73
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Height | String [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Button line height for firefox\n",
+        "commentRange": {
+            "start": 75,
+            "end": 77
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-line-height--small--firefox",
+            "value": "1.4em",
+            "scope": "default",
+            "line": {
+                "start": 78,
+                "end": 78
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Line Height | String [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Primary font color\n",
+        "commentRange": {
+            "start": 80,
+            "end": 82
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-primary-color",
+            "value": "$white",
+            "scope": "default",
+            "line": {
+                "start": 83,
+                "end": 83
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Primary background color\n",
+        "commentRange": {
+            "start": 85,
+            "end": 87
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-primary-background",
+            "value": "$primary-blue",
+            "scope": "default",
+            "line": {
+                "start": 88,
+                "end": 88
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Primary hover background color\n",
+        "commentRange": {
+            "start": 90,
+            "end": 92
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-primary-background--hover",
+            "value": "$primary-blue-hover",
+            "scope": "default",
+            "line": {
+                "start": 93,
+                "end": 93
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color - [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Primary pressed background color\n",
+        "commentRange": {
+            "start": 95,
+            "end": 97
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-primary-background--pressed",
+            "value": "$primary-blue-pressed",
+            "scope": "default",
+            "line": {
+                "start": 98,
+                "end": 98
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color - [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Primary border color\n",
+        "commentRange": {
+            "start": 100,
+            "end": 102
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-primary-border-color",
+            "value": "$primary-blue-pressed",
+            "scope": "default",
+            "line": {
+                "start": 103,
+                "end": 103
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Tertiary font color\n",
+        "commentRange": {
+            "start": 105,
+            "end": 107
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-tertiary-color",
+            "value": "$primary-blue",
+            "scope": "default",
+            "line": {
+                "start": 108,
+                "end": 108
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Tertiary background color\n",
+        "commentRange": {
+            "start": 110,
+            "end": 112
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-tertiary-background",
+            "value": "$white",
+            "scope": "default",
+            "line": {
+                "start": 113,
+                "end": 113
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Tertiary hover background color\n",
+        "commentRange": {
+            "start": 115,
+            "end": 117
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-tertiary-background--hover",
+            "value": "$gray3",
+            "scope": "default",
+            "line": {
+                "start": 118,
+                "end": 118
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color - [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Tertiary pressed background color\n",
+        "commentRange": {
+            "start": 120,
+            "end": 122
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-tertiary-background--pressed",
+            "value": "$gray5",
+            "scope": "default",
+            "line": {
+                "start": 123,
+                "end": 123
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color - [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Disabled font color\n",
+        "commentRange": {
+            "start": 125,
+            "end": 127
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-disabled-color",
+            "value": "$gray4",
+            "scope": "default",
+            "line": {
+                "start": 128,
+                "end": 128
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Disabled background color\n",
+        "commentRange": {
+            "start": 130,
+            "end": 132
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-disabled-background",
+            "value": "$white",
+            "scope": "default",
+            "line": {
+                "start": 133,
+                "end": 133
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Disabled border color\n",
+        "commentRange": {
+            "start": 135,
+            "end": 137
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-disabled-border-color",
+            "value": "$gray4",
+            "scope": "default",
+            "line": {
+                "start": 138,
+                "end": 138
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Color [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Assume `box-sizing : border-box;`\n",
+        "commentRange": {
+            "start": 190,
+            "end": 192
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-global-border-box",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 193,
+                "end": 193
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    }
+]

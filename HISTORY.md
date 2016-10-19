@@ -1,3 +1,8 @@
+v0.4.32
+==============================
+* Updated dependencies
+* Updated boilerplate files
+
 v0.4.31
 ==============================
 * added minor fixes to demo

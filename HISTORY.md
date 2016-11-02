@@ -1,3 +1,8 @@
+
+v0.4.35
+==================
+* patch test
+
 v0.4.34
 ==============================
 * updating to fix safari demo height bug

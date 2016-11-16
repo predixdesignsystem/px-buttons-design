@@ -199,10 +199,10 @@ $inuit-global-border-box                            : false !default;
   overflow: visible;
   height: $inuit-btn-height;
   margin: 0;
-  border: 1px solid $inuit-btn-border-color;
+  border: 1px solid var(--px-btn-border-color, $inuit-btn-border-color);
   border-radius: 3px;
   padding: 0 $inuit-btn-height/2;
-  box-shadow: $inuit-btn-shadow--light;
+  box-shadow: var(--px-btn-shadow--light, $inuit-btn-shadow--light);
   font: inherit;
   line-height: calc(#{$inuit-btn-height} - 2px);
   -webkit-font-smoothing: antialiased;
@@ -211,23 +211,23 @@ $inuit-global-border-box                            : false !default;
   text-decoration: none;
   text-transform: none;
   white-space: nowrap;
-  background-color: $inuit-btn-background;
+  background-color: var(--px-btn-background, $inuit-btn-background);
   &,
   &:link,
   &:visited,
   &:hover,
   &:active {
-    color: $inuit-btn-color;
+    color: var(--px-btn-color, $inuit-btn-color);
   }
   &:hover {
-    border-color: $inuit-btn-border-color--hover;
-    box-shadow: $inuit-btn-shadow;
-    background-color: $inuit-btn-background--hover;
+    border-color: var(--px-btn-border-color--hover, $inuit-btn-border-color--hover);
+    box-shadow: var(--px-btn-shadow, $inuit-btn-shadow);
+    background-color: var(--px-btn-background--hover, $inuit-btn-background--hover);
   }
   &:active {
-    border-color: $inuit-btn-border-color--pressed;
+    border-color: var(--px-btn-border-color--pressed, $inuit-btn-border-color--pressed);
     box-shadow: none;
-    background-color: $inuit-btn-background--pressed;
+    background-color: var(--px-btn-background--pressed, $inuit-btn-background--pressed);
   }
   &:active {
     outline: none;
@@ -281,14 +281,14 @@ button.#{$inuit-btn-namespace}btn {
     &,
     &:link,
     &:visited {
-      color: $gray8;
+      color: var(--px-btn-bare-color--visited, $gray8);
     }
     &:hover {
-      color: $primary-blue;
+      color: var(--px-btn-bare-color--hover, $primary-blue);
     }
     &:active,
     &:focus {
-      color: $primary-blue-pressed;
+      color: var(--px-btn-bare-color--pressed, $primary-blue-pressed);
     }
   }
 }
@@ -321,14 +321,14 @@ button.#{$inuit-btn-namespace}btn {
       &,
       &:link,
       &:visited {
-        color: $primary-blue;
+        color: var(--px-btn-primary-bare-color--visited, $primary-blue);
       }
       &:hover {
-        color: $primary-blue-hover;
+        color: var(--px-btn-primary-bare-color--hover, $primary-blue-hover);
       }
       &:active,
       &:focus {
-        color: $primary-blue-pressed;
+        color: var(--px-btn-primary-bare-color--pressed, $primary-blue-pressed);
       }
   }
 }
@@ -337,23 +337,23 @@ button.#{$inuit-btn-namespace}btn {
 @if ($inuit-enable-btn--primary == true) {
   .#{$inuit-btn-namespace}btn--primary,
   %#{$inuit-btn-namespace}btn--primary {
-    border-color: $inuit-btn-primary-border-color;
-    box-shadow: $inuit-btn-shadow;
-    background-color: $inuit-btn-primary-background;
+    border-color: var(--px-btn-primary-border-color, $inuit-btn-primary-border-color);
+    box-shadow: var(--px-btn-shadow, $inuit-btn-shadow);
+    background-color: var(--px-btn-primary-background, $inuit-btn-primary-background);
     &,
     &:link,
     &:visited,
     &:hover,
     &:active {
-      color: $inuit-btn-primary-color;
+      color: var(--px-btn-primary-color, $inuit-btn-primary-color);
     }
     &:hover {
       border-color: transparent;
-      background-color: $inuit-btn-primary-background--hover;
+      background-color: var(--px-btn-primary-background--hover, $inuit-btn-primary-background--hover);
     }
     &:active {
       border-color: transparent;
-      background-color: $inuit-btn-primary-background--pressed;
+      background-color: var(--px-btn-primary-background--pressed, $inuit-btn-primary-background--pressed);
     }
   }
 }
@@ -362,25 +362,25 @@ button.#{$inuit-btn-namespace}btn {
 @if ($inuit-enable-btn--tertiary == true) {
   .#{$inuit-btn-namespace}btn--tertiary,
   %#{$inuit-btn-namespace}btn--tertiary {
-    border-color: $inuit-btn-border-color;
+    border-color: var(--px-btn-border-color, $inuit-btn-border-color);
     box-shadow: none;
-    background-color: $inuit-btn-tertiary-background;
+    background-color: var(--px-btn-tertiary-background, $inuit-btn-tertiary-background);
     &,
     &:link,
     &:visited,
     &:hover,
     &:active {
-      color: $inuit-btn-tertiary-color;
+      color: var(--px-btn-tertiary-color, $inuit-btn-tertiary-color);
     }
     &:hover {
-      border-color: $inuit-btn-border-color--hover;
+      border-color: var(--px-btn-border-color--hover, $inuit-btn-border-color--hover);
       box-shadow: none;
-      background-color: $inuit-btn-tertiary-background--hover;
+      background-color: var(--px-btn-tertiary-background--hover, $inuit-btn-tertiary-background--hover);
     }
     &:active {
-      border-color: $inuit-btn-border-color--pressed;
+      border-color: var(--px-btn-border-color--pressed, $inuit-btn-border-color--pressed);
       box-shadow: none;
-      background-color: $inuit-btn-tertiary-background--pressed;
+      background-color: var(--px-btn-tertiary-background--pressed, $inuit-btn-tertiary-background--pressed);
     }
   }
 }
@@ -395,11 +395,11 @@ button.#{$inuit-btn-namespace}btn {
     &:visited,
     &:hover,
     &:active {
-      border-color: $inuit-btn-disabled-border-color;
+      border-color: var(--px-btn-disabled-border-color, $inuit-btn-disabled-border-color);
       box-shadow: none;
       cursor: not-allowed;
-      background-color: $inuit-btn-disabled-background;
-      color: $inuit-btn-disabled-color;
+      background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background);
+      color: var(--px-btn-disabled-color, $inuit-btn-disabled-color);
     }
   }
 }

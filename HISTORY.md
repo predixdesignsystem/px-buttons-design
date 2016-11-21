@@ -1,3 +1,7 @@
+v0.4.39
+==================
+* added pointer-events:none to disabled buttons
+
 v0.4.38
 ==================
 * Adding css variables for button colour styles.

@@ -400,6 +400,7 @@ button.#{$inuit-btn-namespace}btn {
       cursor: not-allowed;
       background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background);
       color: var(--px-btn-disabled-color, $inuit-btn-disabled-color);
+      pointer-events: none;
     }
   }
 }

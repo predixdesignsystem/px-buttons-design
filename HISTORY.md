@@ -1,3 +1,7 @@
+v0.4.40
+==================
+* remove CSS style variables from 0.4.X release track
+
 v0.4.39
 ==================
 * added pointer-events:none to disabled buttons

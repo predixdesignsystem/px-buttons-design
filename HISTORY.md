@@ -1,3 +1,7 @@
+v1.0.1
+==================
+* Move demo page to use style module. Clean out dead code.
+
 v1.0.0
 ==================
 * Reintroduce CSS style variables

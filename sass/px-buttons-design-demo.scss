@@ -30,7 +30,6 @@ PAGE. IT SHOULD NOT PROVIDE RULES FOR THE MODULE.
 // Base
 @import "px-flexbox-design/_base.flexbox.scss";
 @import "px-viewport-design/_base.viewport.scss";
-@import "px-typography-design/_base.typography.scss";
 
 // Component
 $inuit-enable-btn--small : true;
@@ -44,7 +43,6 @@ $inuit-enable-btn--bare : true;
 $inuit-enable-btn--bare--primary : true;
 $inuit-enable-btn--icon : true;
 @import "../_objects.buttons.scss";
-
 
 // Trumps
 @import "inuit-clearfix/_trumps.clearfix.scss";

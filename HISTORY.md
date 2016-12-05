@@ -1,3 +1,7 @@
+v1.0.2
+==================
+* Gulp fixes & style module naming changes.
+
 v1.0.1
 ==================
 * Move demo page to use style module. Clean out dead code.

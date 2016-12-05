@@ -49,7 +49,7 @@ gulp.task('sass', function() {
     .pipe(buildCSS())
     .pipe(stylemod({
       moduleId: function(file) {
-        return 'px-demo-styles';
+        return path.basename(file.path, path.extname(file.path)) + '-styles';
       }
     }))
     .pipe(gulp.dest('css'))

@@ -54,6 +54,10 @@ yes | cp index.vulacanized.html index.html
 rm index.vulacanized.html
 cd ../ #remember to exit out of the component before you do any git stuff
 
+npm install sw-precache
+rm -Rf ${REPO_NAME}/node_modules
+sw-precache  --root="." --static-file-globs="${REPO_NAME}/**/*.{html,png,jpg,gif,svg,eot,ttf,woff}"
+
 #do the git stuff
 git add .
 git commit -m "rebuild github pages"

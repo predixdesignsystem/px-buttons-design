@@ -1,6 +1,6 @@
 {
     "name": "px-buttons-design",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Button object styles for Predix UI",
     "private": false,
     "scripts": {

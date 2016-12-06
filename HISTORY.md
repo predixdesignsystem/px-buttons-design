@@ -1,3 +1,7 @@
+v1.0.3
+==================
+* Add service worker for gh_pages.
+
 v1.0.2
 ==================
 * Gulp fixes & style module naming changes.

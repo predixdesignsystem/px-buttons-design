@@ -56,7 +56,7 @@ cd ../ #remember to exit out of the component before you do any git stuff
 
 npm install sw-precache
 rm -Rf ${REPO_NAME}/node_modules
-sw-precache  --root="." --static-file-globs="${REPO_NAME}/**/*.{html,png,jpg,gif,svg,eot,ttf,woff}"
+sw-precache  --root="." --static-file-globs="${REPO_NAME}/**/{sassdoc.json,*.{html,png,jpg,gif,svg,eot,ttf,woff}}"
 
 #do the git stuff
 git add .

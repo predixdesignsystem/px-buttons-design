@@ -1,3 +1,7 @@
+v1.1.0
+==================
+* Updated dependencies
+
 v1.0.3
 ==================
 * Add service worker for gh_pages.

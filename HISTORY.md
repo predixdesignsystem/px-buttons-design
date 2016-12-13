@@ -1,3 +1,7 @@
+v1.1.2
+==================
+* Add px-iconography-design dependency
+
 v1.1.1
 ==================
 * Update missed design depndencies

@@ -1,3 +1,7 @@
+v1.1.3
+==================
+* updated px-colors-design version number
+
 v1.1.2
 ==================
 * Add px-iconography-design dependency

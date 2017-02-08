@@ -1,0 +1,175 @@
+<!-- Common imports -->
+<link rel="import" href="../../polymer/polymer.html" />
+
+  <!-- Common demo imports -->
+  <link rel="import" href="../../px-sass-doc/px-sass-doc.html" />
+  <link rel="import" href="../css/px-buttons-design-demo-styles.html" />
+
+<!-- Demo DOM module -->
+<dom-module id="local-element-demo">
+  <template>  
+  <!-- 0: Import the styles-->
+  <style include="px-buttons-design-demo-styles" is="custom-style"></style>
+
+<!-- 1: Describe Module -->
+<px-sass-doc
+  module-name="px-buttons-design"
+  description="The Predix UI Buttons module is a simple, robust, extensible baseline for building entire suites of buttons on."
+  layer="objects"
+  sassdoc-path="sassdoc.json"
+  dependencies='[
+    "https://github.com/PredixDev/px-colors-design",
+    "https://github.com/PredixDev/px-defaults-design"
+  ]'
+  selected-options="{{selectedOptions}}">
+
+<!-- 2: Set Options -->
+<px-sass-doc-option
+  option-name="Size"
+  choose-with="dropdown"
+  choices='[
+    "small",
+    "regular (default)",
+    "large",
+    "huge",
+    "full"
+  ]'
+  default-choice="regular (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Type"
+  choose-with="dropdown"
+  choices='[
+    "primary",
+    "secondary (default)",
+    "tertiary",
+    "disabled",
+    "bare",
+    "bare primary"
+  ]'
+  default-choice="secondary (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Icon"
+  choose-with="boolean">
+</px-sass-doc-option>
+
+<!-- 3: Make HTML Demo -->
+<template is="dom-if" if="{{isIcon(selectedOptions.Icon)}}" restamp>
+<section data-slot="demoHTML">
+<button class$="{{buttonClasses}}">
+  <i class="fa fa-briefcase"></i>
+</button>
+</section>
+
+</template>
+<template is="dom-if" if="{{!isIcon(selectedOptions.Icon)}}" restamp>
+<section data-slot="demoHTML">
+<button class$="{{buttonClasses}}">Label</button>
+</section>
+</template>
+
+<!-- 4: Set Import Slot -->
+<section data-slot="import">
+{{importCode}}
+</section>
+
+<!-- 5: Set Usage HTML -->
+<section data-slot="usage">
+```
+<!-- Default Button: -->
+<button class="btn">Button</button>
+
+
+<!-- Sizes of Buttons: -->
+<button class="btn btn--small">Small</button>
+<button class="btn btn--large">Large</button>
+<button class="btn btn--huge">Huge</button>
+<button class="btn btn--full">Full</button>
+
+Note: the "Full" size button has a width that is 100% of its parent container.
+It is ideal for use on mobile devices, in modals, or any other use case where
+the button should appear as wide as possible. It does not appear any wider
+in the demo above due to the structure of this page.
+
+
+<!-- Types of Buttons: -->
+<button class="btn btn--primary">Primary</button>
+<button class="btn btn--tertiary">Tertiary</button>
+<button class="btn btn--disabled">Disabled</button>
+<button class="btn btn--bare">Bare</button>
+<button class="btn btn--bare--primary">Bare Primary</button>
+
+
+<!-- Iconic Buttons: -->
+<button class="btn btn--icon">Icon</button>
+```
+</section>
+
+</px-sass-doc>
+</template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'local-element-demo',
+
+    attached : function(){
+      var boundHandler = this._handleOptionsUpdated.bind(this); 
+      this.addEventListener('px-sass-doc-options-updated', boundHandler)
+    },
+    
+    detached : function(){
+      this.removeEventListener('px-sass-doc-options-updated', boundHandler);
+    },
+
+    _handleOptionsUpdated : function(evt) {
+      //call functions created below
+      this.importCode = this._importCode();
+      this.buttonClasses = this._buttonClasses();
+
+      // Wait, then tell the highlighter to run after dom-if restamps
+      this.async(function(){ this.fire('px-sass-doc-demo-updated', {}) }, 10);
+    },
+
+    _buttonClasses : function() {
+      var opts = this.selectedOptions || {}, strings = [];
+      if (opts.Size === "small")         strings.push("btn--small");
+      if (opts.Size === "large")         strings.push("btn--large");
+      if (opts.Size === "huge")          strings.push("btn--huge");
+      if (opts.Size === "full")          strings.push("btn--full");
+      if (opts.Type === "primary")       strings.push("btn--primary");
+      if (opts.Type === "tertiary")      strings.push("btn--tertiary");
+      if (opts.Type === "disabled")      strings.push("btn--disabled");
+      if (opts.Type === "bare")          strings.push("btn--bare");
+      if (opts.Type === "bare primary")  strings.push("btn--bare--primary");
+      if (opts.Icon === true)            strings.push("btn--icon");
+      return ("btn " + strings.join(" ")).trim();
+    },
+
+    _importCode : function() {
+      var opts = this.selectedOptions || {}, strings = [];
+      if (opts.Size === "small")          strings.push("$inuit-enable-btn--small : true;");
+      if (opts.Size === "large")          strings.push("$inuit-enable-btn--large : true;");
+      if (opts.Size === "huge")           strings.push("$inuit-enable-btn--huge : true;");
+      if (opts.Size === "full")           strings.push("$inuit-enable-btn--full : true;");
+      if (opts.Type === "primary")        strings.push("$inuit-enable-btn--primary : true;");
+      if (opts.Type === "tertiary")       strings.push("$inuit-enable-btn--tertiary : true;");
+      if (opts.Type === "disabled")       strings.push("$inuit-enable-btn--disabled : true;");
+      if (opts.Type === "bare")           strings.push("$inuit-enable-btn--bare : true;");
+      if (opts.Type === "bare primary")   strings.push("$inuit-enable-btn--bare--primary : true;");
+      if (opts.Icon === true)             strings.push("$inuit-enable-btn--icon : true;");
+      return (strings.join("\n") + "\n@import 'px-buttons-design/_objects.buttons.scss';").trim();
+    },
+
+    isIcon : function() {
+      var opts = this.selectedOptions || {};
+      if (opts.Icon === true) return true;
+      return false;
+    }
+  });
+
+</script>

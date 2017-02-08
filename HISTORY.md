@@ -1,6 +1,10 @@
-v1.1.5
+v1.1.6
 ==================
 * Updated to new demo using px-demo
+
+v1.1.5
+==================
+* rebuilt sass with new colors
 
 v1.1.4
 ==================

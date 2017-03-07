@@ -7,7 +7,7 @@
 
 <!-- Demo DOM module -->
 <dom-module id="local-element-demo">
-  <template>  
+  <template>
   <!-- 0: Import the styles-->
   <style include="px-buttons-design-demo-styles" is="custom-style"></style>
 
@@ -21,7 +21,9 @@
     "https://github.com/PredixDev/px-colors-design",
     "https://github.com/PredixDev/px-defaults-design"
   ]'
-  selected-options="{{selectedOptions}}">
+  selected-options="{{selectedOptions}}"
+  tabs='["Text","Text & icon","Icon"]'
+  selected-tab="{{selectedTab}}">
 
 <!-- 2: Set Options -->
 <px-sass-doc-option
@@ -51,23 +53,34 @@
   default-choice="secondary (default)">
 </px-sass-doc-option>
 
+<template is="dom-if" if="[[_tabIs('Icon',selectedTab)]]">
 <px-sass-doc-option
   option-name="Icon"
-  choose-with="boolean">
+  choose-with="boolean"
+  default-choice="true">
 </px-sass-doc-option>
+</template>
 
 <!-- 3: Make HTML Demo -->
-<template is="dom-if" if="{{isIcon(selectedOptions.Icon)}}" restamp>
+<template is="dom-if" if="{{_tabIs('Icon',selectedTab)}}" restamp>
 <section data-slot="demoHTML">
 <button class$="{{buttonClasses}}">
   <i class="fa fa-briefcase"></i>
 </button>
 </section>
-
 </template>
-<template is="dom-if" if="{{!isIcon(selectedOptions.Icon)}}" restamp>
+
+<template is="dom-if" if="{{_tabIs('Text',selectedTab)}}" restamp>
 <section data-slot="demoHTML">
 <button class$="{{buttonClasses}}">Label</button>
+</section>
+</template>
+
+<template is="dom-if" if="{{_tabIs('Text & icon',selectedTab)}}" restamp>
+<section data-slot="demoHTML">
+<button class$="{{buttonClasses}}">
+  <i class="fa fa-briefcase u-mr--"></i>Label
+</button>
 </section>
 </template>
 
@@ -118,10 +131,10 @@ in the demo above due to the structure of this page.
     is: 'local-element-demo',
 
     attached : function(){
-      var boundHandler = this._handleOptionsUpdated.bind(this); 
+      var boundHandler = this._handleOptionsUpdated.bind(this);
       this.addEventListener('px-sass-doc-options-updated', boundHandler)
     },
-    
+
     detached : function(){
       this.removeEventListener('px-sass-doc-options-updated', boundHandler);
     },
@@ -165,10 +178,9 @@ in the demo above due to the structure of this page.
       return (strings.join("\n") + "\n@import 'px-buttons-design/_objects.buttons.scss';").trim();
     },
 
-    isIcon : function() {
-      var opts = this.selectedOptions || {};
-      if (opts.Icon === true) return true;
-      return false;
+    _tabIs : function(tabName) {
+      var selected = this.selectedTab || "";
+      return selected === tabName;
     }
   });
 

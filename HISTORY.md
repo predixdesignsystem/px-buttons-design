@@ -1,3 +1,7 @@
+v1.1.7
+==================
+* added example of text & icon (#9)
+
 v1.1.6
 ==================
 * Updated to new demo using px-demo

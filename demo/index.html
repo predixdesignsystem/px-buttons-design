@@ -47,6 +47,7 @@
     "secondary (default)",
     "tertiary",
     "call to action",
+    "call to action (disabled)",
     "disabled",
     "bare",
     "bare primary"
@@ -112,6 +113,7 @@ in the demo above due to the structure of this page.
 <!-- Types of Buttons: -->
 <button class="btn btn--primary">Primary</button>
 <button class="btn btn--call-to-action">Call To Action</button>
+<button class="btn btn--call-to-action btn--disabled">Call To Action (disabled)</button>
 <button class="btn btn--tertiary">Tertiary</button>
 <button class="btn btn--disabled">Disabled</button>
 <button class="btn btn--bare">Bare</button>
@@ -158,6 +160,7 @@ in the demo above due to the structure of this page.
       if (opts.Size === "full")           strings.push("btn--full");
       if (opts.Type === "primary")        strings.push("btn--primary");
       if (opts.Type === "call to action") strings.push("btn--call-to-action");
+      if (opts.Type === "call to action (disabled)") strings.push("btn--call-to-action btn--disabled");
       if (opts.Type === "tertiary")       strings.push("btn--tertiary");
       if (opts.Type === "disabled")       strings.push("btn--disabled");
       if (opts.Type === "bare")           strings.push("btn--bare");
@@ -174,6 +177,7 @@ in the demo above due to the structure of this page.
       if (opts.Size === "full")           strings.push("$inuit-enable-btn--full : true;");
       if (opts.Type === "primary")        strings.push("$inuit-enable-btn--primary : true;");
       if (opts.Type === "call to action") strings.push("$inuit-enable-btn--call-to-action : true;");
+      if (opts.Type === "call to action (disabled)") strings.push("$inuit-enable-btn--call-to-action : true;\n$inuit-enable-btn--disabled : true;");
       if (opts.Type === "tertiary")       strings.push("$inuit-enable-btn--tertiary : true;");
       if (opts.Type === "disabled")       strings.push("$inuit-enable-btn--disabled : true;");
       if (opts.Type === "bare")           strings.push("$inuit-enable-btn--bare : true;");

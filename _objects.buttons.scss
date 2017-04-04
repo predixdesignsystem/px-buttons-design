@@ -198,6 +198,25 @@ $inuit-btn-call-to-action-color--disabled           : $white !default;
 /// @type Color [default]
 $inuit-btn-call-to-action-background--disabled      : $cyan5 !default;
 
+/// Icon button background color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
+$inuit-btn-icon-background                          : transparent !default;
+
+/// Icon button font color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
+$inuit-btn-icon-color                               : $primary-default !default;
+
+/// Icon button hover font color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
+$inuit-btn-icon-color--hover                        : $primary-hover !default;
+
+/// Icon button pressed font color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
+$inuit-btn-icon-color--pressed                      : $primary-pressed !default;
 
 
 /// Produce CSS for primary buttons?
@@ -476,6 +495,15 @@ button.#{$inuit-btn-namespace}btn {
       background-color: var(--px-btn-call-to-action-background--pressed, $inuit-btn-call-to-action-background--pressed);
     }
   }
+  @if ($inuit-enable-btn--disabled == true) {
+    .#{$inuit-btn-namespace}btn--call-to-action.#{$inuit-btn-namespace}btn--disabled,
+    %#{$inuit-btn-namespace}btn--call-to-action%#{$inuit-btn-namespace}btn--disabled,
+    .#{$inuit-btn-namespace}btn--call-to-action.btn[disabled],
+    %#{$inuit-btn-namespace}btn--call-to-action.btn[disabled] {
+      background-color: var(--px-btn-call-to-action-disabled-background, $inuit-btn-call-to-action-background--disabled);
+      color: var(--px-btn-call-to-action-disabled-color, $inuit-btn-call-to-action-color--disabled);
+    }
+  }
 }
 
 /// Disabled buttons
@@ -553,10 +581,28 @@ button.#{$inuit-btn-namespace}btn {
 @if ($inuit-enable-btn--icon == true) {
   .#{$inuit-btn-namespace}btn--icon,
   %#{$inuit-btn-namespace}btn--icon {
+      height: $inuit-btn-height;
       width: $inuit-btn-height;
-      border-radius: 6.6666666667em;
-      padding: 1px 0 0 1px;
+      padding-right: 0;
+      padding-left:  0;
+      background-color: var(--px-btn-icon-background, $inuit-btn-icon-background);
+      color: var(--px-btn-icon-color, $inuit-btn-icon-color);
+      &,
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        background-color: var(--px-btn-icon-background, $inuit-btn-icon-background);
+        color: var(--px-btn-icon-color, $inuit-btn-icon-color);
+      }
+      &:hover {
+        color: var(--px-btn-icon--hover, $inuit-btn-icon-color--hover);
+      }
+      &:active {
+        color: var(--px-btn-icon--pressed, $inuit-btn-icon-color--pressed);
+      }
   }
+
   /** Workaround for FF since it does not support calc().
   **/
   @-moz-document url-prefix() {

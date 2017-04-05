@@ -350,11 +350,9 @@ button.#{$inuit-btn-namespace}btn {
     height: $inuit-btn-height;
     border: 0;
     border-radius: 0;
-    padding: 0;
     line-height: inherit;
-    font-size: calculateRem(18px);
-    width: calculateRem(34px);
-    height: calculateRem(34px);
+    padding-left: 0;
+    padding-right: 0;
     box-shadow: none;
     background: none;
     outline:none;
@@ -387,17 +385,15 @@ button.#{$inuit-btn-namespace}btn {
 @if ($inuit-enable-btn--bare--primary == true) {
   .#{$inuit-btn-namespace}btn--bare--primary,
   %#{$inuit-btn-namespace}btn--bare--primary {
-      height: $inuit-btn-height;
-      border: 0;
-      border-radius: 0;
-      padding: 0;
-      line-height: inherit;
-      font-size: calculateRem(18px);
-      width: calculateRem(34px);
-      height: calculateRem(34px);
-      box-shadow: none;
-      background: none;
-      outline:none;
+    height: $inuit-btn-height;
+    border: 0;
+    border-radius: 0;
+    line-height: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: none;
+    background: none;
+    outline:none;
       &,
       &:link,
       &:visited,

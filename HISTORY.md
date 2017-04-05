@@ -1,3 +1,7 @@
+v1.1.8
+==================
+* fixed demo issue
+
 v1.1.7
 ==================
 * added example of text & icon (#9)

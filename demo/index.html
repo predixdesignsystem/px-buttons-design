@@ -187,7 +187,9 @@ in the demo above due to the structure of this page.
     },
 
     _tabIs : function(tabName) {
-      var selected = this.selectedTab || "";
+      var selected = this.selectedTab || '';
+      this.selectedOptions.Icon = (this.selectedTab === 'Icon');
+      this.fire('px-sass-doc-options-updated', {});
       return selected === tabName;
     }
   });

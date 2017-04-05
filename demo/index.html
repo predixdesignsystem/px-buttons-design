@@ -55,13 +55,11 @@
   default-choice="secondary (default)">
 </px-sass-doc-option>
 
-<template is="dom-if" if="[[_tabIs('Icon',selectedTab)]]">
 <px-sass-doc-option
   option-name="Icon"
   choose-with="boolean"
-  default-choice="true">
+  default-choice="false">
 </px-sass-doc-option>
-</template>
 
 <!-- 3: Make HTML Demo -->
 <template is="dom-if" if="{{_tabIs('Icon',selectedTab)}}" restamp>
@@ -106,8 +104,7 @@
 
 Note: the "Full" size button has a width that is 100% of its parent container.
 It is ideal for use on mobile devices, in modals, or any other use case where
-the button should appear as wide as possible. It does not appear any wider
-in the demo above due to the structure of this page.
+the button should appear as wide as possible.
 
 
 <!-- Types of Buttons: -->

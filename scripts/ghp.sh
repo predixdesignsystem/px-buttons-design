@@ -79,13 +79,13 @@ echo ${meta_temp/'COMPONENT_NAME'/$REPO_NAME} > index.html
 npm install bower -g
 bower cache clean
 # Install the repo and the dark-theme.
-bower install ${REPO_NAME} px-dark-theme px-dark-demo-theme
+bower install ${REPO_NAME} px-dark-theme px-dark-demo-theme --force-latest
 
 #copy the bower file into our root
 yes | cp ${REPO_NAME}/bower.json bower.json
 
 #and run install
-bower install
+bower install --force-latest
 
 # ------------------------------------------------------------------------------
 # BUILD PROJECT

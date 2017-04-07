@@ -1,3 +1,7 @@
+v2.0.0
+==================
+* Implementation of redesign of all button styles
+
 v1.1.8
 ==================
 * fixed demo issue

@@ -1,3 +1,7 @@
+v2.0.1
+==================
+* Bump other deps
+
 v2.0.0
 ==================
 * Implementation of redesign of all button styles

@@ -33,7 +33,7 @@
     "px-iconography-design": "^0.3.0"
   },
   "devDependencies": {
-    "px-sass-doc": "^1.0.1",
+    "px-sass-doc": "^1.0.0",
     "px-starter-kit-design": "^1.0.0"
   }
 }

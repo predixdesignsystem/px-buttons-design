@@ -28,12 +28,12 @@
     "test"
   ],
   "dependencies": {
-    "px-colors-design": "^1.0.1",
-    "px-defaults-design": "^1.0.5",
-    "px-iconography-design": "^0.3.11"
+    "px-colors-design": "^1.0.0",
+    "px-defaults-design": "^1.0.0",
+    "px-iconography-design": "^0.3.0"
   },
   "devDependencies": {
     "px-sass-doc": "^1.0.1",
-    "px-starter-kit-design": "^1.0.1"
+    "px-starter-kit-design": "^1.0.0"
   }
 }

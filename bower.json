@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "px-colors-design": "^1.0.0",
-    "px-defaults-design": "^1.0.0",
+    "px-defaults-design": "^2.0.0",
     "px-iconography-design": "^0.3.0"
   },
   "devDependencies": {

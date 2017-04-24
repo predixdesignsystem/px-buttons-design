@@ -173,6 +173,11 @@ $inuit-btn-disabled-border-color                    : $gray4 !default;
 /// @type Color [default]
 $inuit-btn-call-to-action-color                     : $white !default;
 
+/// Call to action border color
+/// @group px-buttons-design:variables:style
+/// @type Color [default]
+$inuit-btn-call-to-action-border-color              : transparent !default;
+
 /// Call to action background color
 /// @group px-buttons-design:variables:style
 /// @type Color [default]
@@ -479,7 +484,7 @@ button.#{$inuit-btn-namespace}btn {
   .#{$inuit-btn-namespace}btn--call-to-action,
   %#{$inuit-btn-namespace}btn--call-to-action {
     color: var(--px-btn-call-to-action-color, $inuit-btn-call-to-action-color);
-    border-color: var(--px-btn-call-to-action-border-color, $inuit-btn-border-color);
+    border-color: var(--px-btn-call-to-action-border-color, $inuit-btn-call-to-action-border-color);
     box-shadow: var(--px-btn-shadow, $inuit-btn-shadow);
     background-color: var(--px-btn-call-to-action-background, $inuit-btn-call-to-action-background);
     &,
@@ -501,6 +506,7 @@ button.#{$inuit-btn-namespace}btn {
     %#{$inuit-btn-namespace}btn--call-to-action%#{$inuit-btn-namespace}btn--disabled,
     .#{$inuit-btn-namespace}btn--call-to-action.btn[disabled],
     %#{$inuit-btn-namespace}btn--call-to-action.btn[disabled] {
+      border-color: var(--px-btn-call-to-action-border-color, $inuit-btn-call-to-action-border-color);
       background-color: var(--px-btn-call-to-action-disabled-background, $inuit-btn-call-to-action-background--disabled);
       color: var(--px-btn-call-to-action-disabled-color, $inuit-btn-call-to-action-color--disabled);
     }

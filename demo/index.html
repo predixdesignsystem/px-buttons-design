@@ -34,7 +34,7 @@
     "regular (default)",
     "large",
     "huge",
-    "full"
+    "full (mobile)"
   ]'
   default-choice="regular (default)">
 </px-sass-doc-option>
@@ -56,14 +56,6 @@
 </px-sass-doc-option>
 
 <!-- 3: Make HTML Demo -->
-<template is="dom-if" if="{{_tabIs('Icon',selectedTab)}}" restamp>
-<section data-slot="demoHTML">
-<button class$="{{buttonClasses}}">
-  <i class="fa fa-briefcase"></i>
-</button>
-</section>
-</template>
-
 <template is="dom-if" if="{{_tabIs('Text',selectedTab)}}" restamp>
 <section data-slot="demoHTML">
 <button class$="{{buttonClasses}}">Label</button>
@@ -73,7 +65,15 @@
 <template is="dom-if" if="{{_tabIs('Text & icon',selectedTab)}}" restamp>
 <section data-slot="demoHTML">
 <button class$="{{buttonClasses}}">
-  <i class="fa fa-briefcase u-mr--"></i>Label
+  <i class="fa fa-briefcase u-mr--"></i> Label
+</button>
+</section>
+</template>
+
+<template is="dom-if" if="{{_tabIs('Icon',selectedTab)}}" restamp>
+<section data-slot="demoHTML">
+<button class$="{{buttonClasses}}">
+  <i class="fa fa-briefcase"></i>
 </button>
 </section>
 </template>
@@ -148,7 +148,7 @@ the button should appear as wide as possible.
       if (opts.Size === "small")          strings.push("btn--small");
       if (opts.Size === "large")          strings.push("btn--large");
       if (opts.Size === "huge")           strings.push("btn--huge");
-      if (opts.Size === "full")           strings.push("btn--full");
+      if (opts.Size === "full (mobile)")  strings.push("btn--full");
       if (opts.Type === "primary")        strings.push("btn--primary");
       if (opts.Type === "call to action") strings.push("btn--call-to-action");
       if (opts.Type === "call to action (disabled)") strings.push("btn--call-to-action btn--disabled");
@@ -165,7 +165,7 @@ the button should appear as wide as possible.
       if (opts.Size === "small")          strings.push("$inuit-enable-btn--small : true;");
       if (opts.Size === "large")          strings.push("$inuit-enable-btn--large : true;");
       if (opts.Size === "huge")           strings.push("$inuit-enable-btn--huge : true;");
-      if (opts.Size === "full")           strings.push("$inuit-enable-btn--full : true;");
+      if (opts.Size === "full (mobile)")  strings.push("$inuit-enable-btn--full : true;");
       if (opts.Type === "primary")        strings.push("$inuit-enable-btn--primary : true;");
       if (opts.Type === "call to action") strings.push("$inuit-enable-btn--call-to-action : true;");
       if (opts.Type === "call to action (disabled)") strings.push("$inuit-enable-btn--call-to-action : true;\n$inuit-enable-btn--disabled : true;");

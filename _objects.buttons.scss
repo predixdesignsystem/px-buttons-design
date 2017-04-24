@@ -302,6 +302,7 @@ $inuit-global-border-box                            : false !default;
   text-transform: none;
   white-space: nowrap;
   background-color: var(--px-btn-background, $inuit-btn-background);
+  transition: background .4s, border-color .4s, color .4s;
   &,
   &:link,
   &:visited,
@@ -369,7 +370,7 @@ button.#{$inuit-btn-namespace}btn {
     &,
     &:link,
     &:visited {
-      color: var(--px-btn-bare-color--visited, $gray8);
+      color: var(--px-btn-bare-color--visited, $gray15);
     }
     &:hover {
       color: var(--px-btn-bare-color--hover, $primary-default);
@@ -448,7 +449,7 @@ button.#{$inuit-btn-namespace}btn {
 @if ($inuit-enable-btn--tertiary == true) {
   .#{$inuit-btn-namespace}btn--tertiary,
   %#{$inuit-btn-namespace}btn--tertiary {
-    border-color: var(--px-btn-border-color, $inuit-btn-border-color);
+    border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
     border: $inuit-btn-tertiary-border;
     box-shadow: none;
     background-color: var(--px-btn-tertiary-background, $inuit-btn-tertiary-background);
@@ -457,16 +458,16 @@ button.#{$inuit-btn-namespace}btn {
     &:visited,
     &:hover,
     &:active {
-      border-color: var(--px-btn-border-color, $inuit-btn-tertiary-border-color);
+      border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
       color: var(--px-btn-tertiary-color, $inuit-btn-tertiary-color);
     }
     &:hover {
-      border-color: var(--px-btn-border-color--hover, $inuit-btn-tertiary-border-color);
+      border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
       box-shadow: none;
       background-color: var(--px-btn-tertiary-background--hover, $inuit-btn-tertiary-background--hover);
     }
     &:active {
-      border-color: var(--px-btn-border-color--pressed, $inuit-btn-tertiary-border-color);
+      border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
       box-shadow: none;
       background-color: var(--px-btn-tertiary-background--pressed, $inuit-btn-tertiary-background--pressed);
     }

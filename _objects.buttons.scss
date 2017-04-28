@@ -51,7 +51,7 @@ $inuit-btn-border-color--pressed                    : transparent !default;
 /// Border size and style
 /// @group px-buttons-design:variables:style
 /// @type Color [default]
-$inuit-btn-border                                  : 0px solid !default;
+$inuit-btn-border                                  : 1px solid !default;
 
 /// Shadow
 /// @group px-buttons-design:variables:style
@@ -344,7 +344,7 @@ button.#{$inuit-btn-namespace}btn {
   .#{$inuit-btn-namespace}btn--bare,
   %#{$inuit-btn-namespace}btn--bare {
     height: $inuit-btn-height;
-    border: 0;
+    border: 0 !important;
     border-radius: 0;
     line-height: inherit;
     padding-left: 0;
@@ -382,7 +382,7 @@ button.#{$inuit-btn-namespace}btn {
   .#{$inuit-btn-namespace}btn--bare--primary,
   %#{$inuit-btn-namespace}btn--bare--primary {
     height: $inuit-btn-height;
-    border: 0;
+    border: 0 !important;
     border-radius: 0;
     line-height: inherit;
     padding-left: 0;
@@ -505,11 +505,11 @@ button.#{$inuit-btn-namespace}btn {
     &:active {
       border-color: var(--px-btn-disabled-border-color, $inuit-btn-disabled-border-color);
       border: $inuit-btn-disabled-border;
-      box-shadow: none;
-      cursor: not-allowed;
-      background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background);
-      color: var(--px-btn-disabled-color, $inuit-btn-disabled-color);
-      pointer-events: none;
+      box-shadow: none !important;
+      cursor: not-allowed !important;
+      background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background) !important;
+      color: var(--px-btn-disabled-color, $inuit-btn-disabled-color) !important;
+      pointer-events: none !important;
     }
   }
 }

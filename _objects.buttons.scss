@@ -365,13 +365,12 @@ button.#{$inuit-btn-namespace}btn {
     &,
     &:link,
     &:visited {
-      color: var(--px-btn-bare-color--visited, $gray15);
+      color: var(--px-btn-bare-color, $gray15);
     }
     &:hover {
       color: var(--px-btn-bare-color--hover, $primary-default);
     }
-    &:active,
-    &:focus {
+    &:active {
       color: var(--px-btn-bare-color--pressed, $primary-pressed);
     }
   }

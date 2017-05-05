@@ -218,57 +218,57 @@ $inuit-btn-icon-color--pressed                      : $primary-pressed !default;
 /// @type Color [default]
 $inuit-btn-icon-border                          : 0px solid !default;
 
-/// Produce CSS for primary buttons?
+/// Produce CSS for primary buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--primary                          : false !default;
 
-/// Produce CSS for tertiary buttons?
+/// Produce CSS for tertiary buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--tertiary                         : false !default;
 
-/// Produce CSS for call to action buttons?
+/// Produce CSS for call to action buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--call-to-action                   : false !default;
 
-/// Produce CSS for small buttons?
+/// Produce CSS for small buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--small                            : false !default;
 
-/// Produce CSS for large buttons?
+/// Produce CSS for large buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--large                            : false !default;
 
-/// Produce CSS for huge buttons?
+/// Produce CSS for huge buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--huge                             : false !default;
 
-/// Produce CSS for full buttons?
+/// Produce CSS for full buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--full                             : false !default;
 
-/// Produce CSS for icon buttons?
+/// Produce CSS for icon buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--icon                             : false !default;
 
-/// Produce CSS for bare buttons?
+/// Produce CSS for bare buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--bare                             : false !default;
 
-/// Produce CSS for bare--primary buttons?
+/// Produce CSS for bare--primary buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--bare--primary                    : false !default;
 
-/// Produce CSS for disabled buttons?
+/// Produce CSS for disabled buttons
 /// @group px-buttons-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-btn--disabled                         : false !default;
@@ -504,11 +504,11 @@ button.#{$inuit-btn-namespace}btn {
     &:active {
       border-color: var(--px-btn-disabled-border-color, $inuit-btn-disabled-border-color);
       border: $inuit-btn-disabled-border;
-      box-shadow: none !important;
-      cursor: not-allowed !important;
-      background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background) !important;
-      color: var(--px-btn-disabled-color, $inuit-btn-disabled-color) !important;
-      pointer-events: none !important;
+      box-shadow: none ;
+      cursor: not-allowed ;
+      background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background) ;
+      color: var(--px-btn-disabled-color, $inuit-btn-disabled-color) ;
+      pointer-events: none ;
     }
   }
 }

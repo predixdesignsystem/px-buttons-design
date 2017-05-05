@@ -2,16 +2,16 @@
     {
         "description": "Default buttons\n",
         "commentRange": {
-            "start": 286,
-            "end": 286
+            "start": 281,
+            "end": 281
         },
         "context": {
             "type": "css",
             "name": ".#{$inuit-btn-namespace}btn,\n%#{$inuit-btn-namespace}btn",
             "value": "display: inline-block;\n  overflow: visible;\n  height: $inuit-btn-height;\n  margin: 0;\n  border: $inuit-btn-border var(--px-btn-border-color, $inuit-btn-border-color);\n  padding: 0 $inuit-btn-height/2;\n  box-shadow: var(--px-btn-shadow--light, $inuit-btn-shadow--light);\n  font: inherit;\n  line-height: calc(#{$inuit-btn-height} - 2px);\n  -webkit-font-smoothing: antialiased;\n  cursor: pointer;\n  text-align: center;\n  text-decoration: none;\n  text-transform: none;\n  white-space: nowrap;\n  background-color: var(--px-btn-background, $inuit-btn-background);\n  transition: background .4s, border-color .4s, color .4s;\n  &,\n  &:link,\n  &:visited,\n  &:hover,\n  &:active {\n    color: var(--px-btn-color, $inuit-btn-color);\n  }\n  &:hover {\n    border-color: var(--px-btn-border-color--hover, $inuit-btn-border-color--hover);\n    box-shadow: var(--px-btn-shadow, $inuit-btn-shadow);\n    background-color: var(--px-btn-background--hover, $inuit-btn-background--hover);\n  }\n  &:active {\n    border-color: var(--px-btn-border-color--pressed, $inuit-btn-border-color--pressed);\n    box-shadow: none;\n    background-color: var(--px-btn-background--pressed, $inuit-btn-background--pressed);\n  }\n  &:active {\n    outline: none;\n  }",
             "line": {
-                "start": 288,
-                "end": 617
+                "start": 283,
+                "end": 587
             }
         },
         "group": [
@@ -26,16 +26,16 @@
     {
         "description": "All buttons\n",
         "commentRange": {
-            "start": 337,
-            "end": 337
+            "start": 332,
+            "end": 332
         },
         "context": {
             "type": "css",
             "name": "button.#{$inuit-btn-namespace}btn",
             "value": "-webkit-appearance: button;",
             "line": {
-                "start": 338,
-                "end": 617
+                "start": 333,
+                "end": 587
             }
         },
         "group": [
@@ -50,16 +50,16 @@
     {
         "description": "Establish default space between adjacent buttons\n",
         "commentRange": {
-            "start": 342,
-            "end": 342
+            "start": 337,
+            "end": 337
         },
         "context": {
             "type": "css",
             "name": ".#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn",
             "value": "margin-left: $inuit-base-spacing-unit--small;",
             "line": {
-                "start": 343,
-                "end": 617
+                "start": 338,
+                "end": 587
             }
         },
         "group": [
@@ -72,14 +72,40 @@
         }
     },
     {
-        "description": "Produce CSS for primary buttons?\n",
+        "description": "Produce CSS for primary buttons\n",
+        "commentRange": {
+            "start": 221,
+            "end": 223
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-btn--primary",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 224,
+                "end": 224
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Produce CSS for tertiary buttons\n",
         "commentRange": {
             "start": 226,
             "end": 228
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--primary",
+            "name": "inuit-enable-btn--tertiary",
             "value": "false",
             "scope": "default",
             "line": {
@@ -98,14 +124,14 @@
         }
     },
     {
-        "description": "Produce CSS for tertiary buttons?\n",
+        "description": "Produce CSS for call to action buttons\n",
         "commentRange": {
             "start": 231,
             "end": 233
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--tertiary",
+            "name": "inuit-enable-btn--call-to-action",
             "value": "false",
             "scope": "default",
             "line": {
@@ -124,14 +150,14 @@
         }
     },
     {
-        "description": "Produce CSS for call to action buttons?\n",
+        "description": "Produce CSS for small buttons\n",
         "commentRange": {
             "start": 236,
             "end": 238
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--call-to-action",
+            "name": "inuit-enable-btn--small",
             "value": "false",
             "scope": "default",
             "line": {
@@ -150,14 +176,14 @@
         }
     },
     {
-        "description": "Produce CSS for small buttons?\n",
+        "description": "Produce CSS for large buttons\n",
         "commentRange": {
             "start": 241,
             "end": 243
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--small",
+            "name": "inuit-enable-btn--large",
             "value": "false",
             "scope": "default",
             "line": {
@@ -176,14 +202,14 @@
         }
     },
     {
-        "description": "Produce CSS for large buttons?\n",
+        "description": "Produce CSS for huge buttons\n",
         "commentRange": {
             "start": 246,
             "end": 248
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--large",
+            "name": "inuit-enable-btn--huge",
             "value": "false",
             "scope": "default",
             "line": {
@@ -202,14 +228,14 @@
         }
     },
     {
-        "description": "Produce CSS for huge buttons?\n",
+        "description": "Produce CSS for full buttons\n",
         "commentRange": {
             "start": 251,
             "end": 253
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--huge",
+            "name": "inuit-enable-btn--full",
             "value": "false",
             "scope": "default",
             "line": {
@@ -228,14 +254,14 @@
         }
     },
     {
-        "description": "Produce CSS for full buttons?\n",
+        "description": "Produce CSS for icon buttons\n",
         "commentRange": {
             "start": 256,
             "end": 258
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--full",
+            "name": "inuit-enable-btn--icon",
             "value": "false",
             "scope": "default",
             "line": {
@@ -254,14 +280,14 @@
         }
     },
     {
-        "description": "Produce CSS for icon buttons?\n",
+        "description": "Produce CSS for bare buttons\n",
         "commentRange": {
             "start": 261,
             "end": 263
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--icon",
+            "name": "inuit-enable-btn--bare",
             "value": "false",
             "scope": "default",
             "line": {
@@ -280,14 +306,14 @@
         }
     },
     {
-        "description": "Produce CSS for bare buttons?\n",
+        "description": "Produce CSS for bare--primary buttons\n",
         "commentRange": {
             "start": 266,
             "end": 268
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-btn--bare",
+            "name": "inuit-enable-btn--bare--primary",
             "value": "false",
             "scope": "default",
             "line": {
@@ -306,36 +332,10 @@
         }
     },
     {
-        "description": "Produce CSS for bare--primary buttons?\n",
+        "description": "Produce CSS for disabled buttons\n",
         "commentRange": {
             "start": 271,
             "end": 273
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-btn--bare--primary",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 274,
-                "end": 274
-            }
-        },
-        "group": [
-            "px-buttons-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_objects.buttons.scss",
-            "name": "_objects.buttons.scss"
-        }
-    },
-    {
-        "description": "Produce CSS for disabled buttons?\n",
-        "commentRange": {
-            "start": 276,
-            "end": 278
         },
         "context": {
             "type": "variable",
@@ -343,8 +343,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 279,
-                "end": 279
+                "start": 274,
+                "end": 274
             }
         },
         "group": [
@@ -574,7 +574,7 @@
         "context": {
             "type": "variable",
             "name": "inuit-btn-border",
-            "value": "0px solid",
+            "value": "1px solid",
             "scope": "default",
             "line": {
                 "start": 54,
@@ -1216,15 +1216,15 @@
         }
     },
     {
-        "description": "Call to action background color\n",
+        "description": "Call to action border color\n",
         "commentRange": {
             "start": 176,
             "end": 178
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-call-to-action-background",
-            "value": "$primary-default",
+            "name": "inuit-btn-call-to-action-border-color",
+            "value": "transparent",
             "scope": "default",
             "line": {
                 "start": 179,
@@ -1242,15 +1242,15 @@
         }
     },
     {
-        "description": "Call to action hover background color\n",
+        "description": "Call to action background color\n",
         "commentRange": {
             "start": 181,
             "end": 183
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-call-to-action-background--hover",
-            "value": "$primary-hover",
+            "name": "inuit-btn-call-to-action-background",
+            "value": "$primary-default",
             "scope": "default",
             "line": {
                 "start": 184,
@@ -1260,7 +1260,7 @@
         "group": [
             "px-buttons-design:variables:style"
         ],
-        "type": "Color - [default]",
+        "type": "Color [default]",
         "access": "public",
         "file": {
             "path": "_objects.buttons.scss",
@@ -1268,15 +1268,15 @@
         }
     },
     {
-        "description": "Call to action pressed background color\n",
+        "description": "Call to action hover background color\n",
         "commentRange": {
             "start": 186,
             "end": 188
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-call-to-action-background--pressed",
-            "value": "$primary-pressed",
+            "name": "inuit-btn-call-to-action-background--hover",
+            "value": "$primary-hover",
             "scope": "default",
             "line": {
                 "start": 189,
@@ -1294,15 +1294,15 @@
         }
     },
     {
-        "description": "Call to action disabled font color\n",
+        "description": "Call to action pressed background color\n",
         "commentRange": {
             "start": 191,
             "end": 193
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-call-to-action-color--disabled",
-            "value": "$white",
+            "name": "inuit-btn-call-to-action-background--pressed",
+            "value": "$primary-pressed",
             "scope": "default",
             "line": {
                 "start": 194,
@@ -1312,7 +1312,7 @@
         "group": [
             "px-buttons-design:variables:style"
         ],
-        "type": "Color [default]",
+        "type": "Color - [default]",
         "access": "public",
         "file": {
             "path": "_objects.buttons.scss",
@@ -1320,15 +1320,15 @@
         }
     },
     {
-        "description": "Call to action disabled background color\n",
+        "description": "Icon button background color\n",
         "commentRange": {
             "start": 196,
             "end": 198
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-call-to-action-background--disabled",
-            "value": "$cyan5",
+            "name": "inuit-btn-icon-background",
+            "value": "transparent",
             "scope": "default",
             "line": {
                 "start": 199,
@@ -1346,15 +1346,15 @@
         }
     },
     {
-        "description": "Icon button background color\n",
+        "description": "Icon button font color\n",
         "commentRange": {
             "start": 201,
             "end": 203
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-icon-background",
-            "value": "transparent",
+            "name": "inuit-btn-icon-color",
+            "value": "$primary-default",
             "scope": "default",
             "line": {
                 "start": 204,
@@ -1372,15 +1372,15 @@
         }
     },
     {
-        "description": "Icon button font color\n",
+        "description": "Icon button hover font color\n",
         "commentRange": {
             "start": 206,
             "end": 208
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-icon-color",
-            "value": "$primary-default",
+            "name": "inuit-btn-icon-color--hover",
+            "value": "$primary-hover",
             "scope": "default",
             "line": {
                 "start": 209,
@@ -1398,15 +1398,15 @@
         }
     },
     {
-        "description": "Icon button hover font color\n",
+        "description": "Icon button pressed font color\n",
         "commentRange": {
             "start": 211,
             "end": 213
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-icon-color--hover",
-            "value": "$primary-hover",
+            "name": "inuit-btn-icon-color--pressed",
+            "value": "$primary-pressed",
             "scope": "default",
             "line": {
                 "start": 214,
@@ -1424,15 +1424,15 @@
         }
     },
     {
-        "description": "Icon button pressed font color\n",
+        "description": "Disabled border size and style\n",
         "commentRange": {
             "start": 216,
             "end": 218
         },
         "context": {
             "type": "variable",
-            "name": "inuit-btn-icon-color--pressed",
-            "value": "$primary-pressed",
+            "name": "inuit-btn-icon-border",
+            "value": "0px solid",
             "scope": "default",
             "line": {
                 "start": 219,
@@ -1450,36 +1450,10 @@
         }
     },
     {
-        "description": "Disabled border size and style\n",
-        "commentRange": {
-            "start": 221,
-            "end": 223
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-btn-icon-border",
-            "value": "0px solid",
-            "scope": "default",
-            "line": {
-                "start": 224,
-                "end": 224
-            }
-        },
-        "group": [
-            "px-buttons-design:variables:style"
-        ],
-        "type": "Color [default]",
-        "access": "public",
-        "file": {
-            "path": "_objects.buttons.scss",
-            "name": "_objects.buttons.scss"
-        }
-    },
-    {
         "description": "Assume `box-sizing : border-box;`\n",
         "commentRange": {
-            "start": 281,
-            "end": 283
+            "start": 276,
+            "end": 278
         },
         "context": {
             "type": "variable",
@@ -1487,8 +1461,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 284,
-                "end": 284
+                "start": 279,
+                "end": 279
             }
         },
         "group": [

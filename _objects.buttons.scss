@@ -161,7 +161,7 @@ $inuit-btn-disabled-border                          : 1px solid !default;
 /// Disabled background color
 /// @group px-buttons-design:variables:style
 /// @type Color [default]
-$inuit-btn-disabled-background                      : $white !default;
+$inuit-btn-disabled-background                      : transparent !default;
 
 /// Disabled border color
 /// @group px-buttons-design:variables:style
@@ -505,7 +505,6 @@ button.#{$inuit-btn-namespace}btn {
       border-color: var(--px-btn-disabled-border-color, $inuit-btn-disabled-border-color);
       border: $inuit-btn-disabled-border;
       box-shadow: none ;
-      cursor: not-allowed ;
       background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background) ;
       color: var(--px-btn-disabled-color, $inuit-btn-disabled-color) ;
       pointer-events: none ;

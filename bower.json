@@ -30,11 +30,11 @@
   ],
   "dependencies": {
     "px-colors-design": "^1.0.0",
-    "px-defaults-design": "^2.0.0",
-    "px-iconography-design": "^0.3.0"
+    "px-defaults-design": "^2.0.0"
   },
   "devDependencies": {
     "px-sass-doc": "^1.0.0",
-    "px-starter-kit-design": "^1.0.0"
+    "px-starter-kit-design": "^1.0.0",
+    "px-polymer-font-awesome": "^2.0.0"
   }
 }

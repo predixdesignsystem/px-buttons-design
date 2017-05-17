@@ -4,13 +4,13 @@
   <!-- Common demo imports -->
   <link rel="import" href="../../px-sass-doc/px-sass-doc.html" />
   <link rel="import" href="../css/px-buttons-design-demo-styles.html" />
+  <link rel="import" href="../../px-polymer-font-awesome/px-icon-set.html" />
 
 <!-- Demo DOM module -->
 <dom-module id="local-element-demo">
   <template>
   <!-- 0: Import the styles-->
   <style include="px-buttons-design-demo-styles" is="custom-style"></style>
-
 <!-- 1: Describe Module -->
 <px-sass-doc
   module-name="px-buttons-design"
@@ -100,7 +100,7 @@
 </px-sass-doc-option>
 <section data-slot="demoHTML">
 <button class$="{{buttonClasses}}">
-  <i class="fa fa-briefcase u-mr--"></i> Label
+  <iron-icon style="height:16px" icon="px:pipeline"></iron-icon> Label
 </button>
 </section>
 <!-- 4: Set Import Slot -->
@@ -138,7 +138,7 @@
 </px-sass-doc-option>
 <section data-slot="demoHTML">
 <button class$="{{iconClasses}}">
-  <i class="fa fa-briefcase"></i>
+  <iron-icon style="height:16px" icon="px:pipeline"></iron-icon>
 </button>
 </section>
 <section data-slot="import">

@@ -150,7 +150,7 @@ $inuit-btn-tertiary-border-color                    : $gray8 !default;
 /// Disabled font color
 /// @group px-buttons-design:variables:style
 /// @type Color [default]
-$inuit-btn-disabled-color                           : $gray4 !default;
+$inuit-btn-disabled-color                           : rgba($black,.2) !default;
 
 /// Disabled border size and style
 /// @group px-buttons-design:variables:style
@@ -165,7 +165,7 @@ $inuit-btn-disabled-background                      : transparent !default;
 /// Disabled border color
 /// @group px-buttons-design:variables:style
 /// @type Color [default]
-$inuit-btn-disabled-border-color                    : $gray4 !default;
+$inuit-btn-disabled-border-color                    : rgba($black,.2) !default;
 
 /// Call to action font color
 /// @group px-buttons-design:variables:style
@@ -455,11 +455,13 @@ button.#{$inuit-btn-namespace}btn {
       color: var(--px-btn-tertiary-color, $inuit-btn-tertiary-color);
     }
     &:hover {
+      color: var(--px-btn-tertiary-color--hover, $inuit-btn-tertiary-color--hover);
       border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
       box-shadow: none;
       background-color: var(--px-btn-tertiary-background--hover, $inuit-btn-tertiary-background--hover);
     }
     &:active {
+      color: var(--px-btn-tertiary-color--pressed, $inuit-btn-tertiary-color--pressed);
       border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
       box-shadow: none;
       background-color: var(--px-btn-tertiary-background--pressed, $inuit-btn-tertiary-background--pressed);
@@ -501,11 +503,11 @@ button.#{$inuit-btn-namespace}btn {
     &:visited,
     &:hover,
     &:active {
-      border-color: var(--px-btn-disabled-border-color, $inuit-btn-disabled-border-color);
+      color: var(--px-btn-disabled-color, $inuit-btn-disabled-color) ;
       border: $inuit-btn-disabled-border;
+      border-color: var(--px-btn-disabled-border-color, $inuit-btn-disabled-border-color);
       box-shadow: none ;
       background-color: var(--px-btn-disabled-background, $inuit-btn-disabled-background) ;
-      color: var(--px-btn-disabled-color, $inuit-btn-disabled-color) ;
       pointer-events: none ;
     }
   }

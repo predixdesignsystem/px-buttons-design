@@ -304,7 +304,8 @@ $inuit-global-border-box                            : false !default;
   &:active {
     color: var(--px-btn-color, $inuit-btn-color);
   }
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: var(--px-btn-border-color--hover, $inuit-btn-border-color--hover);
     box-shadow: var(--px-btn-shadow, $inuit-btn-shadow);
     background-color: var(--px-btn-background--hover, $inuit-btn-background--hover);
@@ -366,7 +367,8 @@ button.#{$inuit-btn-namespace}btn {
     &:visited {
       color: var(--px-btn-bare-color, $gray15);
     }
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--px-btn-bare-color--hover, $primary-default);
     }
     &:active {
@@ -403,7 +405,8 @@ button.#{$inuit-btn-namespace}btn {
       &:visited {
         color: var(--px-btn-primary-bare-color--visited, $primary-default);
       }
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--px-btn-primary-bare-color--hover, $primary-hover);
       }
       &:active,
@@ -427,7 +430,8 @@ button.#{$inuit-btn-namespace}btn {
     &:active {
       color: var(--px-btn-primary-color, $inuit-btn-primary-color);
     }
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: transparent;
       background-color: var(--px-btn-primary-background--hover, $inuit-btn-primary-background--hover);
     }
@@ -454,7 +458,8 @@ button.#{$inuit-btn-namespace}btn {
       border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
       color: var(--px-btn-tertiary-color, $inuit-btn-tertiary-color);
     }
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--px-btn-tertiary-color--hover, $inuit-btn-tertiary-color--hover);
       border-color: var(--px-btn-tertiary-border-color, $inuit-btn-tertiary-border-color);
       box-shadow: none;
@@ -484,7 +489,8 @@ button.#{$inuit-btn-namespace}btn {
     &:active {
       color: var(--px-btn-call-to-action-color, $inuit-btn-call-to-action-color);
     }
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--px-btn-call-to-action-background--hover, $inuit-btn-call-to-action-background--hover);
     }
     &:active {
@@ -502,7 +508,8 @@ button.#{$inuit-btn-namespace}btn {
     &:link,
     &:visited,
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: var(--px-btn-disabled-color, $inuit-btn-disabled-color) ;
       border: $inuit-btn-disabled-border;
       border-color: var(--px-btn-disabled-border-color, $inuit-btn-disabled-border-color);

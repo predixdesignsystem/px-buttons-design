@@ -197,25 +197,10 @@ $inuit-btn-call-to-action-background--pressed       : $primary-pressed !default;
 /// @type Color [default]
 $inuit-btn-icon-background                          : transparent !default;
 
-/// Icon button font color
-/// @group px-buttons-design:variables:style
-/// @type Color [default]
-$inuit-btn-icon-color                               : $primary-default !default;
-
-/// Icon button hover font color
-/// @group px-buttons-design:variables:style
-/// @type Color [default]
-$inuit-btn-icon-color--hover                        : $primary-hover !default;
-
-/// Icon button pressed font color
-/// @group px-buttons-design:variables:style
-/// @type Color [default]
-$inuit-btn-icon-color--pressed                      : $primary-pressed !default;
-
 /// Disabled border size and style
 /// @group px-buttons-design:variables:style
 /// @type Color [default]
-$inuit-btn-icon-border                          : 0px solid !default;
+$inuit-btn-icon-border                              : 0px solid !default;
 
 /// Produce CSS for primary buttons
 /// @group px-buttons-design:variables:flag

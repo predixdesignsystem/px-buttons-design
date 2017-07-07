@@ -1,6 +1,6 @@
-# Buttons
+# px-buttons-design
 
-Predix UI Buttons module is a simple, robust, extensible baseline for building entire suites of buttons onto. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
+The px-buttons-design module is a simple, robust, extensible baseline for building entire suites of buttons. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
 
 ## Dependencies
 

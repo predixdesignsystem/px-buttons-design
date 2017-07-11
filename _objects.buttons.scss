@@ -77,7 +77,7 @@ $inuit-btn-shadow--light                            : var(--px-btn-shadow--light
 /// @group px-buttons-design:variables:style
 /// @type Height | String [default]
 /// @todo N/A
-$inuit-btn-height                                   : 2em !default;
+$inuit-btn-height                                   : var(--px-btn-height, 2em) !default;
 
 /// Button line height for Firefox
 /// @group px-buttons-design:variables:style

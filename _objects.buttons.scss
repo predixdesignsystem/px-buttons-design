@@ -347,7 +347,7 @@ $inuit-global-border-box                            : false !default;
   height: $inuit-btn-height;
   margin: 0;
   border: $inuit-btn-border $inuit-btn-border-color;
-  padding: 0 calc($inuit-btn-height/2);
+  padding: 0 calc(#{$inuit-btn-height} / 2);
   box-shadow: $inuit-btn-shadow--light;
   font: inherit;
   line-height: calc(#{$inuit-btn-height} - 2px);

@@ -1,17 +1,17 @@
 # px-buttons-design
 
-The px-buttons-design module is a simple, robust, extensible baseline for building entire suites of buttons. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
+The Predix UI Buttons module is a simple, robust, extensible baseline for building entire suites of buttons. This module is a fork of the [inuitcss Buttons module](https://github.com/inuitcss/objects.buttons).
 
 ## Dependencies
 
-Predix UI's Buttons module depends on two other Px modules:
+The `px-buttons-design` module depends on two other Px modules:
 
 * [px-colors-design](https://github.com/PredixDev/px-colors-design)
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
 
-## Upstream dependency
+## Upstream dependencies
 
-The Buttons module is also an upstream dependency in this meta kit:
+The `px-buttons-design` module is also an upstream dependency in this meta kit:
 
 * [px-meta-buttons-design](https://github.com/PredixDev/px-meta-buttons-design)
 
@@ -72,4 +72,4 @@ These classes are available if the variable flags listed above are set to `true`
 * `btn--full`: Full width buttons
 * `btn--icon`: Circular button for icons
 
-view the full API [here](http://predixdev.github.io/px-buttons-design/)
+View the full API [here](http://predixdev.github.io/px-buttons-design/)

@@ -1,3 +1,6 @@
+v2.0.1
+==================
+* Insist on no border-radius for .btn class. Canary added a 4px radius.
 
 v2.0.0
 ==================

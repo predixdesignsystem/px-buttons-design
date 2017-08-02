@@ -1,3 +1,7 @@
+v2.0.2
+==================
+* design feedback on icon size
+
 v2.0.1
 ==================
 * Insist on no border-radius for .btn class. Canary added a 4px radius.

@@ -1,3 +1,7 @@
+v2.0.3
+==================
+* update demo to use unique name
+
 v2.0.2
 ==================
 * design feedback on icon size

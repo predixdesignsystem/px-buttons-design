@@ -1,3 +1,7 @@
+v2.0.4
+==================
+* runtime theming for demo
+
 v2.0.3
 ==================
 * update demo to use unique name

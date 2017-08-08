@@ -1,3 +1,7 @@
+v2.0.5
+==================
+* add min width (#10)
+
 v2.0.4
 ==================
 * runtime theming for demo

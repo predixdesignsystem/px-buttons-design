@@ -76,8 +76,14 @@ $inuit-btn-shadow--light                            : var(--px-btn-shadow--light
 /// Button height
 /// @group px-buttons-design:variables:style
 /// @type Height | String [default]
-/// @todo N/A
+/// @todo --px-btn-height
 $inuit-btn-height                                   : var(--px-btn-height, 2em) !default;
+
+/// Button minimum width
+/// @group px-buttons-design:variables:style
+/// @type Width | String [default]
+/// @todo --px-btn-min-width
+$inuit-btn-min-width                                : var(--px-btn-min-width, 4.6666666667em) !default;
 
 /// Button line height for Firefox
 /// @group px-buttons-design:variables:style
@@ -345,6 +351,7 @@ $inuit-global-border-box                            : false !default;
   display: inline-block;
   overflow: visible;
   height: $inuit-btn-height;
+  min-width: $inuit-btn-min-width;
   margin: 0;
   border: $inuit-btn-border $inuit-btn-border-color;
   border-radius: 0 !important;
@@ -639,6 +646,7 @@ button.#{$inuit-btn-namespace}btn {
   %#{$inuit-btn-namespace}btn--icon {
       height: $inuit-btn-height;
       width: $inuit-btn-height;
+      min-width: $inuit-btn-height;
       padding-right: 0;
       padding-left:  0;
       border: $inuit-btn-icon-border !important;

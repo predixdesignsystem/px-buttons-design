@@ -2,16 +2,16 @@
     {
         "description": "Default buttons\n",
         "commentRange": {
-            "start": 342,
-            "end": 342
+            "start": 348,
+            "end": 348
         },
         "context": {
             "type": "css",
             "name": ".#{$inuit-btn-namespace}btn,\n%#{$inuit-btn-namespace}btn",
-            "value": "display: inline-block;\n  overflow: visible;\n  height: $inuit-btn-height;\n  margin: 0;\n  border: $inuit-btn-border $inuit-btn-border-color;\n  padding: 0 $inuit-btn-height/2;\n  box-shadow: $inuit-btn-shadow--light;\n  font: inherit;\n  line-height: calc(#{$inuit-btn-height} - 2px);\n  -webkit-font-smoothing: antialiased;\n  cursor: pointer;\n  text-align: center;\n  text-decoration: none;\n  text-transform: none;\n  white-space: nowrap;\n  background-color: $inuit-btn-background;\n  transition: background .4s, border-color .4s, color .4s;\n  &,\n  &:link,\n  &:visited,\n  &:hover,\n  &:active {\n    color: $inuit-btn-color;\n  }\n  &:hover,\n  &:focus {\n    border-color: $inuit-btn-border-color--hover;\n    box-shadow: $inuit-btn-shadow;\n    background-color: $inuit-btn-background--hover;\n  }\n  &:active {\n    border-color: $inuit-btn-border-color--pressed;\n    box-shadow: none;\n    background-color: $inuit-btn-background--pressed;\n  }\n  &:active {\n    outline: none;\n  }",
+            "value": "display: inline-block;\n  overflow: visible;\n  height: $inuit-btn-height;\n  min-width: $inuit-btn-min-width;\n  margin: 0;\n  border: $inuit-btn-border $inuit-btn-border-color;\n  border-radius: 0 !important;\n  padding: 0 calc(#{$inuit-btn-height} / 2);\n  box-shadow: $inuit-btn-shadow--light;\n  font: inherit;\n  line-height: calc(#{$inuit-btn-height} - 2px);\n  -webkit-font-smoothing: antialiased;\n  cursor: pointer;\n  text-align: center;\n  text-decoration: none;\n  text-transform: none;\n  white-space: nowrap;\n  background-color: $inuit-btn-background;\n  transition: background .4s, border-color .4s, color .4s;\n  &,\n  &:link,\n  &:visited,\n  &:hover,\n  &:active {\n    color: $inuit-btn-color;\n  }\n  &:hover,\n  &:focus {\n    border-color: $inuit-btn-border-color--hover;\n    box-shadow: $inuit-btn-shadow;\n    background-color: $inuit-btn-background--hover;\n  }\n  &:active {\n    border-color: $inuit-btn-border-color--pressed;\n    box-shadow: none;\n    background-color: $inuit-btn-background--pressed;\n  }\n  &:active {\n    outline: none;\n  }",
             "line": {
-                "start": 344,
-                "end": 656
+                "start": 350,
+                "end": 665
             }
         },
         "group": [
@@ -26,16 +26,16 @@
     {
         "description": "All buttons\n",
         "commentRange": {
-            "start": 394,
-            "end": 394
+            "start": 402,
+            "end": 402
         },
         "context": {
             "type": "css",
             "name": "button.#{$inuit-btn-namespace}btn",
             "value": "-webkit-appearance: button;",
             "line": {
-                "start": 395,
-                "end": 656
+                "start": 403,
+                "end": 665
             }
         },
         "group": [
@@ -50,16 +50,16 @@
     {
         "description": "Establish default space between adjacent buttons\n",
         "commentRange": {
-            "start": 399,
-            "end": 399
+            "start": 407,
+            "end": 407
         },
         "context": {
             "type": "css",
             "name": ".#{$inuit-btn-namespace}btn + .#{$inuit-btn-namespace}btn",
             "value": "margin-left: $inuit-base-spacing-unit--small;",
             "line": {
-                "start": 400,
-                "end": 656
+                "start": 408,
+                "end": 665
             }
         },
         "group": [
@@ -74,8 +74,8 @@
     {
         "description": "Produce CSS for primary buttons\n",
         "commentRange": {
-            "start": 281,
-            "end": 283
+            "start": 287,
+            "end": 289
         },
         "context": {
             "type": "variable",
@@ -83,8 +83,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 284,
-                "end": 284
+                "start": 290,
+                "end": 290
             }
         },
         "group": [
@@ -100,8 +100,8 @@
     {
         "description": "Produce CSS for tertiary buttons\n",
         "commentRange": {
-            "start": 286,
-            "end": 288
+            "start": 292,
+            "end": 294
         },
         "context": {
             "type": "variable",
@@ -109,8 +109,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 289,
-                "end": 289
+                "start": 295,
+                "end": 295
             }
         },
         "group": [
@@ -126,8 +126,8 @@
     {
         "description": "Produce CSS for call to action buttons\n",
         "commentRange": {
-            "start": 291,
-            "end": 293
+            "start": 297,
+            "end": 299
         },
         "context": {
             "type": "variable",
@@ -135,8 +135,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 294,
-                "end": 294
+                "start": 300,
+                "end": 300
             }
         },
         "group": [
@@ -152,8 +152,8 @@
     {
         "description": "Produce CSS for small buttons\n",
         "commentRange": {
-            "start": 296,
-            "end": 298
+            "start": 302,
+            "end": 304
         },
         "context": {
             "type": "variable",
@@ -161,8 +161,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 299,
-                "end": 299
+                "start": 305,
+                "end": 305
             }
         },
         "group": [
@@ -178,8 +178,8 @@
     {
         "description": "Produce CSS for large buttons\n",
         "commentRange": {
-            "start": 301,
-            "end": 303
+            "start": 307,
+            "end": 309
         },
         "context": {
             "type": "variable",
@@ -187,8 +187,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 304,
-                "end": 304
+                "start": 310,
+                "end": 310
             }
         },
         "group": [
@@ -204,8 +204,8 @@
     {
         "description": "Produce CSS for huge buttons\n",
         "commentRange": {
-            "start": 306,
-            "end": 308
+            "start": 312,
+            "end": 314
         },
         "context": {
             "type": "variable",
@@ -213,8 +213,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 309,
-                "end": 309
+                "start": 315,
+                "end": 315
             }
         },
         "group": [
@@ -230,8 +230,8 @@
     {
         "description": "Produce CSS for full buttons\n",
         "commentRange": {
-            "start": 311,
-            "end": 313
+            "start": 317,
+            "end": 319
         },
         "context": {
             "type": "variable",
@@ -239,8 +239,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 314,
-                "end": 314
+                "start": 320,
+                "end": 320
             }
         },
         "group": [
@@ -256,8 +256,8 @@
     {
         "description": "Produce CSS for icon buttons\n",
         "commentRange": {
-            "start": 316,
-            "end": 318
+            "start": 322,
+            "end": 324
         },
         "context": {
             "type": "variable",
@@ -265,8 +265,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 319,
-                "end": 319
+                "start": 325,
+                "end": 325
             }
         },
         "group": [
@@ -282,8 +282,8 @@
     {
         "description": "Produce CSS for bare buttons\n",
         "commentRange": {
-            "start": 321,
-            "end": 323
+            "start": 327,
+            "end": 329
         },
         "context": {
             "type": "variable",
@@ -291,8 +291,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 324,
-                "end": 324
+                "start": 330,
+                "end": 330
             }
         },
         "group": [
@@ -308,8 +308,8 @@
     {
         "description": "Produce CSS for bare--primary buttons\n",
         "commentRange": {
-            "start": 326,
-            "end": 328
+            "start": 332,
+            "end": 334
         },
         "context": {
             "type": "variable",
@@ -317,8 +317,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 329,
-                "end": 329
+                "start": 335,
+                "end": 335
             }
         },
         "group": [
@@ -334,8 +334,8 @@
     {
         "description": "Produce CSS for disabled buttons\n",
         "commentRange": {
-            "start": 331,
-            "end": 333
+            "start": 337,
+            "end": 339
         },
         "context": {
             "type": "variable",
@@ -343,8 +343,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 334,
-                "end": 334
+                "start": 340,
+                "end": 340
             }
         },
         "group": [
@@ -685,7 +685,7 @@
         "context": {
             "type": "variable",
             "name": "inuit-btn-height",
-            "value": "2em",
+            "value": "var(--px-btn-height, 2em)",
             "scope": "default",
             "line": {
                 "start": 80,
@@ -697,7 +697,36 @@
         ],
         "type": "Height | String [default]",
         "todo": [
-            "N/A"
+            "--px-btn-height"
+        ],
+        "access": "public",
+        "file": {
+            "path": "_objects.buttons.scss",
+            "name": "_objects.buttons.scss"
+        }
+    },
+    {
+        "description": "Button minimum width\n",
+        "commentRange": {
+            "start": 82,
+            "end": 85
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-btn-min-width",
+            "value": "var(--px-btn-min-width, 4.6666666667em)",
+            "scope": "default",
+            "line": {
+                "start": 86,
+                "end": 86
+            }
+        },
+        "group": [
+            "px-buttons-design:variables:style"
+        ],
+        "type": "Width | String [default]",
+        "todo": [
+            "--px-btn-min-width"
         ],
         "access": "public",
         "file": {
@@ -708,8 +737,8 @@
     {
         "description": "Button line height for Firefox\n",
         "commentRange": {
-            "start": 82,
-            "end": 85
+            "start": 88,
+            "end": 91
         },
         "context": {
             "type": "variable",
@@ -717,8 +746,8 @@
             "value": "1.8em",
             "scope": "default",
             "line": {
-                "start": 86,
-                "end": 86
+                "start": 92,
+                "end": 92
             }
         },
         "group": [
@@ -737,8 +766,8 @@
     {
         "description": "Small button height\n",
         "commentRange": {
-            "start": 88,
-            "end": 91
+            "start": 94,
+            "end": 97
         },
         "context": {
             "type": "variable",
@@ -746,8 +775,8 @@
             "value": "1.6666666667em",
             "scope": "default",
             "line": {
-                "start": 92,
-                "end": 92
+                "start": 98,
+                "end": 98
             }
         },
         "group": [
@@ -766,8 +795,8 @@
     {
         "description": "Small button line height for Firefox\n",
         "commentRange": {
-            "start": 94,
-            "end": 97
+            "start": 100,
+            "end": 103
         },
         "context": {
             "type": "variable",
@@ -775,8 +804,8 @@
             "value": "1.4em",
             "scope": "default",
             "line": {
-                "start": 98,
-                "end": 98
+                "start": 104,
+                "end": 104
             }
         },
         "group": [
@@ -795,8 +824,8 @@
     {
         "description": "Primary button font color\n",
         "commentRange": {
-            "start": 100,
-            "end": 103
+            "start": 106,
+            "end": 109
         },
         "context": {
             "type": "variable",
@@ -804,8 +833,8 @@
             "value": "var(--px-btn-primary-color, $white)",
             "scope": "default",
             "line": {
-                "start": 104,
-                "end": 104
+                "start": 110,
+                "end": 110
             }
         },
         "group": [
@@ -824,8 +853,8 @@
     {
         "description": "Primary button background color\n",
         "commentRange": {
-            "start": 106,
-            "end": 109
+            "start": 112,
+            "end": 115
         },
         "context": {
             "type": "variable",
@@ -833,8 +862,8 @@
             "value": "var(--px-btn-primary-background, $gray14)",
             "scope": "default",
             "line": {
-                "start": 110,
-                "end": 110
+                "start": 116,
+                "end": 116
             }
         },
         "group": [
@@ -853,8 +882,8 @@
     {
         "description": "Primary button hover background color\n",
         "commentRange": {
-            "start": 112,
-            "end": 115
+            "start": 118,
+            "end": 121
         },
         "context": {
             "type": "variable",
@@ -862,8 +891,8 @@
             "value": "var(--px-btn-primary-background--hover, $gray16)",
             "scope": "default",
             "line": {
-                "start": 116,
-                "end": 116
+                "start": 122,
+                "end": 122
             }
         },
         "group": [
@@ -882,8 +911,8 @@
     {
         "description": "Primary button pressed background color\n",
         "commentRange": {
-            "start": 118,
-            "end": 121
+            "start": 124,
+            "end": 127
         },
         "context": {
             "type": "variable",
@@ -891,8 +920,8 @@
             "value": "var(--px-btn-primary-background--pressed, $gray18)",
             "scope": "default",
             "line": {
-                "start": 122,
-                "end": 122
+                "start": 128,
+                "end": 128
             }
         },
         "group": [
@@ -911,8 +940,8 @@
     {
         "description": "Primary button border color\n",
         "commentRange": {
-            "start": 124,
-            "end": 127
+            "start": 130,
+            "end": 133
         },
         "context": {
             "type": "variable",
@@ -920,8 +949,8 @@
             "value": "var(--px-btn-primary-border-color, transparent)",
             "scope": "default",
             "line": {
-                "start": 128,
-                "end": 128
+                "start": 134,
+                "end": 134
             }
         },
         "group": [
@@ -940,8 +969,8 @@
     {
         "description": "Tertiary button font color\n",
         "commentRange": {
-            "start": 130,
-            "end": 133
+            "start": 136,
+            "end": 139
         },
         "context": {
             "type": "variable",
@@ -949,8 +978,8 @@
             "value": "var(--px-btn-tertiary-color, $primary-default)",
             "scope": "default",
             "line": {
-                "start": 134,
-                "end": 134
+                "start": 140,
+                "end": 140
             }
         },
         "group": [
@@ -969,8 +998,8 @@
     {
         "description": "Tertiary button border size and style\n",
         "commentRange": {
-            "start": 136,
-            "end": 139
+            "start": 142,
+            "end": 145
         },
         "context": {
             "type": "variable",
@@ -978,8 +1007,8 @@
             "value": "1px solid",
             "scope": "default",
             "line": {
-                "start": 140,
-                "end": 140
+                "start": 146,
+                "end": 146
             }
         },
         "group": [
@@ -998,8 +1027,8 @@
     {
         "description": "Tertiary button hover font color\n",
         "commentRange": {
-            "start": 142,
-            "end": 145
+            "start": 148,
+            "end": 151
         },
         "context": {
             "type": "variable",
@@ -1007,8 +1036,8 @@
             "value": "var(--px-btn-tertiary-color--hover, $primary-hover)",
             "scope": "default",
             "line": {
-                "start": 146,
-                "end": 146
+                "start": 152,
+                "end": 152
             }
         },
         "group": [
@@ -1027,8 +1056,8 @@
     {
         "description": "Tertiary button pressed font color\n",
         "commentRange": {
-            "start": 148,
-            "end": 151
+            "start": 154,
+            "end": 157
         },
         "context": {
             "type": "variable",
@@ -1036,8 +1065,8 @@
             "value": "var(--px-btn-tertiary-color--pressed, $primary-pressed)",
             "scope": "default",
             "line": {
-                "start": 152,
-                "end": 152
+                "start": 158,
+                "end": 158
             }
         },
         "group": [
@@ -1056,8 +1085,8 @@
     {
         "description": "Tertiary button background color\n",
         "commentRange": {
-            "start": 154,
-            "end": 157
+            "start": 160,
+            "end": 163
         },
         "context": {
             "type": "variable",
@@ -1065,8 +1094,8 @@
             "value": "var(--px-btn-tertiary-background, $white)",
             "scope": "default",
             "line": {
-                "start": 158,
-                "end": 158
+                "start": 164,
+                "end": 164
             }
         },
         "group": [
@@ -1085,8 +1114,8 @@
     {
         "description": "Tertiary button hover background color\n",
         "commentRange": {
-            "start": 160,
-            "end": 163
+            "start": 166,
+            "end": 169
         },
         "context": {
             "type": "variable",
@@ -1094,8 +1123,8 @@
             "value": "var(--px-btn-tertiary-background--hover, $gray4)",
             "scope": "default",
             "line": {
-                "start": 164,
-                "end": 164
+                "start": 170,
+                "end": 170
             }
         },
         "group": [
@@ -1114,8 +1143,8 @@
     {
         "description": "Tertiary button pressed background color\n",
         "commentRange": {
-            "start": 166,
-            "end": 169
+            "start": 172,
+            "end": 175
         },
         "context": {
             "type": "variable",
@@ -1123,8 +1152,8 @@
             "value": "var(--px-btn-tertiary-background--pressed, $gray7)",
             "scope": "default",
             "line": {
-                "start": 170,
-                "end": 170
+                "start": 176,
+                "end": 176
             }
         },
         "group": [
@@ -1143,8 +1172,8 @@
     {
         "description": "Tertiary button border color\n",
         "commentRange": {
-            "start": 172,
-            "end": 175
+            "start": 178,
+            "end": 181
         },
         "context": {
             "type": "variable",
@@ -1152,8 +1181,8 @@
             "value": "var(--px-btn-tertiary-border-color, $gray8)",
             "scope": "default",
             "line": {
-                "start": 176,
-                "end": 176
+                "start": 182,
+                "end": 182
             }
         },
         "group": [
@@ -1172,8 +1201,8 @@
     {
         "description": "Disabled button font color\n",
         "commentRange": {
-            "start": 178,
-            "end": 181
+            "start": 184,
+            "end": 187
         },
         "context": {
             "type": "variable",
@@ -1181,8 +1210,8 @@
             "value": "var(--px-btn-disabled-color, rgba($black,.2))",
             "scope": "default",
             "line": {
-                "start": 182,
-                "end": 182
+                "start": 188,
+                "end": 188
             }
         },
         "group": [
@@ -1201,8 +1230,8 @@
     {
         "description": "Disabled button border size and style\n",
         "commentRange": {
-            "start": 184,
-            "end": 187
+            "start": 190,
+            "end": 193
         },
         "context": {
             "type": "variable",
@@ -1210,8 +1239,8 @@
             "value": "1px solid",
             "scope": "default",
             "line": {
-                "start": 188,
-                "end": 188
+                "start": 194,
+                "end": 194
             }
         },
         "group": [
@@ -1230,8 +1259,8 @@
     {
         "description": "Disabled button background color\n",
         "commentRange": {
-            "start": 190,
-            "end": 193
+            "start": 196,
+            "end": 199
         },
         "context": {
             "type": "variable",
@@ -1239,8 +1268,8 @@
             "value": "var(--px-btn-disabled-background, transparent)",
             "scope": "default",
             "line": {
-                "start": 194,
-                "end": 194
+                "start": 200,
+                "end": 200
             }
         },
         "group": [
@@ -1259,8 +1288,8 @@
     {
         "description": "Disabled button border color\n",
         "commentRange": {
-            "start": 196,
-            "end": 199
+            "start": 202,
+            "end": 205
         },
         "context": {
             "type": "variable",
@@ -1268,8 +1297,8 @@
             "value": "var(--px-btn-disabled-border-color, rgba($black,.2))",
             "scope": "default",
             "line": {
-                "start": 200,
-                "end": 200
+                "start": 206,
+                "end": 206
             }
         },
         "group": [
@@ -1288,8 +1317,8 @@
     {
         "description": "Call to action button font color\n",
         "commentRange": {
-            "start": 202,
-            "end": 205
+            "start": 208,
+            "end": 211
         },
         "context": {
             "type": "variable",
@@ -1297,8 +1326,8 @@
             "value": "var(--px-btn-call-to-action-color, $white)",
             "scope": "default",
             "line": {
-                "start": 206,
-                "end": 206
+                "start": 212,
+                "end": 212
             }
         },
         "group": [
@@ -1317,8 +1346,8 @@
     {
         "description": "Call to action button border color\n",
         "commentRange": {
-            "start": 208,
-            "end": 211
+            "start": 214,
+            "end": 217
         },
         "context": {
             "type": "variable",
@@ -1326,8 +1355,8 @@
             "value": "var(--px-btn-call-to-action-border-color, transparent)",
             "scope": "default",
             "line": {
-                "start": 212,
-                "end": 212
+                "start": 218,
+                "end": 218
             }
         },
         "group": [
@@ -1346,8 +1375,8 @@
     {
         "description": "Call to action button background color\n",
         "commentRange": {
-            "start": 214,
-            "end": 217
+            "start": 220,
+            "end": 223
         },
         "context": {
             "type": "variable",
@@ -1355,8 +1384,8 @@
             "value": "var(--px-btn-call-to-action-background, $primary-default)",
             "scope": "default",
             "line": {
-                "start": 218,
-                "end": 218
+                "start": 224,
+                "end": 224
             }
         },
         "group": [
@@ -1375,8 +1404,8 @@
     {
         "description": "Call to action button hover background color\n",
         "commentRange": {
-            "start": 220,
-            "end": 223
+            "start": 226,
+            "end": 229
         },
         "context": {
             "type": "variable",
@@ -1384,8 +1413,8 @@
             "value": "var(--px-btn-call-to-action-background--hover, $primary-hover)",
             "scope": "default",
             "line": {
-                "start": 224,
-                "end": 224
+                "start": 230,
+                "end": 230
             }
         },
         "group": [
@@ -1404,8 +1433,8 @@
     {
         "description": "Call to action button pressed background color\n",
         "commentRange": {
-            "start": 226,
-            "end": 229
+            "start": 232,
+            "end": 235
         },
         "context": {
             "type": "variable",
@@ -1413,8 +1442,8 @@
             "value": "var(--px-btn-call-to-action-background--pressed, $primary-pressed)",
             "scope": "default",
             "line": {
-                "start": 230,
-                "end": 230
+                "start": 236,
+                "end": 236
             }
         },
         "group": [
@@ -1433,8 +1462,8 @@
     {
         "description": "Icon button background color\n",
         "commentRange": {
-            "start": 232,
-            "end": 235
+            "start": 238,
+            "end": 241
         },
         "context": {
             "type": "variable",
@@ -1442,8 +1471,8 @@
             "value": "var(--px-btn-icon-background, transparent)",
             "scope": "default",
             "line": {
-                "start": 236,
-                "end": 236
+                "start": 242,
+                "end": 242
             }
         },
         "group": [
@@ -1462,8 +1491,8 @@
     {
         "description": "Icon button border size and style\n",
         "commentRange": {
-            "start": 238,
-            "end": 241
+            "start": 244,
+            "end": 247
         },
         "context": {
             "type": "variable",
@@ -1471,8 +1500,8 @@
             "value": "var(--px-btn-icon-border, 0px solid)",
             "scope": "default",
             "line": {
-                "start": 242,
-                "end": 242
+                "start": 248,
+                "end": 248
             }
         },
         "group": [
@@ -1491,8 +1520,8 @@
     {
         "description": "Bare button text color\n",
         "commentRange": {
-            "start": 244,
-            "end": 247
+            "start": 250,
+            "end": 253
         },
         "context": {
             "type": "variable",
@@ -1500,8 +1529,8 @@
             "value": "var(--px-btn-bare-color, $gray15)",
             "scope": "default",
             "line": {
-                "start": 248,
-                "end": 248
+                "start": 254,
+                "end": 254
             }
         },
         "group": [
@@ -1520,8 +1549,8 @@
     {
         "description": "Bare button hover text color\n",
         "commentRange": {
-            "start": 250,
-            "end": 253
+            "start": 256,
+            "end": 259
         },
         "context": {
             "type": "variable",
@@ -1529,8 +1558,8 @@
             "value": "var(--px-btn-bare-color--hover, $primary-default)",
             "scope": "default",
             "line": {
-                "start": 254,
-                "end": 254
+                "start": 260,
+                "end": 260
             }
         },
         "group": [
@@ -1549,8 +1578,8 @@
     {
         "description": "Bare button pressed text color\n",
         "commentRange": {
-            "start": 256,
-            "end": 259
+            "start": 262,
+            "end": 265
         },
         "context": {
             "type": "variable",
@@ -1558,8 +1587,8 @@
             "value": "var(--px-btn-bare-color--pressed, $primary-pressed)",
             "scope": "default",
             "line": {
-                "start": 260,
-                "end": 260
+                "start": 266,
+                "end": 266
             }
         },
         "group": [
@@ -1578,8 +1607,8 @@
     {
         "description": "Primary bare button text color\n",
         "commentRange": {
-            "start": 262,
-            "end": 265
+            "start": 268,
+            "end": 271
         },
         "context": {
             "type": "variable",
@@ -1587,8 +1616,8 @@
             "value": "var(--px-btn-primary-bare-color--visited, $primary-default)",
             "scope": "default",
             "line": {
-                "start": 266,
-                "end": 266
+                "start": 272,
+                "end": 272
             }
         },
         "group": [
@@ -1607,8 +1636,8 @@
     {
         "description": "Primary bare button hover text color\n",
         "commentRange": {
-            "start": 268,
-            "end": 271
+            "start": 274,
+            "end": 277
         },
         "context": {
             "type": "variable",
@@ -1616,8 +1645,8 @@
             "value": "var(--px-btn-primary-bare-color--hover, $primary-hover)",
             "scope": "default",
             "line": {
-                "start": 272,
-                "end": 272
+                "start": 278,
+                "end": 278
             }
         },
         "group": [
@@ -1636,8 +1665,8 @@
     {
         "description": "Primary bare button pressed text color\n",
         "commentRange": {
-            "start": 274,
-            "end": 277
+            "start": 280,
+            "end": 283
         },
         "context": {
             "type": "variable",
@@ -1645,8 +1674,8 @@
             "value": "var(--px-btn-primary-bare-color--pressed, $primary-pressed)",
             "scope": "default",
             "line": {
-                "start": 278,
-                "end": 278
+                "start": 284,
+                "end": 284
             }
         },
         "group": [
@@ -1665,8 +1694,8 @@
     {
         "description": "Assume `box-sizing : border-box;`\n",
         "commentRange": {
-            "start": 336,
-            "end": 339
+            "start": 342,
+            "end": 345
         },
         "context": {
             "type": "variable",
@@ -1674,8 +1703,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 340,
-                "end": 340
+                "start": 346,
+                "end": 346
             }
         },
         "group": [

@@ -29,7 +29,7 @@
 
 <!-- 3: Make HTML Demo -->
 <template is="dom-if" if="{{_tabIs('Text',selectedTab)}}" restamp>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Size"
   choose-with="dropdown"
   choices='[
@@ -41,7 +41,7 @@
   ]'
   default-choice="regular (default)">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Type"
   choose-with="dropdown"
   choices='[
@@ -54,22 +54,22 @@
   ]'
   default-choice="secondary (default)">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
-<section data-slot="demoHTML">
+<section slot="demo-html">
 <button class$="{{buttonClasses}}">Label</button>
 </section>
 <!-- 4: Set Import Slot -->
-<section data-slot="import">
+<section slot="import">
 {{importCode}}
 </section>
 </template>
 
 <template is="dom-if" if="{{_tabIs('Text & icon',selectedTab)}}" restamp>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Size"
   choose-with="dropdown"
   choices='[
@@ -81,7 +81,7 @@
   ]'
   default-choice="regular (default)">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Type"
   choose-with="dropdown"
   choices='[
@@ -94,24 +94,24 @@
   ]'
   default-choice="secondary (default)">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
-<section data-slot="demoHTML">
+<section slot="demo-html">
 <button class$="{{buttonClasses}}">
   <px-icon style="--iron-icon-height:16px" icon="px-utl:app-settings"></px-icon> Label
 </button>
 </section>
 <!-- 4: Set Import Slot -->
-<section data-slot="import">
+<section slot="import">
 {{importCode}}
 </section>
 </template>
 
 <template is="dom-if" if="{{_tabIs('Icon',selectedTab)}}" restamp>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Size"
   choose-with="dropdown"
   choices='[
@@ -123,7 +123,7 @@
   ]'
   default-choice="regular (default)">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Icon Type"
   choose-with="dropdown"
   choices='[
@@ -132,24 +132,24 @@
   ]'
   default-choice="bare">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
-<section data-slot="demoHTML">
+<section slot="demo-html">
 <button class$="{{iconClasses}}">
   <px-icon style="--iron-icon-height:16px" icon="px-utl:app-settings"></px-icon>
 </button>
 </section>
-<section data-slot="import">
+<section slot="import">
 {{importIconCode}}
 </section>
 </template>
 
 
 <!-- 5: Set Usage HTML -->
-<section data-slot="usage">
+<section slot="usage">
 ```
 <!-- Default Button: -->
 <button class="btn">Button</button>

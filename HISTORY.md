@@ -1,3 +1,7 @@
+v2.0.7
+==================
+* fix spacing in demo
+
 v2.0.6
 ==================
 * Upgrade docs to use Polymer 2.x, bump px-demo and px-sass-doc dependencies

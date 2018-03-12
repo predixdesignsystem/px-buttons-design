@@ -161,7 +161,7 @@ $inuit-btn-tertiary-color--pressed                  : var(--px-btn-tertiary-colo
 /// @group px-buttons-design:variables:style
 /// @type Color [default]
 /// @todo --px-btn-tertiary-background
-$inuit-btn-tertiary-background                      : var(--px-btn-tertiary-background, $white) !default;
+$inuit-btn-tertiary-background                      : var(--px-btn-tertiary-background, transparent) !default;
 
 /// Tertiary button hover background color
 /// @group px-buttons-design:variables:style

@@ -1091,7 +1091,7 @@
         "context": {
             "type": "variable",
             "name": "inuit-btn-tertiary-background",
-            "value": "var(--px-btn-tertiary-background, $white)",
+            "value": "var(--px-btn-tertiary-background, transparent)",
             "scope": "default",
             "line": {
                 "start": 164,

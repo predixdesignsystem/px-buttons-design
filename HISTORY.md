@@ -1,3 +1,7 @@
+v2.0.8
+==================
+* remove background from tertiary buttons
+
 v2.0.7
 ==================
 * fix spacing in demo

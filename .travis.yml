@@ -25,7 +25,6 @@ after_success:
 - cd $TRAVIS_BUILD_DIR/scripts
 - chmod 755 ghp.sh
 - "./ghp.sh"
-- bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
 env:
   global:
   - secure: ltgcy0uCrp1KmTRFA/oEWns9RziddFmr3qfAFo+s/16PhAIrXjxgz6c4V2W1MuVK9gXvZJyu9PmkVIAR9/ElbmHAkka+Ye3Ktxx6S3mxsv8qcs9WApb7CT9Tf5kR7GHC7b5/e30GQjME9E5KW7horCNK3mfdn5rRgoB4DAG6BoeJsCOfSonuejFTD68JezpXBjRvw30eTtvKpYZY6V+cuFdLgZSIxj2UmDmHB0jPlRhEg3Ke1MOHsk8bEwaaqjRM8h3SCW6RRmo6c+1gCsjR1wJdHCySyed3BCC4Eo51Q0bFMIpAyzlrLtQFJ4ZDupZH/kgBS6WyZ+aAmkmQOmw6rlC3XcPc4b+Iibcq32flsakI3lFa+JRI0c/9lqvtimfg7ziQw+nlUGQ4UWI6DqzLxrn8SpQVC8vorXt9P30i6ODVkB453T3EjezwqYSM7cmfHfhC4PLl/4oThBFVI5nScZNikNDaTIMaLwYa7FrWTbM1vJnmLJu/qNK1RU9XITakYehAbTontKiyt3yboKfFanQb75ftFpxH6ILxXUAeBpZLze6OoAd+dT92y33XwwvzNiKp8hI3E6ENI6ZGF7Ft9c2zm9y/qOGujGhLm+zQSqpuEUlMeN+jLPhNFV/8yROSMbmUTt0FRJn/Ri98pmZr3Q6lTyv6YC+QkcdKASsnu0c=

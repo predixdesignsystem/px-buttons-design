@@ -36,5 +36,5 @@
     "gulp-style-modules": "^0.1.0",
     "sw-precache": "^4.2.3"
   },
-  "license": "BSD-3-Clause"
+  "license": "Apache-2.0"
 }
